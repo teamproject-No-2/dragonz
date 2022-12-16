@@ -7,5 +7,5 @@
 4. 파트너스 & 헤더푸터 & 오른쪽 하단 고정아이콘
 
 <폰트(google)>
-Noto Sans KR
+Noto Sans KR,
 Poppins 
