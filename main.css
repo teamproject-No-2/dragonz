@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+:root {
+  --bg-lightBlue: ;
+  --bg-lightGray: ;
+  --bg-contain: no-repeat 50% / contain;
+  --bg-cover: no-repeat 50% / cover;
+  --color-gray: ;
+}
+
+body {
+  font-family: "Poppins", "Noto Sans KR", sans-serif;
+}
