@@ -21,7 +21,9 @@
   <body>
     <main>
       <!-- article 1 home -->
-      <article id="home">
+      <article id="main_home">
+        <div class="moon_img"></div>
+        <div class="water_img"></div>
         <div class="main_home_txt">
           <img src="./main-images/home_welcome.png" alt="welcome" />
           <h1>META TOY<span>DRAGONZ</span></h1>
@@ -31,12 +33,43 @@
             즐겨보세요.
           </p>
         </div>
-        <div class="main_home_characters"></div>
-        <div class="main_home_banner"></div>
+
+        <div class="main_home_characters">
+          <div class="main_home_characters_stage">
+            <img src="./main-images/home_dragonz01.png" alt="dragon1" />
+            <!-- <img src="./main-images/home_dragonz02.png" alt="dragon2">
+                <img src="./main-images/home_dragonz03.png" alt="dragon3">
+                <img src="./main-images/home_dragonz04.png" alt="dragon4">
+                <img src="./main-images/home_dragonz05.png" alt="dragon5"> -->
+          </div>
+        </div>
+
+        <div class="main_home_banner">
+          <div class="main_home_banner_box">
+            <img src="./main-images/home_dragonz_thum01.png" alt="img1" />
+            <h4>MTDZ#7983</h4>
+          </div>
+          <div class="main_home_banner_box active">
+            <img src="./main-images/home_dragonz_thum02.png" alt="img2" />
+            <h4>MTDZ#6481</h4>
+          </div>
+          <div class="main_home_banner_box">
+            <img src="./main-images/home_dragonz_thum03.png" alt="img3" />
+            <h4>MTDZ#1038</h4>
+          </div>
+          <div class="main_home_banner_box">
+            <img src="./main-images/home_dragonz_thum04.png" alt="img4" />
+            <h4>MTDZ#330</h4>
+          </div>
+          <div class="main_home_banner_box">
+            <img src="./main-images/home_dragonz_thum05.png" alt="img5" />
+            <h4>MTDZ#7575</h4>
+          </div>
+        </div>
       </article>
 
       <!-- article 2 story -->
-      <article id="story">
+      <article id="main_story">
         <div class="story_txt">
           <h2>STORY</h2>
           <h3>Meet a toy DragonZ</h3>
@@ -119,7 +152,7 @@
 
         <!-- article 3 project -->
       </article>
-      <article id="project">
+      <article id="main_project">
         <img
           src="./main-images/project_big_coin.png"
           alt="큰 별"
@@ -222,101 +255,135 @@
       </article>
 
       <!-- article 4 roadmap -->
-      <article id="roadmap">
-        <img src="./main-images/roadmap_tit.png" alt="선글라스 아이콘" />
+      <article id="main_roadmap">
+        <div class="roadmap_head">
+          <img src="./main-images/roadmap_tit.png" alt="선글라스 아이콘" />
+          <h2>ROADMAP</h2>
+          <div class="circle"></div>
+        </div>
 
-        <div id="box1">
+        <div id="roadmap_box1" class="roadmap_box">
+          <img
+            src="./main-images/roadmap_completed.png"
+            alt="completed"
+            class="completed"
+          />
           <div class="step">step0</div>
-          <h3>The beginning of Meta Toy DragonZ & Opening of Community.</h3>
+          <h3>메타 토이 드래곤의 시작 & 커뮤니티 오픈</h3>
           <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
+            <li>홈페이지, 트위터, 디스코드 커뮤니티를 오픈한다.</li>
+            <li>Klaytn과 기술협약을 체결한다.</li>
+            <li>PFP NFT X9999 민팅한다.</li>
+            <li>프로젝트 총괄 유튜브 인터뷰를 2회 진행한다.</li>
+            <li>'보라 거버넌스 카운슬'에 합류한다.</li>
+            <li>프로젝트 총괄 AMA를 진행한다.</li>
+            <li>기업 파트너쉽을 확장한다.</li>
+            <li>온/오프라인 브랜드 마케팅을 진행한다.</li>
           </ul>
+          <img
+            src="./main-images/home_dragonz01.png"
+            alt="popUpCharacter"
+            class="popUpCharacter"
+          />
         </div>
-        <div id="box2">
+        <div id="roadmap_box2" class="roadmap_box">
+          <img
+            src="./main-images/roadmap_completed.png"
+            alt="completed"
+            class="completed"
+          />
           <div class="step">step1</div>
-          <h3>Minting of limited edition Legendary NFT for holders</h3>
-          <h3>Launch Sandbox Meta Toya IPization and NFT Universe</h3>
+          <h3>홀더 전용 한정판 레전더리 PFP NFT 민팅</h3>
           <ul>
-            <li>Proceed With Leading IP Collaboration.</li>
+            <li>민팅 완료 후 레어리티 등급 표를 공개한다.</li>
+            <li>스냅샷 후 추첨을 통해 레전더리 드래곤 1개 에어드랍한다.</li>
             <li>
-              Release MTDZ The Game's Equipment NFTs And Proceed The First
-              Minting Event For Holders-Only.
+              스냅샷 후 15개 이상 보유한 홀더 대상 럭키 드로우를 실시한다.
             </li>
-            <li>Proceed A Collaboration Project With The 'Sandbox Gaming'.</li>
-            <li>Network YouTubers.</li>
-            <li>Open Meta Toy Goods Shop In Metaverse.</li>
-            <li>Release Meta Toy DragonZ's Limited Toy Edition.</li>
-            <li>Reveal The MTDZ Universe Story.</li>
-            <li>Reveal The MTDZ Universe Story.</li>
+            <li>메타 캐릭터 NFT들과 파트너십 제휴를 체결한다.</li>
+            <li>홀더 대상 1:1 BBL X MTDZ PFP NTF 에어드랍을 진행한다.</li>
           </ul>
+          <img
+            src="./main-images/home_dragonz02.png"
+            alt="popUpCharacter"
+            class="popUpCharacter"
+          />
         </div>
-        <div id="box3">
+        <div id="roadmap_box3" class="roadmap_box">
           <div class="step">step2</div>
-          <h3>P2E GAME launch</h3>
-          <h3>Launch Sandbox Meta Toya IPization and NFT Universe</h3>
+          <h3>P2E 게임 런칭</h3>
           <ul>
-            <li>Proceed With Leading IP Collaboration.</li>
-            <li>
-              Release MTDZ The Game's Equipment NFTs And Proceed The First
-              Minting Event For Holders-Only.
-            </li>
-            <li>Proceed A Collaboration Project With The 'Sandbox Gaming'.</li>
-            <li>Network YouTubers.</li>
-            <li>Open Meta Toy Goods Shop In Metaverse.</li>
+            <li>개발 영상을 공개한다.</li>
+            <li>홀더 대상 알파 테스트를 진행한다.</li>
+            <li>P2E 수집형 RPG 캐릭터 NFT 에어드랍을 진행한다.</li>
+            <li>홀더 채굴이 가능한 공개 베타테스트를 진행한다.</li>
+            <li>아시아 서버를 정식 런칭한다.</li>
+            <li>게임 공식 유튜브 채널을 개설한다.</li>
           </ul>
+          <img
+            src="./main-images/home_dragonz03.png"
+            alt="popUpCharacter"
+            class="popUpCharacter"
+          />
         </div>
-        <div id="box4">
+        <div id="roadmap_box4" class="roadmap_box">
           <div class="step">step3</div>
-          <h3>Launch the holder governance</h3>
-          <h3>Launch Sandbox Meta Toya IPization and NFT Universe</h3>
+          <h3>PFP NFT 홀더 거버넌스 출범</h3>
           <ul>
-            <li>Proceed With Leading IP Collaboration.</li>
+            <li>홀더 거버넌스로 스테이킹을 통한 수익화를 제공한다.</li>
+            <li>투표 기반의 의사 결정 구조로 탈중앙화를 제공한다.</li>
             <li>
-              Release MTDZ The Game's Equipment NFTs And Proceed The First
-              Minting Event For Holders-Only.
+              공식 브리더 인증 제도를 추가하여 거래 로열티 수익을 제공한다.
             </li>
-            <li>Proceed A Collaboration Project With The 'Sandbox Gaming'.</li>
-            <li>Network YouTubers.</li>
-            <li>Open Meta Toy Goods Shop In Metaverse.</li>
-            <li>Release Meta Toy DragonZ's Limited Toy Edition.</li>
-            <li>Reveal The MTDZ Universe Story.</li>
-            <li>Reveal The MTDZ Universe Story.</li>
-            <li>Produce Short-Form Videos/Animations.</li>
-            <li>Create The MTDZ's Official YouTube Channel.</li>
+            <li>
+              P2E 게임 수익의 일부를 고정 비율만큼 스테이킹하여 홀더의 수익을
+              추가 보장한다.
+            </li>
+            <li>오프라인 서비스 연계 혜택을 공개한다.</li>
           </ul>
+          <img
+            src="./main-images/home_dragonz04.png"
+            alt="popUpCharacter"
+            class="popUpCharacter"
+          />
         </div>
-        <div id="box5">
+        <div id="roadmap_box5" class="roadmap_box">
           <div class="step">step4</div>
-          <h3>Extend to Metaverse</h3>
+          <h3>메타버스로 확장</h3>
           <ul>
-            <li>Release Meta Toy DragonZ's Limited Toy Edition.</li>
-            <li>Reveal The MTDZ Universe Story.</li>
-            <li>Reveal The MTDZ Universe Story.</li>
-            <li>Produce Short-Form Videos/Animations.</li>
-            <li>Create The MTDZ's Official YouTube Channel.</li>
+            <li>더 샌드박스 랜드를 구입한다. 12x12</li>
+            <li>더 샌드박스 NFT 제작 아티스트로 등록한다.</li>
+            <li>'더 샌드박스' 공식 파트너 MOU를 체결한다.</li>
+            <li>더 샌드박스 MTDZ 월드를 오픈한다.</li>
+            <li>전체 홀더를 대상으로 3D & 복셀 NFT를 1종 이상 에어드랍한다.</li>
           </ul>
+          <img
+            src="./main-images/home_dragonz05.png"
+            alt="popUpCharacter"
+            class="popUpCharacter"
+          />
         </div>
-        <div id="box6">
+        <div id="roadmap_box6" class="roadmap_box">
           <div class="step">step5</div>
-          <h3>Launch Sandbox Meta Toya IPization and NFT Universe</h3>
+          <h3>드박스 메타토이 IP화 및 NFT 유니버스 출범</h3>
           <ul>
-            <li>Proceed With Leading IP Collaboration.</li>
             <li>
-              Release MTDZ The Game's Equipment NFTs And Proceed The First
-              Minting Event For Holders-Only.
+              샌 NFT 유니버스 출범 장비 NFT를 출시하고 홀더 한정 1차 민팅을
+              진행한다.
             </li>
-            <li>Proceed A Collaboration Project With The 'Sandbox Gaming'.</li>
-            <li>Network YouTubers.</li>
-            <li>Open Meta Toy Goods Shop In Metaverse.</li>
-            <li>Release Meta Toy DragonZ's Limited Toy Edition.</li>
-            <li>Reveal The MTDZ Universe Story.</li>
-            <li>Reveal The MTDZ Universe Story.</li>
-            <li>Produce Short-Form Videos/Animations.</li>
-            <li>Create The MTDZ's Official YouTube Channel.</li>
+            <li>'샌드박스 게이밍' 콜라보레이션을 진행한다.</li>
+            <li>유튜브 크리에이터 콜라보레이션을 진행한다.</li>
+            <li>메타버스에 메타 토이 굿즈 샵을 오픈한다.</li>
+            <li>메타 토이 드래곤즈 한정판 장난감을 출시한다.</li>
+            <li>세계관을 공개한다.</li>
+            <li>숏폼/애니메이션을 제작한다.</li>
+            <li>전용 유튜브 채널을 개설한다.</li>
           </ul>
+          <img
+            src="./main-images/home_dragonz02.png"
+            alt="popUpCharacter"
+            class="popUpCharacter"
+          />
         </div>
 
         <div class="roadmap_btn viewMore">
@@ -325,17 +392,144 @@
       </article>
 
       <!-- article 5 partners -->
-      <article id="partners">
+      <article id="main_partners">
         <div class="line1">
           <ul>
-            <li></li>
+            <li>
+              <img src="./main-images/파트너이미지/bg-3-1.png" alt="partners_logo">
+              <div class="mouseenter"><img src="./main-images/파트너이미지/bg-3-2.png" alt="partners_logo"></div>
+            </li>
+            <li>
+              <img src="./main-images/파트너이미지/bp-1-1.png" alt="partners_logo">
+              <div class="mouseenter"><img src="./main-images/파트너이미지/bp-1-2.png" alt="partners_logo"></div>
+            </li>
+            <li>
+              <img src="./main-images/파트너이미지/bp-2-1.png" alt="partners_logo">
+              <div class="mouseenter"><img src="./main-images/파트너이미지/bp-2-2.png" alt="partners_logo"></div>
+            </li>
+            <li>
+              <img src="./main-images/파트너이미지/bp-4-1.png" alt="partners_logo">
+              <div class="mouseenter"><img src="./main-images/파트너이미지/bp-4-2.png" alt="partners_logo"></div>
+            </li>
+            <li>
+              <img src="./main-images/파트너이미지/bp-5-1.png" alt="partners_logo">
+              <div class="mouseenter"><img src="./main-images/파트너이미지/bp-5-2.png" alt="partners_logo"></div>
+            </li>
+            <li>
+              <img src="./main-images/파트너이미지/bp-6-1.png" alt="partners_logo">
+              <div class="mouseenter"><img src="./main-images/파트너이미지/bp-6-2.png" alt="partners_logo"></div>
+            </li>
+            <li>
+              <img src="./main-images/파트너이미지/bp-7-1.png" alt="partners_logo">
+              <div class="mouseenter"><img src="./main-images/파트너이미지/bp-7-2.png" alt="partners_logo"></div>
+            </li>
+            <li>
+              <img src="./main-images/파트너이미지/bp-8-1.png" alt="partners_logo">
+              <div class="mouseenter"><img src="./main-images/파트너이미지/bp-8-2.png" alt="partners_logo"></div>
+            </li>
+            <li>
+              <img src="./main-images/파트너이미지/bp-9-1.png" alt="partners_logo">
+              <div class="mouseenter"><img src="./main-images/파트너이미지/bp-9-2.png" alt="partners_logo"></div>
+            </li>
+            <li>
+              <img src="./main-images/파트너이미지/bp-10-1.png" alt="partners_logo">
+              <div class="mouseenter"><img src="./main-images/파트너이미지/bp-10-2.png" alt="partners_logo"></div>
+            </li>
+            <li>
+              <img src="./main-images/파트너이미지/bp-11-1.png" alt="partners_logo">
+              <div class="mouseenter"><img src="./main-images/파트너이미지/bp-11-2.png" alt="partners_logo"></div>
+            </li>
+            <li>
+              <img src="./main-images/파트너이미지/pp-1-1.png" alt="partners_logo">
+              <div class="mouseenter"><img src="./main-images/파트너이미지/pp-1-2.png" alt="partners_logo"></div>
+            </li>
+            <li>
+              <img src="./main-images/파트너이미지/pp-2-1.png" alt="partners_logo">
+              <div class="mouseenter"><img src="./main-images/파트너이미지/pp-2-2.png" alt="partners_logo"></div>
+            </li>
+            <li>
+              <img src="./main-images/파트너이미지/pp-3-1.png" alt="partners_logo">
+              <div class="mouseenter"><img src="./main-images/파트너이미지/pp-3-2.png" alt="partners_logo"></div>
+            </li>
+            <li>
+              <img src="./main-images/파트너이미지/pp-4-1.png" alt="partners_logo">
+              <div class="mouseenter"><img src="./main-images/파트너이미지/pp-4-2.png" alt="partners_logo"></div>
+            </li>
+            <li>
+              <img src="./main-images/파트너이미지/pp-5-1.png" alt="partners_logo">
+              <div class="mouseenter"><img src="./main-images/파트너이미지/pp-5-2.png" alt="partners_logo"></div>
+            </li>
           </ul>
-        </div>
+
         <div class="line2">
           <ul>
-            <li></li>
+            <li>
+              <img src="./main-images/파트너이미지/pp-6-1.png" alt="partners_logo">
+              <div class="mouseenter"><img src="./main-images/파트너이미지/pp-6-2.png" alt="partners_logo"></div>
+            </li>
+            <li>
+              <img src="./main-images/파트너이미지/pp-7-1.png" alt="partners_logo">
+              <div class="mouseenter"><img src="./main-images/파트너이미지/pp-7-2.png" alt="partners_logo"></div>
+            </li>
+            <li>
+              <img src="./main-images/파트너이미지/pp-8-1.png" alt="partners_logo">
+              <div class="mouseenter"><img src="./main-images/파트너이미지/pp-8-2.png" alt="partners_logo"></div>
+            </li>
+            <li>
+              <img src="./main-images/파트너이미지/pp-9-1.png" alt="partners_logo">
+              <div class="mouseenter"><img src="./main-images/파트너이미지/pp-9-2.png" alt="partners_logo"></div>
+            </li>
+            <li>
+              <img src="./main-images/파트너이미지/pp-10-1.png" alt="partners_logo">
+              <div class="mouseenter"><img src="./main-images/파트너이미지/pp-10-2.png" alt="partners_logo"></div>
+            </li>
+            <li>
+              <img src="./main-images/파트너이미지/pp-11-1.png" alt="partners_logo">
+              <div class="mouseenter"><img src="./main-images/파트너이미지/pp-11-2.png" alt="partners_logo"></div>
+            </li>
+            <li>
+              <img src="./main-images/파트너이미지/pp-12-1.png" alt="partners_logo">
+              <div class="mouseenter"><img src="./main-images/파트너이미지/pp-12-2.png" alt="partners_logo"></div>
+            </li>
+            <li>
+              <img src="./main-images/파트너이미지/pp-13-1.png" alt="partners_logo">
+              <div class="mouseenter"><img src="./main-images/파트너이미지/pp-13-2.png" alt="partners_logo"></div>
+            </li>
+            <li>
+              <img src="./main-images/파트너이미지/pp-14-1.png" alt="partners_logo">
+              <div class="mouseenter"><img src="./main-images/파트너이미지/pp-14-2.png" alt="partners_logo"></div>
+            </li>
+            <li>
+              <img src="./main-images/파트너이미지/pp-15-1.png" alt="partners_logo">
+              <div class="mouseenter"><img src="./main-images/파트너이미지/pp-15-2.png" alt="partners_logo"></div>
+            </li>
+            <li>
+              <img src="./main-images/파트너이미지/pp-16-1.png" alt="partners_logo">
+              <div class="mouseenter"><img src="./main-images/파트너이미지/pp-16-2.png" alt="partners_logo"></div>
+            </li>
+            <li>
+              <img src="./main-images/파트너이미지/pp-17-1.png" alt="partners_logo">
+              <div class="mouseenter"><img src="./main-images/파트너이미지/pp-17-2.png" alt="partners_logo"></div>
+            </li>
+            <li>
+              <img src="./main-images/파트너이미지/pp-18-1.png" alt="partners_logo">
+              <div class="mouseenter"><img src="./main-images/파트너이미지/pp-18-2.png" alt="partners_logo"></div>
+            </li>
+            <li>
+              <img src="./main-images/파트너이미지/pp-19-1.png" alt="partners_logo">
+              <div class="mouseenter"><img src="./main-images/파트너이미지/pp-19-2.png" alt="partners_logo"></div>
+            </li>
+            <li>
+              <img src="./main-images/파트너이미지/pp-20-1.png" alt="partners_logo">
+              <div class="mouseenter"><img src="./main-images/파트너이미지/pp-20-2.png" alt="partners_logo"></div>
+            </li>
+            <li>
+              <img src="./main-images/파트너이미지/pp-21-1.png" alt="partners_logo">
+              <div class="mouseenter"><img src="./main-images/파트너이미지/pp-21-2.png" alt="partners_logo"></div>
+            </li>
           </ul>
         </div>
+
 
         <div class="partners_btn viewMore">
           View more <img src="./main-images/more_icon.png" alt="+" />
@@ -343,12 +537,16 @@
       </article>
     </main>
 
+
     <!-- floated_btn -->
-    <div class="fixed_btn">
-      <div class="float_icon1"></div>
-      <div class="float_icon2"></div>
-      <div class="scrollup"></div>
+    <div id="main_fixed_btn">
+      <div class="float_btn"><img src="./main-images/float_icon01.png" alt="버튼1"></div>
+      <div class="float_btn"><img src="./main-images/float_icon02.png" alt="버튼2"></div>
+
+      <div class="scrollup float_btn"><img src="./main-images/scrollup.png" alt="스크롤 업"></div>
     </div>
+
+
 
     <script src="./main.js"></script>
   </body>
