@@ -258,3 +258,60 @@ body {
 .itemList .itemCard .cardInner .cardTxt .cardIcon .linkIcon.rmv { display: none;}
 .itemList .itemCard .cardInner .cardTxt .cardIcon .projIcon.rmv { display: none;}
 .itemList .itemCard .cardInner .cardTxt .cardIcon .storyIcon.rmv { display: none;}
+
+
+/* popUp */
+.popInfo.popDel { display: none;}
+.popInfo {
+  background-color: rgba(0, 0, 0, .5);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 999;
+}
+.popInfo .popWindow {
+  padding: 45px;
+  width: 1028px;
+  height: auto;
+  border-radius: 40px;
+  position: fixed;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+}
+.popInfo .popWindow .closeBtn {
+  width: 20px;
+  height: 20px;
+  background: url(../images/story/pop_close_icon.png) no-repeat center;
+  position: absolute;
+  top: 30px; right: 30px;
+  cursor: pointer;
+}
+.popInfo .popWindow .popInner {
+  display: flex;
+}
+.popInfo .popWindow .popInner .popLeft { 
+  margin-right: 40px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.popInfo .popWindow .popInner .popLeft .popImg {
+  width: 320px;
+  height: 320px;  
+}
+.popInfo .popWindow .popInner .popRight {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+:is(.popInfo .popWindow .popInner .popRight) .popWord, .popTxt { 
+  font-size: 15px;
+  color: #7f7f7f;
+  height: 1.8;
+}
+.popInfo .popWindow .popInner .popRight .popTitle {
+  font-size: 30px;
+  font-weight: 500;
+  padding-bottom: 14px;
+}

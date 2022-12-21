@@ -16,6 +16,33 @@
   <script defer src="./common/story.js"></script>
 </head>
 <body>
+  <!-- popUp -->
+  <div id="popInfo" class="popInfo popDel">
+    <div class="popWindow">
+      <div class="closeBtn"></div>
+      <div class="popInner">
+        <div class="popLeft">
+          <div class="popImg">
+            <img src="./images/story/story-items001.png" alt="img">
+          </div>
+        </div>
+        <div class="popRight">
+          <p class="popWord">Meta Toy DragonZ</p>
+          <div class="popTitle">
+            <p class="popTag">MTDZ#9514</p>
+            <div class="popIcon"></div>
+          </div>
+          <p class="popTxt">
+            유튜브를 기반으로, 레트로한 분위기의 개성 있는 비주얼과 뛰어난 선곡으로 매력적인 애니메이션 영상을 만드는 크리에이터 람다람.
+            그리고 람다람과의 콜라보로 탄생한 '람다람 드래곤'.
+            '람다람 드래곤'은 람다람이 표현하는 가장 큰 세계관인 '언더피티(Underfity)'의
+            메인 캐릭터 '다람이'의 모습을 닮아 핑크 컬러의 귀여운 만두 머리와 다람쥐를 닮은 풍성한 꼬리를 가졌다.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- main -->
   <div class="storyHeader">
     <div class="leftHead">
       <h2 id="storyTitle">STORY</h2>
@@ -26,7 +53,7 @@
       <div class="searchBox">
         <span class="innerTxt">MTZD#</span>
         <input type="text" name="search" id="search" placeholder="0000">
-        <button type="button"></button>
+        <button type="button" id="btn"></button>
       </div>
     </div>
   </div>
@@ -80,6 +107,7 @@
         </div>
       </div>
     </div>
+
     <div class="rightArea">
       <!-- silde -->
       <div class="swiper storySwiper">
@@ -140,13 +168,13 @@
 
         <div class="itemList">
           <!-- 리스트01 시작 (템플릿)-->
-          <!-- <div class="itemCard" id="popupCard01">
+          <!-- <div class="itemCard">
             <div class="cardInner">
               <div class="cardImg">
-                <img src="./images/story/story-items001.png" alt="item01">
+                <img src=" ${item.img}" alt="item01">
               </div>
               <div class="cardTxt">
-                <span class="cardTitle">MTDZ#9514</span>
+                <span class="cardTitle">MTDZ#${item.tag}</span>
                 <div class="cardIcon">
                   <div class="filterIcon linkIcon">
                     <img src="./images/story/icon_link_pop.png" alt="link">
@@ -158,7 +186,7 @@
                     <img src="./images/story/icon_story_pop.png" alt="story">
                   </div>
                   <div class="filterIcon txtIcon">
-                    N
+                  ${item.grade}
                   </div>
                 </div>
               </div>
@@ -169,5 +197,6 @@
       </div>
     </div>
   </div>
+
 </body>
 </html>
