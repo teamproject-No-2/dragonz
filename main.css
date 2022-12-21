@@ -12,6 +12,7 @@
 body {
   font-family: "Poppins", "Noto Sans KR", sans-serif;
   text-align: center;
+  overflow-x: hidden;
 }
 
 /* 공통 */
@@ -103,6 +104,7 @@ main #main_home #bgImg {
   right: 13%;
 }
 
+/* main - home - txt */
 main #main_home .main_home_txt {
   width: 45%;
 
@@ -125,6 +127,7 @@ main #main_home .main_home_txt p {
   line-height: 1.3;
 }
 
+/* main - home - characters */
 main #main_home .main_home_characters {
   /* grid-column: 2/3; */
   width: 55%;
@@ -174,10 +177,14 @@ main #main_home .main_home_characters .characters_stage .stage_left img {
 }
 main #main_home .main_home_characters .characters_stage .stage_center img {
   height: 500px;
+  transition: 1s;
+  transform: scale(10px);
 }
 main #main_home .main_home_characters .characters_stage .stage_right img {
   height: 150px;
 }
+
+/* main - home - banner */
 main #main_home .main_home_banner {
   /* grid-column: 1/3;
   grid-row: 2/3; */
@@ -248,6 +255,9 @@ main #main_story .story_cards .card {
   transition: 0.4s;
   text-align: left;
 }
+/* main #main_story .story_cards .card1.active {
+  transform: rotate(0) scale(10px);
+} */
 main #main_story .story_cards .card1 {
   top: 0;
   left: 230px;
@@ -277,11 +287,6 @@ main #main_story .story_cards .card5 {
   left: 1270px;
   box-shadow: rgba(236, 66, 31, 0.1) 0px 3px 20px;
 }
-
-/* main #main_story .story_cards .card:hover {
-  transform: rotate(0) scale(10px);
-} */
-
 main #main_story .story_cards .card > img {
   width: 290px;
   height: 290px;
@@ -328,7 +333,7 @@ main #main_project .games {
   display: flex;
 }
 main #main_project .games section {
-  width: 12%;
+  width: 13%;
   /* width: 730px; */
   height: 503px;
   border-radius: 20px;
@@ -337,6 +342,7 @@ main #main_project .games section {
   justify-content: center;
   align-items: center;
   filter: opacity(50%);
+  transition: 0.4s;
 }
 
 main #main_project .games section .wrapper {
@@ -352,8 +358,18 @@ main #main_project .games section .wrapper {
 main #main_project .games section .wrapperTxt {
   margin-left: 128px;
   text-align: left;
-
   opacity: 0;
+}
+main #main_project .games section .icon {
+  position: relative;
+}
+main #main_project .games section .icon figcaption {
+  color: #fff;
+  font-weight: bold;
+  font-size: 22px;
+  position: absolute;
+  top: 15vh;
+  line-height: 1;
 }
 main #main_project .games section .wrapperTxt h4 {
   margin-top: 0;
@@ -435,6 +451,9 @@ main #main_project .games section.on .wrapper {
 main #main_project .games section.on .wrapperTxt {
   opacity: 1;
 }
+main #main_project .games section.on .icon figcaption {
+  display: none;
+}
 main #main_project .games section.on .wrapperTxt p {
   transition: 0.5s;
   /* opacity: 1; */
@@ -483,32 +502,44 @@ main #main_roadmap .roadmap_head h2 {
 main #main_roadmap .roadmap_body {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: column;
-  /* justify-content: center; */
-  align-items: center;
   position: relative;
+  justify-content: space-evenly;
   z-index: 9999;
-  height: 190vh;
+  height: 180vh;
   width: 80%;
   margin: 0 auto;
 }
+
 main #main_roadmap .roadmap_body .roadmap_box {
   width: 640px;
-  padding: 50px 50px 40px;
+  padding: 50px 50px 0;
   background-color: #fff;
   border-radius: 30px;
   position: relative;
-  margin: 0 0 80px;
+  margin: 0 0 30px;
+  overflow: hidden;
+  transition: 0.3s;
 }
 main #main_roadmap .roadmap_body .roadmap_box .popUpCharacter {
   margin-top: 40px;
   width: 35%;
-  display: none;
+  height: 0;
+  /* display: none; */
+  transition: 0.5s;
+  transform: translateY(100%);
+}
+
+/* hover */
+main #main_roadmap .roadmap_body .roadmap_box:hover .popUpCharacter {
+  height: 100%;
+  transform: translateY(30%);
 }
 main #main_roadmap .roadmap_body .roadmap_box:hover {
   background-color: #1b1b1b;
   color: #fff;
+  transform: scale(20px);
 }
+
 main #main_roadmap .roadmap_body .roadmap_box .completed {
   position: absolute;
   top: -10px;
@@ -544,7 +575,7 @@ main #main_roadmap .roadmap_body .roadmap_box ul li {
 main #main_roadmap .viewMore {
   background-color: #000;
   box-shadow: rgba(255, 255, 255, 0.9) 3px 3px;
-  /* margin: 0 100px; */
+  margin: 0 40%;
 }
 main #main_roadmap .viewMore:hover {
   box-shadow: rgba(255, 255, 255, 0.9) 0 0;
@@ -553,6 +584,8 @@ main #main_roadmap .viewMore:hover {
 /* article 5 partners */
 main #main_partners {
   background-color: var(--bg-lightGray);
+  position: relative;
+  height: 90vh;
 }
 main #main_partners h2 {
   margin-bottom: 70px;
@@ -562,12 +595,28 @@ main #main_partners .line2 {
   width: 100%;
   height: 150px;
   overflow: hidden;
-  margin: 20px 0;
+  /* margin: 20px 0; */
+  position: absolute;
+  bottom: 45vh;
+
+  animation: partners_mov 30s infinite alternate;
 }
+main #main_partners .line2 {
+  bottom: 25vh;
+  animation-delay: 1s;
+}
+/* @keyframes partners_mov {
+  0% {
+    right: -10%;
+  }
+  100% {
+    right: 110%;
+  }
+} */
 main #main_partners ul {
   display: flex;
   flex-wrap: wrap;
-  position: relative;
+
   width: 100%;
 }
 main #main_partners ul li {
@@ -577,19 +626,8 @@ main #main_partners ul li {
   background-color: #fff;
   margin-right: 40px;
   margin-bottom: 30px;
-  position: absolute;
-  top: 0;
-  right: 0;
-  animation: partners_mov 9s infinite;
 }
-@keyframes partners_mov {
-  0% {
-    right: -10%;
-  }
-  100% {
-    right: 110%;
-  }
-}
+
 main #main_partners ul li > .mouseenter {
   width: 340px;
   height: 140px;
@@ -600,11 +638,12 @@ main #main_partners ul li > .mouseenter {
   left: 0;
   opacity: 0;
 }
-main #main_partners .line2 ul {
-  padding-left: 0;
-}
 
 main #main_partners .partners_btn {
+  position: absolute;
+  bottom: 5vh;
+  left: 50%;
+  transform: translateX(-50%);
   margin: 70px auto;
 }
 
@@ -652,6 +691,7 @@ main #main_partners .partners_btn {
   transform: translateY(-50%);
   z-index: 9;
   opacity: 0;
+  overflow: hidden;
 }
 #main_fixed_btn .float_btn a .hoverBg h5 {
   color: var(--bg-lightBlue);
@@ -664,7 +704,7 @@ main #main_partners .partners_btn {
 }
 
 /* hover */
-/* #main_fixed_btn .float_btn:hover .hoverBg {
+#main_fixed_btn .float_btn:hover .hoverBg {
   width: 125px;
   z-index: 9;
   opacity: 1;
@@ -677,7 +717,7 @@ main #main_partners .partners_btn {
 #main_fixed_btn .float_btn:hover img {
   color: var(--bg-lightBlue);
   filter: opacity(0.5) drop-shadow(0 0 0 #189cf4);
-} */
+}
 
 #main_fixed_btn .scrollup {
   width: 45px;
