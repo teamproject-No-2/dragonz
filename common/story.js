@@ -52,7 +52,7 @@ const txtIcon = document.querySelector('.txtIcon');
 data.forEach((item) => {
   // 리스트 템플릿 (내부 링크 수정)
   itemList.innerHTML += `
-  <div class="itemCard">
+  <div class="itemCard popUpClick">
     <div class="cardInner">
       <div class="cardImg">
         <img src=" ${item.img}" alt="item01">
@@ -92,6 +92,7 @@ const storyIcon = document.querySelector('.storyIcon');
 // if(배열중 proj가 없는 조건) {
 //   projIcon.style.display = 'none'
 // }
+// 아니면 팝업 클릭할곳 처럼 .querySelectorAll하고 forEach로 클래스삭제 < 조건문 달아서?
 
 let project = data.filter(project => project.proj === 1);
 console.log(project);
@@ -99,25 +100,28 @@ console.log(project);
 // 검색
 
 
-// 팝업
+// 팝업 ++ 팝업시에 스크롤 안되게 할것 / 팝업 내용...
 const popInfo = document.getElementById('popInfo');
 // 클릭할 곳
-const itemCard = document.querySelectorAll('.itemCard');
-itemCard.forEach((pop) => {
+const popUpClick = document.querySelectorAll('.popUpClick');
+const body = document.querySelector('body');
+popUpClick.forEach((pop) => {
   pop.addEventListener('click', () => {
     popInfo.style.display = 'flex'
+    body.style.overflow = 'hidden'
   })
 });
 // 닫기 버튼 클릭시
 const closeBtn = popInfo.querySelector('.closeBtn');
 closeBtn.addEventListener('click', () => {
     popInfo.style.display = 'none'
+    body.style.overflow = 'visible'
 });
 // 팝업창 외부영역 클릭시 닫기
 popInfo.addEventListener('click', e => {
   const evTarget = e.target;
   if(evTarget.classList.contains('popDel')) {
       popInfo.style.display = 'none'
+      body.style.overflow = 'visible'
   }
 });
-
