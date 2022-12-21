@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>메타토이드래곤즈 | Meta Toy DragonZ NFT</title>
+  <!-- google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <!-- css -->
+  <link rel="stylesheet" href="./common/minireset.min.css">
+  <link rel="stylesheet" href="./common/swiper-bundle.min.css">
+  <link rel="stylesheet" href="./common/story.css">
+  <!-- js -->
+  <script src="./common/swiper-bundle.min.js"></script>
+  <script defer src="./common/story.js"></script>
+</head>
+<body>
+  <div class="storyHeader">
+    <div class="leftHead">
+      <h2 id="storyTitle">STORY</h2>
+      <p id="storySubTitle">MEET A TOY DRAGONZ</p>
+      <p id="storySentence">메타토이월드에서 토이 드래곤Z의 모험을 함께 즐겨보세요.</p>
+    </div>
+    <div class="rightHead">
+      <div class="searchBox">
+        <span class="innerTxt">MTZD#</span>
+        <input type="text" name="search" id="search" placeholder="0000">
+        <button type="button"></button>
+      </div>
+    </div>
+  </div>
+  <!-- storyContents -->
+  <div class="storyContents">
+    <div class="leftArea">
+      <div class="filter filterNo1">
+        <p class="filterTit">FILTER</p>
+        <div class="filterCheck">
+          <form action="">
+            <div class="filterCont">
+              <input type="checkbox" name="filter" id="cbProj">
+              <label for="cbProj">PROJECT<img src="./images/story/icon_project_pop.png" alt="PROJECT"></label>
+            </div>
+            <div class="filterCont">
+              <input type="checkbox" name="filter" id="cbLink">
+              <label for="cbLink">LINK<img src="./images/story/icon_link_pop.png" alt="LINK"></label>
+            </div>
+            <div class="filterCont">
+              <input type="checkbox" name="filter" id="cbStory">
+              <label for="cbStory">STORY<img src="./images/story/icon_story_pop.png" alt="STORY"></label>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="filter filterNo2">
+        <p class="filterTit">GRADE</p>
+        <div class="filterCheck">
+          <form action="">
+            <div class="filterCont">
+              <input type="checkbox" name="filter" id="cbLegend">
+              <label for="cbLegend">LEGENDARY</label>
+            </div>
+            <div class="filterCont">
+              <input type="checkbox" name="filter" id="cbUR">
+              <label for="cbUR">ULTRA RARE</label>
+            </div>
+            <div class="filterCont">
+              <input type="checkbox" name="filter" id="cbSR">
+              <label for="cbSR">SUPER RARE</label>
+            </div>
+            <div class="filterCont">
+              <input type="checkbox" name="filter" id="cbRare">
+              <label for="cbRare">RARE</label>
+            </div>
+            <div class="filterCont">
+              <input type="checkbox" name="filter" id="cbNM">
+              <label for="cbNM">NORMAL</label>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="rightArea">
+      <!-- silde -->
+      <div class="swiper storySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide slideBg slideBg1">
+            <div class="slideTxt">
+              <span class="boldTxt">An animation artist with music and artwork</span>
+              <span class="lightTxt">Creator RDR</span>
+            </div>
+            <img src="./images/story/story-slide01.png" alt="01">
+          </div>
+          <div class="swiper-slide slideBg slideBg2">
+            <div class="slideTxt">
+              <span class="boldTxt">be healthy with tokkigang!</span>
+              <span class="lightTxt">tokkigang</span>
+            </div>
+            <img src="./images/story/story-slide02.png" alt="02">
+          </div>
+          <div class="swiper-slide slideBg slideBg3">
+            <div class="slideTxt">
+              <span class="boldTxt">Let's explore the Meta Toy World!</span>
+              <span class="lightTxt">MTDZ the Game</span>
+            </div>
+            <img src="./images/story/story-slide03.png" alt="03">
+          </div>
+          <div class="swiper-slide slideBg slideBg4">
+            <div class="slideTxt">
+              <span class="boldTxt">BAYC meets MTDZ!</span>
+              <span class="lightTxt">Meta Toy Bricks</span>
+            </div>
+            <img src="./images/story/story-slide04.png" alt="04">
+          </div>
+          <div class="swiper-slide slideBg slideBg5">
+            <div class="slideTxt">
+              <span class="boldTxt">E-sports meets NFT!</span>
+              <span class="lightTxt">Meta Toy Gamers</span>
+            </div>
+            <img src="./images/story/story-slide05.png" alt="05">
+          </div>
+        </div>
+        <div class="swiper-button-prev slideBtn slideLeft"></div>
+        <div class="swiper-button-next slideBtn slideRight"></div>
+      </div>
+
+      <!-- item -->
+      <div class="itemContents">
+        <div class="itemTitle">
+          <div class="titleLeft">
+            <span class="itemNum">
+              <span id="listCount">nnnn</span>
+              items
+            </span>
+          </div>
+          <div class="titleRight">
+            <button class="refreshBtn"><img src="./images/story/refresh_icon.png" alt="refresh"></button>
+          </div>
+        </div>
+
+        <div class="itemList">
+          <!-- 리스트01 시작 (템플릿)-->
+          <!-- <div class="itemCard" id="popupCard01">
+            <div class="cardInner">
+              <div class="cardImg">
+                <img src="./images/story/story-items001.png" alt="item01">
+              </div>
+              <div class="cardTxt">
+                <span class="cardTitle">MTDZ#9514</span>
+                <div class="cardIcon">
+                  <div class="filterIcon linkIcon">
+                    <img src="./images/story/icon_link_pop.png" alt="link">
+                  </div>
+                  <div class="filterIcon projIcon">
+                    <img src="./images/story/icon_project_pop.png" alt="project">
+                  </div>
+                  <div class="filterIcon storyIcon">
+                    <img src="./images/story/icon_story_pop.png" alt="story">
+                  </div>
+                  <div class="filterIcon txtIcon">
+                    N
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> -->
+          <!-- 리스트01 끝 -->
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
