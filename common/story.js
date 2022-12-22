@@ -27,35 +27,33 @@ const data = [
   {id: 9, tag: '9560', proj: 0, link: 1, story: 1, grade:'S', img: './images/story/story-items010.png'},
   {id: 10, tag: '9778', proj: 0, link: 1, story: 1, grade:'S', img: './images/story/story-items011.png'},
   {id: 11, tag: '9975', proj: 0, link: 1, story: 1, grade:'L', img: './images/story/story-items012.gif'},
-  {id: 12, tag: '9545', proj: 0, link: 1, story: 1, grade:'S', img: './images/story/story-items013.png'},
-  {id: 13, tag: '1577', proj: 0, link: 1, story: 1, grade:'S', img: './images/story/story-items014.png'},
-  {id: 14, tag: '1577', proj: 0, link: 1, story: 1, grade:'S', img: './images/story/story-items015.png'},
-  {id: 15, tag: '1589', proj: 0, link: 1, story: 1, grade:'S', img: './images/story/story-items016.png'},
-  {id: 16, tag: '1846', proj: 0, link: 1, story: 1, grade:'S', img: './images/story/story-items017.png'},
-  {id: 17, tag: '3726', proj: 0, link: 1, story: 1, grade:'S', img: './images/story/story-items018.png'},
-  {id: 18, tag: '4682', proj: 0, link: 1, story: 1, grade:'S', img: './images/story/story-items019.png'},
-  {id: 19, tag: '5462', proj: 0, link: 1, story: 1, grade:'S', img: './images/story/story-items020.png'},
-  {id: 20, tag: '9676', proj: 0, link: 1, story: 1, grade:'S', img: './images/story/story-items021.png'},
-  {id: 21, tag: '9854', proj: 0, link: 1, story: 1, grade:'S', img: './images/story/story-items022.png'},
-  {id: 22, tag: '10000', proj: 0, link: 1, story: 1, grade:'S', img: './images/story/story-items023.png'},
+  {id: 12, tag: '9545', proj: 0, link: 1, story: 0, grade:'S', img: './images/story/story-items013.png'},
+  {id: 13, tag: '9547', proj: 0, link: 1, story: 0, grade:'S', img: './images/story/story-items014.png'},
+  {id: 14, tag: '1577', proj: 0, link: 0, story: 1, grade:'S', img: './images/story/story-items015.png'},
+  {id: 15, tag: '1589', proj: 0, link: 0, story: 1, grade:'S', img: './images/story/story-items016.png'},
+  {id: 16, tag: '1846', proj: 0, link: 0, story: 1, grade:'S', img: './images/story/story-items017.png'},
+  {id: 17, tag: '3726', proj: 0, link: 0, story: 1, grade:'S', img: './images/story/story-items018.png'},
+  {id: 18, tag: '4682', proj: 0, link: 0, story: 1, grade:'S', img: './images/story/story-items019.png'},
+  {id: 19, tag: '5462', proj: 0, link: 0, story: 1, grade:'S', img: './images/story/story-items020.png'},
+  {id: 20, tag: '9676', proj: 0, link: 0, story: 1, grade:'S', img: './images/story/story-items021.png'},
+  {id: 21, tag: '9854', proj: 0, link: 0, story: 1, grade:'S', img: './images/story/story-items022.png'},
+  {id: 22, tag: '10000', proj: 0, link: 0, story: 1, grade:'L', img: './images/story/story-items023.png'},
 ];
 
 const itemList = document.querySelector('.itemList');
 
 // console.log(`${item.tag}, ${item.proj}, ${item.link}, ${item.story}, ${item.grade}`);
 
-const cardTitle = document.querySelector('.cardTitle');
-const txtIcon = document.querySelector('.txtIcon');
-
+// 템플릿 문자열로 변환..
 
 // 아이콘 처리, 이미지(배열?)
 data.forEach((item) => {
   // 리스트 템플릿 (내부 링크 수정)
   itemList.innerHTML += `
-  <div class="itemCard popUpClick">
+  <div class="itemCard popUpClick one_quarter">
     <div class="cardInner">
       <div class="cardImg">
-        <img src=" ${item.img}" alt="item01">
+        <img src="${item.img}" alt="item01">
       </div>
       <div class="cardTxt">
         <span class="cardTitle">MTDZ#${item.tag}</span>
@@ -80,27 +78,67 @@ data.forEach((item) => {
 });
 
 // 조건문으로 html 삭제?
-const cardIcon = document.querySelector('.cardIcon');
+const itemCard = document.querySelectorAll('.itemCard');
 
-const projIcon = document.querySelector('.projIcon');
-const linkIcon = document.querySelector('.linkIcon');
-const storyIcon = document.querySelector('.storyIcon');
+const projIcon = document.querySelectorAll('.projIcon');
+const linkIcon = document.querySelectorAll('.linkIcon');
+const storyIcon = document.querySelectorAll('.storyIcon');
 
-// 배열 안 {객체} boolean 만 꺼내고 참과 거짓 여부
+// projIcon[i].classList.add('rmv');
+// 
+// projIcon 
+for(let i = 0; i < projIcon.length; i++) {
+  if(data[i].proj === 0) {
+    projIcon[i].classList.add('rmv');
+  };
+  console.log(data[i].proj);
+};
+// linkIcon
+for(let i = 0; i < linkIcon.length; i++) {
+  if(data[i].link === 0) {
+    linkIcon[i].classList.add('rmv');
+  };
+  console.log(data[i].proj);
+};
+// storyIcon
+for(let i = 0; i < storyIcon.length; i++) {
+  if(data[i].story === 0) {
+    storyIcon[i].classList.add('rmv');
+  };
+  console.log(data[i].proj);
+};
 
-// itemList
-// if(배열중 proj가 없는 조건) {
-//   projIcon.style.display = 'none'
-// }
-// 아니면 팝업 클릭할곳 처럼 .querySelectorAll하고 forEach로 클래스삭제 < 조건문 달아서?
 
-let project = data.filter(project => project.proj === 1);
-console.log(project);
+// 검색 ??? -> MTDZ# 적어도 검색됨 / 일부만 맞아도 검색됨..
+const btn = document.getElementById('btn');
+const search = document.getElementById('search');
 
-// 검색
+search.focus();
+search.addEventListener('keydown', function(e){
+  if(e.key === "Enter"){
+    Filter();
+  }
+})
+btn.addEventListener('click',Filter);
+
+function Filter(){
+  let value = document.getElementById('search').value;
+  let item = document.getElementsByClassName('one_quarter');
+   for(i = 0; i < item.length; i++) {
+    let name = item[i].getElementsByClassName("cardTitle");
+    if(name[0].innerHTML.indexOf(value) > -1){
+      item[i].style.display = "flex";
+    } else {
+      item[i].style.display = "none";
+    }
+  }
+}
+
+// 체크박스로 필터
 
 
-// 팝업 ++ 팝업시에 스크롤 안되게 할것 / 팝업 내용...
+
+// 팝업 ++팝업 내용...
 const popInfo = document.getElementById('popInfo');
 // 클릭할 곳
 const popUpClick = document.querySelectorAll('.popUpClick');
