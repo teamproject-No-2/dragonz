@@ -196,6 +196,11 @@ body {
   display: flex;
   align-items: center;
 }
+.itemContents .itemTitle .titleLeft .filterChkRes {
+  background-color: orange;
+  height: 100%;
+  width: 600px;
+}
 .itemContents .itemTitle .titleRight .refreshBtn {
   width: 44px;
   height: 44px;
@@ -225,6 +230,25 @@ body {
 }
 .itemList .itemCard .cardInner {
   padding: 10px 10px 20px;
+  position: relative;
+}
+.itemList .itemCard .cardInner:hover {
+  background-color: #1B1B1B; 
+  color: #fff;
+}
+.itemList .itemCard .cardInner:hover .cardHover {
+  background: url(../images/story/partner_logo_bg.png) no-repeat 50% / cover;
+  width: 160px;
+  height: 160px;
+  position: absolute;
+  right: -40%; bottom: -10%;
+}
+.itemList .itemCard .cardInner:hover .cardTxt .cardIcon .filterIcon {
+  background-color: #444444;
+}
+.itemList .itemCard .cardInner:hover .cardTxt .cardIcon .filterIcon img {
+  filter: invert(100%);
+  -webkit-filter: invert(100%);
 }
 .itemList .itemCard .cardInner .cardImg img {
   border-radius: 15px;
@@ -257,11 +281,6 @@ body {
   text-align: center;
   line-height: 35px;
 }
-/* 삭제 css */
-.itemList .itemCard .cardInner .cardTxt .cardIcon .linkIcon.rmv { display: none;}
-.itemList .itemCard .cardInner .cardTxt .cardIcon .projIcon.rmv { display: none;}
-.itemList .itemCard .cardInner .cardTxt .cardIcon .storyIcon.rmv { display: none;}
-
 
 /* popUp */
 .popInfo.popDel { display: none;}

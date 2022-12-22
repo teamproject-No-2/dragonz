@@ -53,7 +53,7 @@
     <div class="rightHead">
       <div class="searchBox">
         <span class="innerTxt">MTZD#</span>
-        <input type="text" name="search" id="search" placeholder="0000">
+        <input type="text" name="search" id="search" class="refresh" placeholder="0000">
         <button type="button" id="btn"></button>
       </div>
     </div>
@@ -66,15 +66,15 @@
         <div class="filterCheck">
           <form action="">
             <div class="filterCont">
-              <input type="checkbox" name="filter" id="cbProj">
+              <input type="checkbox" onchange="checkBox(this)" name="filter" id="cbProj" class="refresh" value="PROJECT">
               <label for="cbProj">PROJECT<img src="./images/story/icon_project_pop.png" alt="PROJECT"></label>
             </div>
             <div class="filterCont">
-              <input type="checkbox" name="filter" id="cbLink">
+              <input type="checkbox" onchange="checkBox(this)" name="filter" id="cbLink" class="refresh" value="LINK">
               <label for="cbLink">LINK<img src="./images/story/icon_link_pop.png" alt="LINK"></label>
             </div>
             <div class="filterCont">
-              <input type="checkbox" name="filter" id="cbStory">
+              <input type="checkbox" onchange="checkBox(this)" name="filter" id="cbStory" class="refresh" value="STORY">
               <label for="cbStory">STORY<img src="./images/story/icon_story_pop.png" alt="STORY"></label>
             </div>
           </form>
@@ -85,23 +85,23 @@
         <div class="filterCheck">
           <form action="">
             <div class="filterCont">
-              <input type="checkbox" name="filter" id="cbLegend">
+              <input type="checkbox" onchange="checkBox(this)" name="filter" id="cbLegend" class="refresh" value="L">
               <label for="cbLegend">LEGENDARY</label>
             </div>
             <div class="filterCont">
-              <input type="checkbox" name="filter" id="cbUR">
+              <input type="checkbox" onchange="checkBox(this)" name="filter" id="cbUR" class="refresh" value="U">
               <label for="cbUR">ULTRA RARE</label>
             </div>
             <div class="filterCont">
-              <input type="checkbox" name="filter" id="cbSR">
+              <input type="checkbox" onchange="checkBox(this)" name="filter" id="cbSR" class="refresh" value="S">
               <label for="cbSR">SUPER RARE</label>
             </div>
             <div class="filterCont">
-              <input type="checkbox" name="filter" id="cbRare">
+              <input type="checkbox" onchange="checkBox(this)" name="filter" id="cbRare" class="refresh" value="R">
               <label for="cbRare">RARE</label>
             </div>
             <div class="filterCont">
-              <input type="checkbox" name="filter" id="cbNM">
+              <input type="checkbox" onchange="checkBox(this)" name="filter" id="cbNM" class="refresh" value="N">
               <label for="cbNM">NORMAL</label>
             </div>
           </form>
@@ -161,9 +161,10 @@
               <span id="listCount">nnnn</span>
               items
             </span>
+            <div class="filterChkRes"></div>
           </div>
           <div class="titleRight">
-            <button class="refreshBtn"><img src="./images/story/refresh_icon.png" alt="refresh"></button>
+            <button class="refreshBtn" onclick="clearInput()"><img src="./images/story/refresh_icon.png" alt="refresh"></button>
           </div>
         </div>
 

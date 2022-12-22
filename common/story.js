@@ -9,9 +9,6 @@ const swiper = new Swiper('.swiper', {
   },
 });
 
-// array - filter
-// 배열로 나열 -> inner.HTML로 입력? (text.content) -> if문으로 조건 거름 
-// project, link, story, grade 
 
 // id = idx , list
 const data = [
@@ -42,9 +39,7 @@ const data = [
 
 const itemList = document.querySelector('.itemList');
 
-// console.log(`${item.tag}, ${item.proj}, ${item.link}, ${item.story}, ${item.grade}`);
-
-// 템플릿 문자열로 변환..
+// 템플릿 문자열로 변환?
 
 // 아이콘 처리, 이미지(배열?)
 data.forEach((item) => {
@@ -52,6 +47,7 @@ data.forEach((item) => {
   itemList.innerHTML += `
   <div class="itemCard popUpClick one_quarter">
     <div class="cardInner">
+      <div class="cardHover"></div>
       <div class="cardImg">
         <img src="${item.img}" alt="item01">
       </div>
@@ -77,35 +73,29 @@ data.forEach((item) => {
   `;
 });
 
-// 조건문으로 html 삭제?
-const itemCard = document.querySelectorAll('.itemCard');
 
 const projIcon = document.querySelectorAll('.projIcon');
 const linkIcon = document.querySelectorAll('.linkIcon');
 const storyIcon = document.querySelectorAll('.storyIcon');
-
-// projIcon[i].classList.add('rmv');
-// 
+// projIcon[i].style.display = 'none';
+// projIcon[i].remove();
 // projIcon 
 for(let i = 0; i < projIcon.length; i++) {
   if(data[i].proj === 0) {
-    projIcon[i].classList.add('rmv');
+    projIcon[i].remove();
   };
-  console.log(data[i].proj);
 };
 // linkIcon
 for(let i = 0; i < linkIcon.length; i++) {
   if(data[i].link === 0) {
-    linkIcon[i].classList.add('rmv');
+    linkIcon[i].remove();
   };
-  console.log(data[i].proj);
 };
 // storyIcon
 for(let i = 0; i < storyIcon.length; i++) {
   if(data[i].story === 0) {
-    storyIcon[i].classList.add('rmv');
+    storyIcon[i].remove();
   };
-  console.log(data[i].proj);
 };
 
 
@@ -116,15 +106,15 @@ const search = document.getElementById('search');
 search.focus();
 search.addEventListener('keydown', function(e){
   if(e.key === "Enter"){
-    Filter();
+    searchFilter();
   }
 })
-btn.addEventListener('click',Filter);
+btn.addEventListener('click',searchFilter);
 
-function Filter(){
+function searchFilter(){
   let value = document.getElementById('search').value;
   let item = document.getElementsByClassName('one_quarter');
-   for(i = 0; i < item.length; i++) {
+  for(i = 0; i < item.length; i++) {
     let name = item[i].getElementsByClassName("cardTitle");
     if(name[0].innerHTML.indexOf(value) > -1){
       item[i].style.display = "flex";
@@ -135,6 +125,56 @@ function Filter(){
 }
 
 // 체크박스로 필터
+function sel(){
+	// 1. chk라는 이름을 가진 모든 checkbox 가져온다.
+	let chks = document.getElementsByName("chk");
+		
+	for(let i = 0; i < chks.length; i++){
+		// 2. 만일 chk들 중에 체크되어있는 element가 있다면,
+		if( chks[i].checked ){
+			// 3. 체크되어있는 chk.value값을 Id로 가지는 요소의 배경색을 chk.value값으로 바꾸자.
+			// document.getElementById(???).stlye.backgroundColor=???
+			document.getElementById(chks[i].value).style.background = chks[i].value;
+		} else {
+			document.getElementById(chks[i].value).style.background = "";
+		}
+	}
+}
+
+
+// 아이템 숫자 표기: 필터->재배열 ->배열수..?
+
+
+// 검색값 초기화 (+ 필터 적용했을 때도 초기화 되는지)
+function clearInput(){
+  let item = document.getElementsByClassName('one_quarter');
+  for(let i = 0; i <= item.length; i++){
+    item[i].style.display = "flex";
+  }
+}
+
+
+// 필터된 단어 표시
+// function checkBox(checked) {
+//   let result = document.querySelector('.filterChkRes');
+//   if (checked.checked == ture) {
+//     if(result.value == '') {
+//       result.value = checked.getAttribute('value');
+//     } else {
+//       result.value += ',' + checked.getAttribute('value');
+//     }
+//   } else {
+//     let resultArr = result.value.split(',');
+//     for(let i = 0; i < resultArr.length; i++) {
+//       if(resultArr[i] == checked.getAttribute('value')) {
+//         resultArr.splice(i,1);
+//         break;
+//       }
+//     }
+//     result.value = resultArr.join(',');
+//   }
+// }
+
 
 
 
