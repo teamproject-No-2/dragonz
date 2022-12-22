@@ -1,17 +1,26 @@
 // main - home
-// const bannerBoxs = document.querySelectorAll(".main_home_banner_box");
-// console.log(bannerBoxs);
+/* const banner = document.querySelectorAll(".main_home_banner_box");
+const characters = document.querySelectorAll(".characters_stage > li");
+const characterImgs = document.querySelectorAll(".characters_stage > li > img");
+console.log(banner);
 
-// const autoMove = bannerBoxs.forEach(() => {
-//   let i = 0;
+(function autoMove() {
+  let i = 0;
 
-//   bannerBoxs[i].classList.remove("active");
-//   i++;
-//   i >= bannerBoxs.length ? (i = 0) : false;
-//   bannerBoxs[i].classList.add("active");
-// });
+  banner.forEach((banner) => {
+    banner.addEventListener("mouseenter", () => {
+      banner.classList.remove("move");
+      i++;
+      if (i >= banner.length) {
+        i = 0;
+      }
+      banner[i].classList.add("move");
+    });
+  });
+})(); */
+// autoMove();
 
-// setTimeout(autoMove, 2000);
+// setInterval(autoMove, 3000);
 
 // main - project
 const sections = document.querySelectorAll(".games > section");
@@ -52,17 +61,19 @@ sections[4].addEventListener("mouseenter", () => {
   sections[4].classList.add("on");
 });
 
+// main - roadmap
+
 // main -partners
 const lis = document.querySelectorAll("li");
 const line1 = document.querySelector(".line1");
 const line2 = document.querySelector(".line2");
 
-const lineLength = line1.clientWidth;
+const lineLength = line1.offsetWidth;
 console.log(lineLength);
 
 line1.animate(
   {
-    transform: [`translateX(-${lineLength}px)`, `translateX(${lineLength}px)`],
+    transform: [`translateX(-${lineLength}px)`, `translateX(${lineLength})`],
   },
   {
     duration: 20000,
@@ -75,7 +86,7 @@ line1.animate(
 );
 line2.animate(
   {
-    transform: [`translateX(-${lineLength}px)`, `translateX(${lineLength}px)`],
+    transform: [`translateX(-${lineLength}px)`, `translateX(${lineLength})`],
   },
   {
     delay: 1000,
@@ -96,3 +107,29 @@ goUp.addEventListener("click", () => {
     behavior: "smooth",
   });
 });
+/* 
+// 마우스 커서
+const cursor = document.querySelector(".cursor");
+// 마우스 좌표
+let mouseX = 0;
+let mouseY = 0;
+// 커서를 따라다니는 이모지 좌표
+let cursorX = 0;
+let cursorY = 0;
+
+// 마우스 이동
+addEventListener("mousemove", (e) => {
+  mouseX = e.clientX - 50;
+  mouseY = e.clientY - 50;
+});
+
+function ani() {
+  requestAnimationFrame(ani); // 연속 호툴이 필요하기 때문에 이렇게 함수로 작성
+  cursorX += (mouseX - cursorX) * 0.1;
+  cursorY += (mouseY - cursorY) * 0.1;
+
+  cursor.style.transform = `translate(${cursorX}px, ${cursorY}px)`;
+}
+
+ani();
+ */
