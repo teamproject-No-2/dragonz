@@ -86,7 +86,7 @@ main #main_home {
   height: 100vh;
   background-color: var(--bg-lightBlue);
   position: relative;
-  padding-top: 120px;
+  padding-top: 50px;
 }
 main #main_home .moon_img {
   background-color: #ffd92e;
@@ -126,11 +126,9 @@ main #main_home #star2 {
 
 main #main_home .main_home_container {
   width: 100%;
-  height: 85vh;
   display: flex;
   flex-wrap: wrap;
-  background: url(./main-images/home_main_blink1.png) no-repeat 77% 15% / 20%;
-  position: relative;
+  background: url(./main-images/home_main_blink1.png) no-repeat 75% 15% / 20%;
 }
 /* main - home - txt */
 main #main_home .main_home_txt {
@@ -154,22 +152,33 @@ main #main_home .main_home_txt p {
 }
 
 /* home - 캐릭터 */
+
 main #main_home .stage {
-  /* grid-column: 2/3; */
+  border: 2px orange solid;
   width: 40%;
   display: flex;
   align-items: flex-end;
   justify-content: space-evenly;
+  overflow: hidden;
 }
-main #main_home .stage > img {
-  display: none;
+main #main_home .stage .stage_character {
 }
+
+main #main_home .stage .left img {
+  height: 150px;
+}
+main #main_home .stage .center img {
+  height: 500px;
+  transition: 1s;
+  transform: scale(10px);
+}
+main #main_home .stage .right img {
+  height: 150px;
+}
+
 /* home - banner */
 main #main_home .banner {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  /* grid-row: 2/3; */
   width: 90%;
   margin: 0 auto;
   display: flex;
@@ -177,44 +186,15 @@ main #main_home .banner {
   background-color: #fff;
   color: var(--color-gray);
   width: 75vw;
-  height: 120px;
   border-radius: 20px;
-  z-index: 9;
 }
-main #main_home .banner_character {
+main #main_home .banner .banner_character {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 15vw;
   height: 120px;
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 999;
 }
-main #main_home .banner .banner_character img {
-  object-fit: contain;
-  margin-right: 20px;
-}
-main #main_home .banner .banner_character h4 {
-  font-weight: 500;
-}
-
-/* left center right */
-/* 캐릭터 */
-main #main_home .stage.left img {
-  height: 150px;
-}
-main #main_home .stage.center img {
-  height: 500px;
-  transition: 1s;
-  transform: scale(10px);
-}
-main #main_home .stage.right img {
-  height: 150px;
-}
-/* 배넌 */
 main #main_home .banner .banner_character.center {
   background-color: #1b1b1b;
   color: #fff;
@@ -232,6 +212,13 @@ main #main_home .banner .banner_character.center::after {
   top: -11px;
   left: 50%;
   transform: translateX(-50%);
+}
+main #main_home .banner .banner_character img {
+  object-fit: contain;
+  margin-right: 20px;
+}
+main #main_home .banner .banner_character h4 {
+  font-weight: 500;
 }
 
 /* article 2 story */

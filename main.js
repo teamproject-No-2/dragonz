@@ -1,26 +1,15 @@
 // main - home
-/* const banner = document.querySelectorAll(".main_home_banner_box");
-const characters = document.querySelectorAll(".characters_stage > li");
-const characterImgs = document.querySelectorAll(".characters_stage > li > img");
-console.log(banner);
+/* const bannerCharacter = document.querySelectorAll(".banner_character");
 
-(function autoMove() {
-  let i = 0;
-
-  banner.forEach((banner) => {
-    banner.addEventListener("mouseenter", () => {
-      banner.classList.remove("move");
-      i++;
-      if (i >= banner.length) {
-        i = 0;
-      }
-      banner[i].classList.add("move");
-    });
+function move() {
+  bannerCharacter.forEach((bannerCharacter, i) => {
+    i = 0;
+    bannerCharacter[i].classList.remove("center");
+    i++;
+    bannerCharacter[i].classList.add("center");
   });
-})(); */
-// autoMove();
-
-// setInterval(autoMove, 3000);
+}
+move(); */
 
 // main - project
 const sections = document.querySelectorAll(".games > section");
