@@ -85,9 +85,8 @@ main #main_home {
   width: 100%;
   height: 100vh;
   background-color: var(--bg-lightBlue);
-  display: flex;
-  flex-wrap: wrap;
   position: relative;
+  padding-top: 120px;
 }
 main #main_home .moon_img {
   background-color: #ffd92e;
@@ -107,20 +106,39 @@ main #main_home .water_img {
   bottom: 40vh;
   left: -40px;
 }
-main #main_home #bgImg {
+main #main_home > Img {
   position: absolute;
+}
+main #main_home #bgImg {
   bottom: 37%;
   right: 13%;
 }
+main #main_home #star1 {
+  right: 45%;
+  top: 20%;
+  animation: starIcon2 2s ease-in infinite;
+}
+main #main_home #star2 {
+  right: 20%;
+  top: 35%;
+  animation: starIcon 3s ease-in-out infinite;
+}
 
+main #main_home .main_home_container {
+  width: 100%;
+  height: 85vh;
+  display: flex;
+  flex-wrap: wrap;
+  background: url(./main-images/home_main_blink1.png) no-repeat 77% 15% / 20%;
+  position: relative;
+}
 /* main - home - txt */
 main #main_home .main_home_txt {
+  /* grid-column: 1/2; */
   width: 45%;
-
   line-height: 1;
   text-align: left;
-  padding-left: 240px;
-  padding-top: 15vh;
+  padding: 15vh 0 15vh 300px;
 }
 
 main #main_home .main_home_txt h1 {
@@ -130,105 +148,80 @@ main #main_home .main_home_txt h1 span {
   display: block;
 }
 main #main_home .main_home_txt p {
-  /* font-size: 1.5rem; */
   font-weight: 500;
   color: #124e7a;
   line-height: 1.3;
 }
 
-.characters_stage_container {
-  position: relative;
-}
-/* main - home - characters */
-main #main_home .main_home_characters {
-  width: 55%;
-  /* border: 2px solid teal; */
-  margin: 0 auto 20px;
-  position: relative;
-}
-main #main_home .main_home_characters > img {
-  position: absolute;
-  width: 62px;
-  height: 70px;
-}
-main #main_home .main_home_characters #star1 {
-  left: 13%;
-  bottom: 70%;
-  animation: starIcon2 2s ease-in infinite;
-}
-main #main_home .main_home_characters #star2 {
-  left: 55%;
-  bottom: 50%;
-  animation: starIcon 3s ease-in-out infinite;
-}
-
-main #main_home .main_home_characters .characters_stage {
+/* home - 캐릭터 */
+main #main_home .stage {
+  /* grid-column: 2/3; */
+  width: 40%;
   display: flex;
-  width: 75%;
-  height: 600px;
-  position: relative;
-  background: url(./main-images/home_main_blink1.png) no-repeat 80% 15% / 50%;
-  /* border: salmon 2px solid; */
+  align-items: flex-end;
+  justify-content: space-evenly;
 }
-
-main #main_home .main_home_characters .characters_stage li {
+main #main_home .stage > img {
+  display: none;
+}
+/* home - banner */
+main #main_home .banner {
   position: absolute;
   bottom: 0;
-}
-main #main_home .main_home_characters .characters_stage .stage_left {
-  left: 10%;
-}
-main #main_home .main_home_characters .characters_stage .stage_center {
   left: 50%;
-  transform: translateX(-55%);
+  transform: translateX(-50%);
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+  color: var(--color-gray);
+  width: 75vw;
+  height: 120px;
+  border-radius: 20px;
+  z-index: 9;
 }
-main #main_home .main_home_characters .characters_stage .stage_right {
-  right: 10%;
+main #main_home .banner_character {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 15vw;
+  height: 120px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999;
 }
-main #main_home .main_home_characters .characters_stage .stage_left img {
+main #main_home .banner .banner_character img {
+  object-fit: contain;
+  margin-right: 20px;
+}
+main #main_home .banner .banner_character h4 {
+  font-weight: 500;
+}
+
+/* left center right */
+/* 캐릭터 */
+main #main_home .stage.left img {
   height: 150px;
 }
-main #main_home .main_home_characters .characters_stage .stage_center img {
+main #main_home .stage.center img {
   height: 500px;
   transition: 1s;
   transform: scale(10px);
 }
-main #main_home .main_home_characters .characters_stage .stage_right img {
+main #main_home .stage.right img {
   height: 150px;
 }
-
-/* main - home - banner */
-main #main_home .main_home_banner {
-  bottom: 20px;
-  max-width: 85vw;
-  width: 75vw;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 120px;
-  background-color: #fff;
-  color: var(--color-gray);
-  margin: 0 auto;
-  border-radius: 20px;
-}
-main #main_home .main_home_banner .main_home_banner_box {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 17vw;
-  height: 120px;
-  position: relative;
-  padding: 0 20px;
-  box-sizing: border-box;
-}
-
-main #main_home .main_home_banner .main_home_banner_box.move {
+/* 배넌 */
+main #main_home .banner .banner_character.center {
   background-color: #1b1b1b;
   color: #fff;
-  width: 16vw;
   border-radius: 20px;
+  position: relative;
 }
-main #main_home .main_home_banner .main_home_banner_box.move::after {
+main #main_home .banner .banner_character.center::after {
   content: "";
   display: block;
   border-top: 10px solid none;
@@ -239,9 +232,6 @@ main #main_home .main_home_banner .main_home_banner_box.move::after {
   top: -11px;
   left: 50%;
   transform: translateX(-50%);
-}
-main #main_home .main_home_banner .main_home_banner_box h4 {
-  margin: 0 20px 0 40px;
 }
 
 /* article 2 story */
