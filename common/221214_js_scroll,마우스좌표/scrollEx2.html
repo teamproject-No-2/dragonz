@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>scroll Ex2</title>
+  <style>
+    body {
+      margin: 0;
+      text-align: center;
+    }
+    nav {
+      background-color: salmon;
+      text-align: center;
+      font-size: 2em;
+      height: 80px;
+      line-height: 80px;
+    }
+    h1 {
+      margin: 0;
+      background-color: slateblue;
+      font-size: 3em;
+      height: 130px;
+      line-height: 130px;
+      position: sticky;
+      top: 0;
+    }
+    main {
+      height: 300vh;
+      background-color: #ddd;
+      font-size: 1.4em;
+      padding-top: 100px;
+    }
+    footer {
+      background-color: #000;
+      color: #fff;
+      font-size: 2em;
+      height: 100px;
+      line-height: 100px;
+    }
+    #banner {
+      width: 300px;
+      height: 100px;
+      line-height: 100px;
+      background-color: coral;
+      color: #fff;
+      font-size: 2em;
+      position: fixed;
+      right: 0; bottom: 50px;
+      transition: .6s;
+    }
+  </style>
+</head>
+<body>
+  <nav>네비게이션</nav>
+  <h1>scroll Ex2</h1>
+  <main>원하는 위치에서 실행</main>
+  <footer>푸터</footer>
+
+  <div id="banner">배너입니다</div>
+
+  <script>
+    const banner = document.querySelector('#banner');
+
+    addEventListener('scroll', () => {
+      scrollY > 500 ? banner.style.transform = 'translateX(0)' : banner.style.transform = 'translateX(300px)';
+    });
+  </script>
+</body>
+</html>

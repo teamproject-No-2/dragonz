@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>scrollTo(), scrollBy(), scrollIntoView()</title>
+  <style>
+    body {
+      height: 200vh;
+    }
+    .btn_wrap {
+      display: flex;
+      position: fixed;
+    }
+    .btn {
+      border: 3px solid #000;
+      padding: 5px 10px;
+      text-align: center;
+      font-weight: bold;
+      font-size: 1.3em;
+      margin: 10px;
+      color: inherit;
+      text-decoration: none;
+    }
+    .btn:hover {
+      background-color: #000;
+      color: #fff;
+    }
+
+    #box1 { 
+      position: absolute; 
+      top: 200px; 
+      left: 50px; 
+      width: 200px; 
+      height: 100px; 
+      background-color: #ffe15d;
+    }
+    #box2 { 
+      position: fixed; 
+      top: 500px; 
+      left: 30px; 
+      width: 300px; 
+      height: 200px; 
+      background-color: #f49d1a;
+    }
+    #box3 { 
+      position: absolute; 
+      top: 500px; 
+      left: 400px; 
+      width: 100px; 
+      height: 400px; 
+      background-color: #dc3535;
+    }
+  </style>
+</head>
+<body>
+  <div class="box" id="box1">box1</div>
+  <div class="box" id="box2">box2</div>
+  <div class="box" id="box3">box3</div>
+
+  <div class="btn_wrap">
+    <a href="#" class="btn" id="btn1">box1이동</a>
+    <a href="#" class="btn" id="btn1_1">box1이동</a>
+    <a href="#" class="btn" id="btn2">box2이동</a>
+    <a href="#" class="btn" id="btn3">box3이동</a>
+    <a href="#" class="btn" id="btn4">스크롤이동</a>
+  </div>
+
+  <script>
+    /*
+    pageX; 페이지 기준                                                                                                                                                                                                                                                                                                              
+      window.scrollTo(pageX, pageY); 절대 좌표 스크롤 값
+      window.scrollBy(x, y); 현재 스크롤 상태를 기준으로 상대적 스크롤정보 변경
+      window.scrollIntoView(); 화면 처음으로 해당 요소가 스크롤로 이동
+    */
+
+    const btns = document.querySelectorAll('.btn');
+    const boxs = document.querySelectorAll('.box');
+
+    btns[0].addEventListener('click', e => {
+      e.preventDefault();
+
+      console.log(boxs[0].offsetTop); // box1 Y좌표:200
+      scrollTo(0, 200);
+    });
+
+    btns[1].addEventListener('click', e => {
+      e.preventDefault();
+
+      let ht = boxs[0].offsetTop; // box1 Y좌표:200
+      scrollTo({
+        top: ht,
+        // left: 0;
+        behavior: 'smooth'
+      });
+    });
+
+    // pos: fixed
+    btns[2].addEventListener('click', e => {
+      e.preventDefault();
+      let ht = boxs[1].offsetTop; // box2 Y좌표
+      scrollTo(0, ht); // 이동 x
+    });
+
+    btns[3].addEventListener('click', e => {
+      e.preventDefault();
+      // boxs[2].scrollIntoView(); 화면의 처음에 요소가 보임
+      boxs[2].scrollIntoView(false); // 화면의 아래에 요소가 보임
+    });
+
+    btns[4].addEventListener('click', e => {
+      e.preventDefault();
+      scrollBy(0, 100); // 상대값으로 현재 위치에서 스크롤 이동
+    });
+  </script>
+</body>
+</html>

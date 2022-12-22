@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>scrollTop, scrollLeft</title>
+  <style>
+    body {
+      height: 200vh;
+    }
+    .container {
+      width: 250px;
+      height: 250px;
+      overflow: auto;
+    }
+    .container .box {
+      width: 2000px;
+      height: 800px;
+      background-color: lightskyblue;
+    }
+    .btn {
+      border: 3px solid #000;
+      width: 200px;
+      padding: 5px 10px;
+      text-align: center;
+      font-weight: bold;
+      font-size: 1.3em;
+      margin: 10px 0;
+    }
+    .btn:hover {
+      background-color: #000;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <h1>scrollTop, scrollLeft</h1>
+  <h2>가로, 세로 스크롤 되는 크기를 불러오거나 반환</h2>
+
+  <div class="leftBtn btn">left->right</div>
+  <div class="topBtn btn">top->bottom</div>
+
+  <div class="container">
+    <div class="box">
+      <p>text1</p>
+      <p>text2</p>
+      <p>text3</p>
+      <p>text4</p>
+    </div>
+  </div>
+
+  <script>
+    // scrollTop; 스크롤 값. 숫자로 반환
+    addEventListener('scroll', () => {
+      console.log(document.documentElement.scrollTop)
+    });
+
+    /*
+    if(document.body.scrollTop || document.documentElement.scrollTop)
+    */
+
+    const container = document.querySelector('.container');
+    document.querySelector('.leftBtn').addEventListener('click', () => {
+      container.scrollLeft += 150;
+    })
+    document.querySelector('.topBtn').addEventListener('click', () => {
+      container.scrollTop += 100;
+    })
+  </script>
+
+</body>
+</html>

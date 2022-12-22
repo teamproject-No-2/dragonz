@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>마우스좌표Ex3</title>
+  <style>
+    body, div, h1, h2 {
+      margin: 0;
+      color: #fff;
+    }
+    .container {
+      height: 100vh;
+      background: linear-gradient(#00394f, #00384d);
+      overflow: hidden;
+      display: grid;
+      place-content: center;
+      text-align: center;
+      position: relative;
+    }
+    h1 {
+      font-size: 12vw;
+      margin: 0;
+      padding: 0;
+      letter-spacing: 1.3vw;
+      font-weight: normal;
+      position: absolute;
+      line-height: 100vh;
+      width: 100%;
+    }
+    h2 {
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      font-weight: normal;
+      font-size: 3em;
+      color: tomato;
+      margin: 0;
+      padding: 0;
+      position: absolute;
+      line-height: 100vh;
+      width: 100%;
+      font-style: italic;
+      letter-spacing: 5vw;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>javascript</h1>
+    <h2>It's to hard</h2>
+  </div>
+
+  <script>
+    const h1 = document.querySelector('h1');
+    const h2 = document.querySelector('h2');
+
+    const calc = e => {
+      const x = e.clientX;
+      const y = e.clientY;
+
+      // 스크롤바 미포함. 순수 사용자 화면
+      const clientWidth = document.documentElement.clientWidth;
+      // console.log(x, y, clientWidth)
+
+      const movX = x / clientWidth * 20 - 10;
+      const movY = y / clientWidth * 20 - 10;
+      console.log(movX, movY);
+
+      // 움직임
+      h1.style.transform = `translate(${movY}px, ${movX}px)`;
+      h2.style.transform = `translate(${movX}px, ${movY}px)`;
+      // 블러
+      h1.style.filter = `blur(${movX * movY / 8}px)`;
+      h2.style.filter = `blur(${movY * movX / 8}px)`;
+      // 글자가 떨어지는
+      h2.style.letterSpacing = `${(movX * movY) + (clientWidth / 20)}px`;
+    }
+
+    addEventListener('mousemove', calc);
+  </script>
+</body>
+</html>
