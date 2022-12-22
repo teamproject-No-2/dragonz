@@ -126,13 +126,27 @@ main #main_home .main_home_txt p {
   color: #124e7a;
   line-height: 1.3;
 }
-
 /* main - home - characters */
 main #main_home .main_home_characters {
-  /* grid-column: 2/3; */
   width: 55%;
   /* border: 2px solid teal; */
   margin: 0 auto 20px;
+  position: relative;
+}
+main #main_home .main_home_characters > img {
+  position: absolute;
+  width: 62px;
+  height: 70px;
+}
+main #main_home .main_home_characters #star1 {
+  left: 13%;
+  bottom: 70%;
+  animation: starIcon2 2s ease-in infinite;
+}
+main #main_home .main_home_characters #star2 {
+  left: 55%;
+  bottom: 50%;
+  animation: starIcon 3s ease-in-out infinite;
 }
 
 main #main_home .main_home_characters .characters_stage {
@@ -143,21 +157,7 @@ main #main_home .main_home_characters .characters_stage {
   background: url(./main-images/home_main_blink1.png) no-repeat 80% 15% / 50%;
   /* border: salmon 2px solid; */
 }
-main #main_home .main_home_characters .characters_stage > img {
-  position: absolute;
-  width: 62px;
-  height: 70px;
-}
-main #main_home .main_home_characters .characters_stage #star1 {
-  left: 20%;
-  top: 30%;
-  animation: starIcon2 2s ease-in infinite;
-}
-main #main_home .main_home_characters .characters_stage #star2 {
-  left: 75%;
-  bottom: 50%;
-  animation: starIcon 3s ease-in-out infinite;
-}
+
 main #main_home .main_home_characters .characters_stage li {
   position: absolute;
   bottom: 0;
@@ -186,8 +186,6 @@ main #main_home .main_home_characters .characters_stage .stage_right img {
 
 /* main - home - banner */
 main #main_home .main_home_banner {
-  /* grid-column: 1/3;
-  grid-row: 2/3; */
   max-width: 85vw;
   width: 75vw;
   display: flex;
@@ -209,6 +207,7 @@ main #main_home .main_home_banner .main_home_banner_box {
   padding: 0 20px;
   box-sizing: border-box;
 }
+
 main #main_home .main_home_banner .main_home_banner_box.active {
   background-color: #1b1b1b;
   color: #fff;
@@ -237,76 +236,94 @@ main #main_home .main_home_banner .main_home_banner_box h4 {
 main #main_story {
   width: 100%;
 }
-main #main_story .story_txt {
-  /* height: 250px; */
-}
 
-main #main_story .story_cards {
+main #main_story .cardsList {
   margin-top: 150px;
   height: 500px;
   position: relative;
 }
-main #main_story .story_cards .card {
+main #main_story .cardsList .card {
   width: 340px;
   height: 415px;
   border-radius: 10%;
   background-color: #fff;
   position: absolute;
-  transition: 0.4s;
   text-align: left;
+  transition: 0.6s;
 }
-/* main #main_story .story_cards .card1.active {
-  transform: rotate(0) scale(10px);
-} */
-main #main_story .story_cards .card1 {
+main #main_story .cardsList #card1 {
   top: 0;
   left: 230px;
   box-shadow: rgba(213, 149, 252, 0.2) 0px 3px 24px;
 }
-main #main_story .story_cards .card2 {
+main #main_story .cardsList #card2 {
   transform: rotate(-17deg);
   top: 0;
   left: 500px;
   box-shadow: rgba(254, 179, 31, 0.2) 0px 3px 24px;
 }
-main #main_story .story_cards .card3 {
+main #main_story .cardsList #card3 {
   transform: rotate(10deg);
   top: -60px;
   left: 750px;
   box-shadow: rgba(33, 186, 165, 0.2) 0px 3px 24px;
 }
-main #main_story .story_cards .card4 {
+main #main_story .cardsList #card4 {
   transform: rotate(-10deg);
   top: 0px;
   left: 1000px;
   box-shadow: rgba(146, 155, 60, 0.2) 0px 3px 20px;
 }
-main #main_story .story_cards .card5 {
+main #main_story .cardsList #card5 {
   transform: rotate(10deg);
   top: 0;
   left: 1270px;
   box-shadow: rgba(236, 66, 31, 0.1) 0px 3px 20px;
 }
-main #main_story .story_cards .card > img {
+/* card hover */
+main #main_story .cardsList #card1:hover {
+  transform: rotate(0) scale(1.1);
+}
+main #main_story .cardsList #card2:hover {
+  transform: rotate(0) scale(1.1);
+}
+main #main_story .cardsList #card3:hover {
+  transform: rotate(0) scale(1.1);
+}
+main #main_story .cardsList #card4:hover {
+  transform: rotate(0) scale(1.1);
+}
+main #main_story .cardsList #card5:hover {
+  transform: rotate(0) scale(1.1);
+}
+
+main #main_story .cardsList .card > img {
   width: 290px;
   height: 290px;
   margin: 25px 25px 10px;
 }
-main #main_story .story_cards .card figcaption {
+main #main_story .cardsList .card h5 {
   text-indent: 22px;
   color: var(--color-gray);
   font-size: 14px;
 }
-main #main_story .story_cards .card figcaption .codeName {
+main #main_story .cardsList .card .num {
+  padding-left: 30px;
+  width: 50px;
+  font-size: 14px;
+  color: var(--color-gray);
+  position: absolute;
+  bottom: 58px;
+  right: 40px;
+}
+main #main_story .cardsList .card .heart {
+  background: url(./main-images/story_heart_icon.png) no-repeat top left / 20px;
+}
+main #main_story .cardsList .card .codeName {
+  text-indent: 22px;
   display: block;
   color: #000;
   font-size: 17px;
-}
-main #main_story .story_cards .card .heart {
-  width: 20px;
-  height: 20px;
-  vertical-align: middle;
-  margin-left: 110px;
 }
 
 /* article 3 project */
@@ -505,7 +522,7 @@ main #main_roadmap .roadmap_body {
   position: relative;
   justify-content: space-evenly;
   z-index: 9999;
-  height: 180vh;
+  /* height: 180vh; */
   width: 80%;
   margin: 0 auto;
 }

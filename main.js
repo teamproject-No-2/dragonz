@@ -1,45 +1,17 @@
 // main - home
+// const bannerBoxs = document.querySelectorAll(".main_home_banner_box");
+// console.log(bannerBoxs);
 
-// main - story
+// const autoMove = bannerBoxs.forEach(() => {
+//   let i = 0;
 
-/* 
-const cards = document.querySelectorAll(".card");
+//   bannerBoxs[i].classList.remove("active");
+//   i++;
+//   i >= bannerBoxs.length ? (i = 0) : false;
+//   bannerBoxs[i].classList.add("active");
+// });
 
-cards[0].addEventListener("mouseenter", () => {
-  cards[0].classList.add("active");
-  cards[1].classList.remove("active");
-  cards[2].classList.remove("active");
-  cards[3].classList.remove("active");
-  cards[4].classList.remove("active");
-});
-cards[1].addEventListener("mouseenter", () => {
-  cards[0].classList.remove("active");
-  cards[1].classList.add("active");
-  cards[2].classList.remove("active");
-  cards[3].classList.remove("active");
-  cards[4].classList.remove("active");
-});
-cards[2].addEventListener("mouseenter", () => {
-  cards[0].classList.remove("active");
-  cards[1].classList.remove("active");
-  cards[2].classList.add("active");
-  cards[3].classList.remove("active");
-  cards[4].classList.remove("active");
-});
-cards[3].addEventListener("mouseenter", () => {
-  cards[0].classList.remove("active");
-  cards[1].classList.remove("active");
-  cards[2].classList.remove("active");
-  cards[3].classList.add("active");
-  cards[4].classList.remove("active");
-});
-cards[4].addEventListener("mouseenter", () => {
-  cards[0].classList.remove("active");
-  cards[1].classList.remove("active");
-  cards[2].classList.remove("active");
-  cards[3].classList.remove("active");
-  cards[4].classList.add("active");
-}); */
+// setTimeout(autoMove, 2000);
 
 // main - project
 const sections = document.querySelectorAll(".games > section");
@@ -85,7 +57,7 @@ const lis = document.querySelectorAll("li");
 const line1 = document.querySelector(".line1");
 const line2 = document.querySelector(".line2");
 
-const lineLength = line1.scrollWidth;
+const lineLength = line1.clientWidth;
 console.log(lineLength);
 
 line1.animate(
@@ -97,16 +69,30 @@ line1.animate(
     iterations: Infinity,
     direction: "reverse",
     fill: "forwards",
+    loop: true,
+    // animation-play-state: paused, running, running,
   }
 );
-// line2.animate(
-//   {
-//     transform: ["translateX(0)", "translateX(80vw)"],
-//   },
-//   {
-//     duration: 7000,
-//     iterations: Infinity,
-//     direction: "reverse",
-//     fill: "forwards",
-//   }
-// );
+line2.animate(
+  {
+    transform: [`translateX(-${lineLength}px)`, `translateX(${lineLength}px)`],
+  },
+  {
+    delay: 1000,
+    duration: 20000,
+    iterations: Infinity,
+    direction: "reverse",
+    fill: "forwards",
+    loop: true,
+  }
+);
+
+// floated_btn
+const goUp = document.querySelector(".scrollup");
+
+goUp.addEventListener("click", () => {
+  document.documentElement.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+});
