@@ -102,7 +102,6 @@ for(let i = 0; i < storyIcon.length; i++) {
 const btn = document.getElementById('btn');
 const search = document.getElementById('search');
 
-search.focus();
 search.addEventListener('keydown', function(e){
   if(e.key === "Enter"){
     searchFilter();
@@ -164,28 +163,39 @@ function clearInput(){
   }
 }
 
-
+// checkResult.innerHTML +=
 // 필터된 단어 표시
-// function checkBox(checked) {
-//   let result = document.querySelector('.filterChkRes');
-//   if (checked.checked == ture) {
-//     if(result.value == '') {
-//       result.value = checked.getAttribute('value');
-//     } else {
-//       result.value += ',' + checked.getAttribute('value');
-//     }
-//   } else {
-//     let resultArr = result.value.split(',');
-//     for(let i = 0; i < resultArr.length; i++) {
-//       if(resultArr[i] == checked.getAttribute('value')) {
-//         resultArr.splice(i,1);
-//         break;
-//       }
-//     }
-//     result.value = resultArr.join(',');
-//   }
-// }
+function checkBox(checked){
+  let result = document.getElementById("checkResult");
+  if(checked.checked == true){
+      console.log(result.value); 
+      if(result.value == "") {
+          result.value = checked.getAttribute("value");
+      } else {
+          result.value += ","+ checked.getAttribute("value");
+      }
+      checkResult.innerHTML += `<div class="cRItem">
+      item
+      <div class="closeBtnM"></div>
+    </div>`;
+  } else {
+      let resultArr = result.value.split(",");
+      for(let i=0; i<resultArr.length; i++){
+          if(resultArr[i] == checked.getAttribute("value")){
+              resultArr.splice(i,1);
+              break;
+          }
+      }
+      result.value  = resultArr.join(",");
+  }
+}
 
+// 체크 닫기 버튼 클릭시
+// const cRItem = document.querySelectorAll('.cRItem');
+// const closeBtnM = document.querySelectorAll('.closeBtnM');
+// closeBtnM.addEventListener('click', () => {
+//   cRItem.style.display = 'none' // 나중에 삭제로 바꿈
+// });
 
 
 

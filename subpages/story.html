@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- favicon -->
-  <link rel="icon" type="image/png" href="../images/favicon/favicon_16x16.png" sizes="16x16">
+  <!-- <link rel="icon" type="image/png" href="../images/favicon/favicon_16x16.png" sizes="16x16"> -->
   <!-- 오픈그래프 -->
   <meta property="og:url" content="https://----------(url)-----------">
   <meta property="og:local" content="ko_KR">
@@ -118,15 +118,15 @@
           <div class="filterCheck">
             <form action="">
               <div class="filterCont">
-                <input type="checkbox" name="filter"  id="cbProj" value="PROJECT" class="filterBox" onclick="ftrCheck()">
+                <input type="checkbox" onchange="checkBox(this)" name="filter"  id="cbProj" value="PROJECT" class="filterBox">
                 <label for="cbProj">PROJECT<img src="../images/story/icon_project_pop.png" alt="PROJECT"></label>
               </div>
               <div class="filterCont">
-                <input type="checkbox" name="filter" id="cbLink" value="LINK" class="filterBox" onclick="ftrCheck()">
+                <input type="checkbox" onchange="checkBox(this)" name="filter" id="cbLink" value="LINK" class="filterBox">
                 <label for="cbLink">LINK<img src="../images/story/icon_link_pop.png" alt="LINK"></label>
               </div>
               <div class="filterCont">
-                <input type="checkbox" name="filter" id="cbStory" value="STORY" class="filterBox" onclick="ftrCheck()">
+                <input type="checkbox" onchange="checkBox(this)" name="filter" id="cbStory" value="STORY" class="filterBox">
                 <label for="cbStory">STORY<img src="../images/story/icon_story_pop.png" alt="STORY"></label>
               </div>
             </form>
@@ -137,23 +137,23 @@
           <div class="filterCheck">
             <form action="">
               <div class="filterCont">
-                <input type="checkbox" name="filter" id="cbLegend" value="L" class="filterGrade" onclick="ftrCheck()">
+                <input type="checkbox" onchange="checkBox(this)" name="filter" id="cbLegend" value="L" class="filterGrade">
                 <label for="cbLegend">LEGENDARY</label>
               </div>
               <div class="filterCont">
-                <input type="checkbox" name="filter" id="cbUR" value="U" class="filterGrade" onclick="ftrCheck()">
+                <input type="checkbox" onchange="checkBox(this)" name="filter" id="cbUR" value="U" class="filterGrade">
                 <label for="cbUR">ULTRA RARE</label>
               </div>
               <div class="filterCont">
-                <input type="checkbox" name="filter" id="cbSR" value="S" class="filterGrade" onclick="ftrCheck()">
+                <input type="checkbox" onchange="checkBox(this)" name="filter" id="cbSR" value="S" class="filterGrade">
                 <label for="cbSR">SUPER RARE</label>
               </div>
               <div class="filterCont">
-                <input type="checkbox" name="filter" id="cbRare" value="R" class="filterGrade" onclick="ftrCheck()">
+                <input type="checkbox" onchange="checkBox(this)" name="filter" id="cbRare" value="R" class="filterGrade">
                 <label for="cbRare">RARE</label>
               </div>
               <div class="filterCont">
-                <input type="checkbox" name="filter" id="cbNM" value="N" class="filterGrade" onclick="ftrCheck()">
+                <input type="checkbox" onchange="checkBox(this)" name="filter" id="cbNM" value="N" class="filterGrade">
                 <label for="cbNM">NORMAL</label>
               </div>
             </form>
@@ -211,10 +211,17 @@
         <div class="itemTitle">
           <div class="titleLeft">
             <span class="itemNum">
-              <span id="listCount">nnnn</span>
+              <span id="listCount">23</span>
               items
             </span>
-            <div class="filterChkRes"></div>
+            <!-- 체크 결과 -->
+            <div id="checkResult">
+              <!-- 체크 값 (템플릿) -->
+              <!-- <div class="cRItem">
+                item
+                <div class="closeBtnM"></div>
+              </div> -->
+            </div>
           </div>
           <div class="titleRight">
             <button class="refreshBtn" onclick="clearInput()"><img src="../images/story/refresh_icon.png" alt="refresh"></button>
@@ -227,5 +234,6 @@
       </div>
     </div>
   </div>
+
 </body>
 </html>
