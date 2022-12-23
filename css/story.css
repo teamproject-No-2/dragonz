@@ -6,6 +6,7 @@ body {
 }
 
 .storyHeader {
+  margin-top: 80px;
   height: 280px;
   padding-bottom: 50px;
   border-bottom: 1px solid #EEEEEE;
@@ -73,30 +74,27 @@ body {
 .storyContents {
   display: flex;
 }
+
 /* leftArea */
 .leftArea {
-  width: 25vw;
   background-color: #DBEEFC;
-  padding: 55px 6.7708vw 0 4.9479vw;
-
+  width: 25vw;
+  padding: 55px 6.7708vw 50px 4.9479vw;
+}
+.leftArea .ftrArea {
   /* 고정 */
   position: sticky;
   left: 0; 
-  top: 380px; /* .storyHeader 높이 */
+  top: 100px; /* .storyHeader 높이 */
 }
 .leftArea .filter {
   background-color: #fff;
   border-radius: 20px;
   padding: 25px 25px 0;
   box-shadow: 0px 3px 13px 0 rgba(0, 0, 0, .1);
-  position: sticky;
-}
-.leftArea .filterNo1 {
-  top: 28px;
 }
 .leftArea .filterNo2 {
   margin-top: 28px;
-  top: 290px;
 }
 .leftArea .filter .filterTit {
   font-weight: 500;
@@ -198,7 +196,7 @@ body {
   align-items: center;
 }
 .itemContents .itemTitle .titleLeft .filterChkRes {
-  background-color: orange;
+  /* background-color: orange; */
   height: 100%;
   width: 600px;
 }
@@ -290,6 +288,7 @@ body {
   width: 100%;
   height: 100%;
   position: fixed;
+  top: 0; left: 0;
   z-index: 999;
 }
 .popInfo .popWindow {

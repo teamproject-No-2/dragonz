@@ -12,29 +12,29 @@ const swiper = new Swiper('.swiper', {
 
 // id = idx , list
 const data = [
-  {id: 0, tag: '9514', proj: 1, link: 1, story: 1, grade:'N', img: './images/story/story-items001.png'},
-  {id: 1, tag: '0', proj: 1, link: 0, story: 1, grade:'N', img: './images/story/story-items002.png'},
-  {id: 2, tag: '9678', proj: 1, link: 0, story: 1, grade:'N', img: './images/story/story-items003.png'},
-  {id: 3, tag: '9512', proj: 0, link: 1, story: 1, grade:'N', img: './images/story/story-items004.png'},
-  {id: 4, tag: '9517', proj: 0, link: 1, story: 1, grade:'R', img: './images/story/story-items005.png'},
-  {id: 5, tag: '9518', proj: 0, link: 1, story: 1, grade:'S', img: './images/story/story-items006.png'},
-  {id: 6, tag: '9543', proj: 0, link: 1, story: 1, grade:'R', img: './images/story/story-items007.png'},
-  {id: 7, tag: '9544', proj: 0, link: 1, story: 1, grade:'R', img: './images/story/story-items008.png'},
-  {id: 8, tag: '9559', proj: 0, link: 1, story: 1, grade:'S', img: './images/story/story-items009.png'},
-  {id: 9, tag: '9560', proj: 0, link: 1, story: 1, grade:'S', img: './images/story/story-items010.png'},
-  {id: 10, tag: '9778', proj: 0, link: 1, story: 1, grade:'S', img: './images/story/story-items011.png'},
-  {id: 11, tag: '9975', proj: 0, link: 1, story: 1, grade:'L', img: './images/story/story-items012.gif'},
-  {id: 12, tag: '9545', proj: 0, link: 1, story: 0, grade:'S', img: './images/story/story-items013.png'},
-  {id: 13, tag: '9547', proj: 0, link: 1, story: 0, grade:'S', img: './images/story/story-items014.png'},
-  {id: 14, tag: '1577', proj: 0, link: 0, story: 1, grade:'S', img: './images/story/story-items015.png'},
-  {id: 15, tag: '1589', proj: 0, link: 0, story: 1, grade:'S', img: './images/story/story-items016.png'},
-  {id: 16, tag: '1846', proj: 0, link: 0, story: 1, grade:'S', img: './images/story/story-items017.png'},
-  {id: 17, tag: '3726', proj: 0, link: 0, story: 1, grade:'S', img: './images/story/story-items018.png'},
-  {id: 18, tag: '4682', proj: 0, link: 0, story: 1, grade:'S', img: './images/story/story-items019.png'},
-  {id: 19, tag: '5462', proj: 0, link: 0, story: 1, grade:'S', img: './images/story/story-items020.png'},
-  {id: 20, tag: '9676', proj: 0, link: 0, story: 1, grade:'S', img: './images/story/story-items021.png'},
-  {id: 21, tag: '9854', proj: 0, link: 0, story: 1, grade:'S', img: './images/story/story-items022.png'},
-  {id: 22, tag: '10000', proj: 0, link: 0, story: 1, grade:'L', img: './images/story/story-items023.png'},
+  {id: 0, tag: '9514', proj: 1, link: 1, story: 1, grade:'N', img: '../images/story/story-items001.png'},
+  {id: 1, tag: '0', proj: 1, link: 0, story: 1, grade:'N', img: '../images/story/story-items002.png'},
+  {id: 2, tag: '9678', proj: 1, link: 0, story: 1, grade:'N', img: '../images/story/story-items003.png'},
+  {id: 3, tag: '9512', proj: 0, link: 1, story: 1, grade:'N', img: '../images/story/story-items004.png'},
+  {id: 4, tag: '9517', proj: 0, link: 1, story: 1, grade:'R', img: '../images/story/story-items005.png'},
+  {id: 5, tag: '9518', proj: 0, link: 1, story: 1, grade:'S', img: '../images/story/story-items006.png'},
+  {id: 6, tag: '9543', proj: 0, link: 1, story: 1, grade:'R', img: '../images/story/story-items007.png'},
+  {id: 7, tag: '9544', proj: 0, link: 1, story: 1, grade:'R', img: '../images/story/story-items008.png'},
+  {id: 8, tag: '9559', proj: 0, link: 1, story: 1, grade:'S', img: '../images/story/story-items009.png'},
+  {id: 9, tag: '9560', proj: 0, link: 1, story: 1, grade:'S', img: '../images/story/story-items010.png'},
+  {id: 10, tag: '9778', proj: 0, link: 1, story: 1, grade:'S', img: '../images/story/story-items011.png'},
+  {id: 11, tag: '9975', proj: 0, link: 1, story: 1, grade:'L', img: '../images/story/story-items012.gif'},
+  {id: 12, tag: '9545', proj: 0, link: 1, story: 0, grade:'S', img: '../images/story/story-items013.png'},
+  {id: 13, tag: '9547', proj: 0, link: 1, story: 0, grade:'S', img: '../images/story/story-items014.png'},
+  {id: 14, tag: '1577', proj: 0, link: 0, story: 1, grade:'S', img: '../images/story/story-items015.png'},
+  {id: 15, tag: '1589', proj: 0, link: 0, story: 1, grade:'S', img: '../images/story/story-items016.png'},
+  {id: 16, tag: '1846', proj: 0, link: 0, story: 1, grade:'S', img: '../images/story/story-items017.png'},
+  {id: 17, tag: '3726', proj: 0, link: 0, story: 1, grade:'S', img: '../images/story/story-items018.png'},
+  {id: 18, tag: '4682', proj: 0, link: 0, story: 1, grade:'S', img: '../images/story/story-items019.png'},
+  {id: 19, tag: '5462', proj: 0, link: 0, story: 1, grade:'S', img: '../images/story/story-items020.png'},
+  {id: 20, tag: '9676', proj: 0, link: 0, story: 1, grade:'S', img: '../images/story/story-items021.png'},
+  {id: 21, tag: '9854', proj: 0, link: 0, story: 1, grade:'S', img: '../images/story/story-items022.png'},
+  {id: 22, tag: '10000', proj: 0, link: 0, story: 1, grade:'L', img: '../images/story/story-items023.png'},
 ];
 
 const itemList = document.querySelector('.itemList');
@@ -54,13 +54,13 @@ data.forEach((item) => {
         <span class="cardTitle">MTDZ#${item.tag}</span>
         <div class="cardIcon">
           <div class="filterIcon linkIcon">
-            <img src="./images/story/icon_link_pop.png" alt="link">
+            <img src="../images/story/icon_link_pop.png" alt="link">
           </div>
           <div class="filterIcon projIcon">
-            <img src="./images/story/icon_project_pop.png" alt="project">
+            <img src="../images/story/icon_project_pop.png" alt="project">
           </div>
           <div class="filterIcon storyIcon">
-            <img src="./images/story/icon_story_pop.png" alt="story">
+            <img src="../images/story/icon_story_pop.png" alt="story">
           </div>
           <div class="filterIcon txtIcon">
           ${item.grade}
@@ -148,10 +148,11 @@ function searchFilter(){
   
 // }
 //   results.forEach(function(result) {
-//     result.style.display = 'block';
+//     result.style.display = 'flex';
 //   });
 // }
 // ftrCheck();
+
 // 아이템 숫자 표기: 필터->재배열 ->배열수..?
 
 
@@ -188,7 +189,7 @@ function clearInput(){
 
 
 
-// 팝업 ++팝업 내용...
+// 팝업 ++팝업 내용..., 스크롤 없어지면서 뒷배경 움직임
 const popInfo = document.getElementById('popInfo');
 // 클릭할 곳
 const popUpClick = document.querySelectorAll('.popUpClick');
