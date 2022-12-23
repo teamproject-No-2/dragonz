@@ -15,29 +15,86 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Poppins:wght@100;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
-
+    <!-- css 헤더 푸터 -->
+    <!-- <link rel="stylesheet" href="./index_header.css" /> -->
+    <!-- css 메인 -->
     <link rel="stylesheet" href="./main.css" />
+
+    <!-- js 헤더 푸터 -->
+    <!-- <script defer src="./index_header.js"></script> -->
   </head>
+
   <body>
+    <!-- header height 120px -->
+    <header class="header">
+      <div class="headerWrap">
+        <div class="logo"><a href="../index.html">logo</a></div>
+        <ul id="gnb">
+          <!-- 각페이지에 맞게 index위치 수정 -->
+          <li><a href="#">STORY</a></li>
+          <li>
+            <a href="#">PROJECTS</a>
+            <ul id="hiddenMenu">
+              <!-- js로 마우스이벤트 display 바꾸기 -->
+              <li><a href="#">MTDZ the Game</a></li>
+              <li><a href="#">Meta Toy City</a></li>
+              <li><a href="#">Meta Toy Gamers</a></li>
+              <li><a href="#">Meta Toy Bricks</a></li>
+              <!-- li a::after opacity 1로 -->
+            </ul>
+          </li>
+          <li><a href="#">ROADMAP</a></li>
+          <li><a href="#">PARTNERS</a></li>
+        </ul>
+
+        <!-- morearrow img사용 -->
+        <div class="lang">
+          <div class="selectLang">
+            <!-- ENG 클릭시 EN 표기하기 -->
+            <div id="ko" class="noSelect selected">KO</div>
+            <div id="en" class="noSelect">EN</div>
+          </div>
+          <ul id="langLi">
+            <li id="selEn">ENG</li>
+            <li id="selKo">KOR</li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <!-- 메인 contents -->
+
     <!-- 마우스 커서 -->
-    <img src="./main-images/mouse_bg.png" alt="마우스 커서" class="cursor" />
+    <img
+      src="./images/main-images/mouse_bg.png"
+      alt="마우스 커서"
+      class="cursor"
+    />
     <main>
       <!-- article 1 home -->
       <article id="main_home">
         <div class="moon_img"></div>
         <div class="water_img"></div>
         <img
-          src="./main-images/home_main_blink2.png"
+          src="./images/main-images/home_main_blink2.png"
           alt="배경 이미지1"
           id="bgImg"
         />
-        <img src="./main-images/home_bling01.png" alt="큰 별" id="star1" />
-        <img src="./main-images/home_bling02.png" alt="작은 별" id="star2" />
+        <img
+          src="./images/main-images/home_bling01.png"
+          alt="큰 별"
+          id="star1"
+        />
+        <img
+          src="./images/main-images/home_bling02.png"
+          alt="작은 별"
+          id="star2"
+        />
 
         <div class="main_home_container">
           <div class="main_home_txt">
             <img
-              src="./main-images/home_welcome.png"
+              src="./images/main-images/home_welcome.png"
               alt="welcome"
               class="welcome"
             />
@@ -51,84 +108,69 @@
 
           <ul class="stage">
             <li class="stage_character left">
-              <img src="./main-images/home_dragonz01.png" alt="dragon1" />
+              <img
+                src="./images/main-images/home_dragonz01.png"
+                alt="dragon1"
+              />
             </li>
             <li class="stage_character center">
-              <img src="./main-images/home_dragonz02.png" alt="dragon2" />
+              <img
+                src="./images/main-images/home_dragonz02.png"
+                alt="dragon2"
+              />
             </li>
             <li class="stage_character right">
-              <img src="./main-images/home_dragonz03.png" alt="dragon3" />
+              <img
+                src="./images/main-images/home_dragonz03.png"
+                alt="dragon3"
+              />
             </li>
             <!-- <li class="stage_character">
-              <img src="./main-images/home_dragonz04.png" alt="dragon4" />
+              <img src="./images/main-images/home_dragonz04.png" alt="dragon4" />
             </li>
             <li class="stage_character">
-              <img src="./main-images/home_dragonz05.png" alt="dragon5" />
+              <img src="./images/main-images/home_dragonz05.png" alt="dragon5" />
             </li> -->
           </ul>
 
           <ul class="banner">
             <li class="banner_character">
-              <img src="./main-images/home_dragonz_thum01.png" alt="dragon1" />
+              <img
+                src="./images/main-images/home_dragonz_thum01.png"
+                alt="dragon1"
+              />
               <h4>MTDZ#7983</h4>
             </li>
             <li class="banner_character center">
-              <img src="./main-images/home_dragonz_thum02.png" alt="dragon2" />
+              <img
+                src="./images/main-images/home_dragonz_thum02.png"
+                alt="dragon2"
+              />
               <h4>MTDZ#6481</h4>
             </li>
             <li class="banner_character">
-              <img src="./main-images/home_dragonz_thum03.png" alt="dragon3" />
+              <img
+                src="./images/main-images/home_dragonz_thum03.png"
+                alt="dragon3"
+              />
               <h4>MTDZ#1038</h4>
             </li>
             <li class="banner_character">
-              <img src="./main-images/home_dragonz_thum04.png" alt="dragon4" />
+              <img
+                src="./images/main-images/home_dragonz_thum04.png"
+                alt="dragon4"
+              />
               <h4>MTDZ#3303</h4>
             </li>
             <li class="banner_character">
-              <img src="./main-images/home_dragonz_thum05.png" alt="dragon5" />
+              <img
+                src="./images/main-images/home_dragonz_thum05.png"
+                alt="dragon5"
+              />
               <h4>MTDZ#7575</h4>
             </li>
           </ul>
         </div>
-
-        <!--           
-          <ul class="stage">
-            <li class="stage_character left">
-              <img src="./main-images/home_dragonz01.png" alt="dragon1" />
-              
-            </li>
-            <li class="stage_character center">
-              <img src="./main-images/home_dragonz02.png" alt="dragon2" />
-            </li>
-            <li class="stage_character right">
-              <img src="./main-images/home_dragonz03.png" alt="dragon3" />
-            </li>
-            <li class="stage_character"><img src="./main-images/home_dragonz04.png" alt="dragon4"></li>
-            <li class="stage_character"><img src="./main-images/home_dragonz05.png" alt="dragon5"></li>
-          </ul>
-
-          <ul class="banner">
-            <li class="banner_character">
-              <img src="./main-images/home_dragonz_thum01.png" alt="dragon1" />
-              <h4>MTDZ#7983</h4>
-            </li>
-            <li class="banner_character center">
-              <img src="./main-images/home_dragonz_thum02.png" alt="dragon2" />
-              <h4>MTDZ#6481</h4>
-            </li>
-            <li class="banner_character">
-              <img src="./main-images/home_dragonz_thum03.png" alt="dragon3" />
-              <h4>MTDZ#1038</h4>
-            </li>
-            <li class="banner_character">
-              <img src="./main-images/home_dragonz_thum04.png" alt="dragon4" />
-              <h4>MTDZ#3303</h4>
-            </li>
-            <li class="banner_character">
-              <img src="./main-images/home_dragonz_thum05.png" alt="dragon5" />
-              <h4>MTDZ#7575</h4>
-            </li>
-          </ul>-->
       </article>
 
       <!-- article 2 story -->
@@ -144,31 +186,31 @@
 
         <ul class="cardsList">
           <li class="card" id="card1">
-            <img src="./main-images/story_dragonz1.png" alt="card1" />
+            <img src="./images/main-images/story_dragonz1.png" alt="card1" />
             <h5>Meta Toy DragonZ</h5>
             <div class="num heart">981</div>
             <div class="codeName">MTDZ#1205</div>
           </li>
           <li class="card" id="card2">
-            <img src="./main-images/story_dragonz2.png" alt="card2" />
+            <img src="./images/main-images/story_dragonz2.png" alt="card2" />
             <h5>Meta Toy DragonZ</h5>
             <div class="num heart">754</div>
             <div class="codeName">MTDZ#8029</div>
           </li>
           <li class="card active" id="card3">
-            <img src="./main-images/story_dragonz3.png" alt="card3" />
+            <img src="./images/main-images/story_dragonz3.png" alt="card3" />
             <h5>Meta Toy DragonZ</h5>
             <div class="num heart">831</div>
             <div class="codeName">MTDZ#4299</div>
           </li>
           <li class="card" id="card4">
-            <img src="./main-images/story_dragonz4.png" alt="card4" />
+            <img src="./images/main-images/story_dragonz4.png" alt="card4" />
             <h5>Meta Toy DragonZ</h5>
             <div class="num heart">651</div>
             <div class="codeName">MTDZ#6481</div>
           </li>
           <li class="card" id="card5">
-            <img src="./main-images/story_dragonz5.png" alt="card5" />
+            <img src="./images/main-images/story_dragonz5.png" alt="card5" />
             <h5>Meta Toy DragonZ</h5>
             <div class="num heart">972</div>
             <div class="codeName">MTDZ#5397</div>
@@ -176,14 +218,14 @@
         </ul>
 
         <div class="story_btn viewMore">
-          View more <img src="./main-images/more_icon.png" alt="+" />
+          View more <img src="./images/main-images/more_icon.png" alt="+" />
         </div>
 
         <!-- article 3 project -->
       </article>
       <article id="main_project">
         <img
-          src="./main-images/project_big_coin.png"
+          src="./images/main-images/project_big_coin.png"
           alt="큰 별"
           class="starIcon"
         />
@@ -194,7 +236,7 @@
           <section>
             <div class="wrapper gameBox1">
               <figure class="icon">
-                <img src="./main-images/project_sliding_icon01.png" />
+                <img src="./images/main-images/project_sliding_icon01.png" />
                 <figcaption>The Game</figcaption>
               </figure>
               <div class="wrapperTxt">
@@ -210,7 +252,7 @@
           <section>
             <div class="wrapper gameBox2">
               <figure class="icon">
-                <img src="./main-images/project_sliding_icon02.png" />
+                <img src="./images/main-images/project_sliding_icon02.png" />
                 <figcaption>MTC</figcaption>
               </figure>
 
@@ -229,7 +271,7 @@
           <section class="on">
             <div class="wrapper gameBox3">
               <figure class="icon">
-                <img src="./main-images/project_sliding_icon03.png" />
+                <img src="./images/main-images/project_sliding_icon03.png" />
                 <figcaption>MTG</figcaption>
               </figure>
 
@@ -246,7 +288,7 @@
           <section>
             <div class="wrapper gameBox4">
               <figure class="icon">
-                <img src="./main-images/project_sliding_icon04.png" />
+                <img src="./images/main-images/project_sliding_icon04.png" />
                 <figcaption>MTB</figcaption>
               </figure>
 
@@ -263,7 +305,7 @@
           <section>
             <div class="wrapper gameBox5">
               <figure class="icon">
-                <img src="./main-images/project_sliding_icon05.png" />
+                <img src="./images/main-images/project_sliding_icon05.png" />
                 <figcaption>Coming Soon</figcaption>
               </figure>
               <div class="wrapperTxt">
@@ -276,7 +318,7 @@
         </div>
 
         <img
-          src="./main-images/project_small_coin.png"
+          src="./images/main-images/project_small_coin.png"
           alt="작은 별"
           class="smallStarIcon"
         />
@@ -286,14 +328,17 @@
       <article id="main_roadmap">
         <div class="circle"></div>
         <div class="roadmap_head">
-          <img src="./main-images/roadmap_tit.png" alt="선글라스 아이콘" />
+          <img
+            src="./images/main-images/roadmap_tit.png"
+            alt="선글라스 아이콘"
+          />
           <h2>ROADMAP</h2>
         </div>
         <div class="roadmap_body">
           <div class="roadmap_box_line1">
             <div class="roadmap_box">
               <img
-                src="./main-images/roadmap_completed.png"
+                src="./images/main-images/roadmap_completed.png"
                 alt="completed"
                 class="completed"
               />
@@ -310,7 +355,7 @@
                 <li>온/오프라인 브랜드 마케팅을 진행한다.</li>
               </ul>
               <img
-                src="./main-images/home_dragonz01.png"
+                src="./images/main-images/home_dragonz01.png"
                 alt="popUpCharacter"
                 class="popUpCharacter"
               />
@@ -329,7 +374,7 @@
                 <li class="emptyBox">게임 공식 유튜브 채널을 개설한다.</li>
               </ul>
               <img
-                src="./main-images/home_dragonz03.png"
+                src="./images/main-images/home_dragonz03.png"
                 alt="popUpCharacter"
                 class="popUpCharacter"
               />
@@ -347,7 +392,7 @@
                 </li>
               </ul>
               <img
-                src="./main-images/home_dragonz05.png"
+                src="./images/main-images/home_dragonz05.png"
                 alt="popUpCharacter"
                 class="popUpCharacter"
               />
@@ -356,7 +401,7 @@
           <div class="roadmap_box_line2">
             <div class="roadmap_box">
               <img
-                src="./main-images/roadmap_completed.png"
+                src="./images/main-images/roadmap_completed.png"
                 alt="completed"
                 class="completed"
               />
@@ -372,7 +417,7 @@
                 <li>홀더 대상 1:1 BBL X MTDZ PFP NTF 에어드랍을 진행한다.</li>
               </ul>
               <img
-                src="./main-images/home_dragonz02.png"
+                src="./images/main-images/home_dragonz02.png"
                 alt="popUpCharacter"
                 class="popUpCharacter"
               />
@@ -393,7 +438,7 @@
                 <li class="emptyBox">오프라인 서비스 연계 혜택을 공개한다.</li>
               </ul>
               <img
-                src="./main-images/home_dragonz04.png"
+                src="./images/main-images/home_dragonz04.png"
                 alt="popUpCharacter"
                 class="popUpCharacter"
               />
@@ -419,14 +464,14 @@
                 <li class="emptyBox">전용 유튜브 채널을 개설한다.</li>
               </ul>
               <img
-                src="./main-images/home_dragonz02.png"
+                src="./images/main-images/home_dragonz02.png"
                 alt="popUpCharacter"
                 class="popUpCharacter"
               />
             </div>
           </div>
           <div class="roadmap_btn viewMore">
-            View more <img src="./main-images/more_icon.png" alt="+" />
+            View more <img src="./images/main-images/more_icon.png" alt="+" />
           </div>
         </div>
       </article>
@@ -438,192 +483,192 @@
           <ul>
             <li>
               <img
-                src="./main-images/파트너이미지/bg-3-1.png"
+                src="./images/main-images/파트너이미지/bg-3-1.png"
                 alt="partners_logo"
               />
               <div class="mouseenter">
                 <img
-                  src="./main-images/파트너이미지/bg-3-2.png"
+                  src="./images/main-images/파트너이미지/bg-3-2.png"
                   alt="partners_logo"
                 />
               </div>
             </li>
             <li>
               <img
-                src="./main-images/파트너이미지/bp-1-1.png"
+                src="./images/main-images/파트너이미지/bp-1-1.png"
                 alt="partners_logo"
               />
               <div class="mouseenter">
                 <img
-                  src="./main-images/파트너이미지/bp-1-2.png"
+                  src="./images/main-images/파트너이미지/bp-1-2.png"
                   alt="partners_logo"
                 />
               </div>
             </li>
             <li>
               <img
-                src="./main-images/파트너이미지/bp-2-1.png"
+                src="./images/main-images/파트너이미지/bp-2-1.png"
                 alt="partners_logo"
               />
               <div class="mouseenter">
                 <img
-                  src="./main-images/파트너이미지/bp-2-2.png"
+                  src="./images/main-images/파트너이미지/bp-2-2.png"
                   alt="partners_logo"
                 />
               </div>
             </li>
             <li>
               <img
-                src="./main-images/파트너이미지/bp-4-1.png"
+                src="./images/main-images/파트너이미지/bp-4-1.png"
                 alt="partners_logo"
               />
               <div class="mouseenter">
                 <img
-                  src="./main-images/파트너이미지/bp-4-2.png"
+                  src="./images/main-images/파트너이미지/bp-4-2.png"
                   alt="partners_logo"
                 />
               </div>
             </li>
             <li>
               <img
-                src="./main-images/파트너이미지/bp-5-1.png"
+                src="./images/main-images/파트너이미지/bp-5-1.png"
                 alt="partners_logo"
               />
               <div class="mouseenter">
                 <img
-                  src="./main-images/파트너이미지/bp-5-2.png"
+                  src="./images/main-images/파트너이미지/bp-5-2.png"
                   alt="partners_logo"
                 />
               </div>
             </li>
             <li>
               <img
-                src="./main-images/파트너이미지/bp-6-1.png"
+                src="./images/main-images/파트너이미지/bp-6-1.png"
                 alt="partners_logo"
               />
               <div class="mouseenter">
                 <img
-                  src="./main-images/파트너이미지/bp-6-2.png"
+                  src="./images/main-images/파트너이미지/bp-6-2.png"
                   alt="partners_logo"
                 />
               </div>
             </li>
             <li>
               <img
-                src="./main-images/파트너이미지/bp-7-1.png"
+                src="./images/main-images/파트너이미지/bp-7-1.png"
                 alt="partners_logo"
               />
               <div class="mouseenter">
                 <img
-                  src="./main-images/파트너이미지/bp-7-2.png"
+                  src="./images/main-images/파트너이미지/bp-7-2.png"
                   alt="partners_logo"
                 />
               </div>
             </li>
             <li>
               <img
-                src="./main-images/파트너이미지/bp-8-1.png"
+                src="./images/main-images/파트너이미지/bp-8-1.png"
                 alt="partners_logo"
               />
               <div class="mouseenter">
                 <img
-                  src="./main-images/파트너이미지/bp-8-2.png"
+                  src="./images/main-images/파트너이미지/bp-8-2.png"
                   alt="partners_logo"
                 />
               </div>
             </li>
             <li>
               <img
-                src="./main-images/파트너이미지/bp-9-1.png"
+                src="./images/main-images/파트너이미지/bp-9-1.png"
                 alt="partners_logo"
               />
               <div class="mouseenter">
                 <img
-                  src="./main-images/파트너이미지/bp-9-2.png"
+                  src="./images/main-images/파트너이미지/bp-9-2.png"
                   alt="partners_logo"
                 />
               </div>
             </li>
             <li>
               <img
-                src="./main-images/파트너이미지/bp-10-1.png"
+                src="./images/main-images/파트너이미지/bp-10-1.png"
                 alt="partners_logo"
               />
               <div class="mouseenter">
                 <img
-                  src="./main-images/파트너이미지/bp-10-2.png"
+                  src="./images/main-images/파트너이미지/bp-10-2.png"
                   alt="partners_logo"
                 />
               </div>
             </li>
             <li>
               <img
-                src="./main-images/파트너이미지/bp-11-1.png"
+                src="./images/main-images/파트너이미지/bp-11-1.png"
                 alt="partners_logo"
               />
               <div class="mouseenter">
                 <img
-                  src="./main-images/파트너이미지/bp-11-2.png"
+                  src="./images/main-images/파트너이미지/bp-11-2.png"
                   alt="partners_logo"
                 />
               </div>
             </li>
             <li>
               <img
-                src="./main-images/파트너이미지/pp-1-1.png"
+                src="./images/main-images/파트너이미지/pp-1-1.png"
                 alt="partners_logo"
               />
               <div class="mouseenter">
                 <img
-                  src="./main-images/파트너이미지/pp-1-2.png"
+                  src="./images/main-images/파트너이미지/pp-1-2.png"
                   alt="partners_logo"
                 />
               </div>
             </li>
             <li>
               <img
-                src="./main-images/파트너이미지/pp-2-1.png"
+                src="./images/main-images/파트너이미지/pp-2-1.png"
                 alt="partners_logo"
               />
               <div class="mouseenter">
                 <img
-                  src="./main-images/파트너이미지/pp-2-2.png"
+                  src="./images/main-images/파트너이미지/pp-2-2.png"
                   alt="partners_logo"
                 />
               </div>
             </li>
             <li>
               <img
-                src="./main-images/파트너이미지/pp-3-1.png"
+                src="./images/main-images/파트너이미지/pp-3-1.png"
                 alt="partners_logo"
               />
               <div class="mouseenter">
                 <img
-                  src="./main-images/파트너이미지/pp-3-2.png"
+                  src="./images/main-images/파트너이미지/pp-3-2.png"
                   alt="partners_logo"
                 />
               </div>
             </li>
             <li>
               <img
-                src="./main-images/파트너이미지/pp-4-1.png"
+                src="./images/main-images/파트너이미지/pp-4-1.png"
                 alt="partners_logo"
               />
               <div class="mouseenter">
                 <img
-                  src="./main-images/파트너이미지/pp-4-2.png"
+                  src="./images/main-images/파트너이미지/pp-4-2.png"
                   alt="partners_logo"
                 />
               </div>
             </li>
             <li>
               <img
-                src="./main-images/파트너이미지/pp-5-1.png"
+                src="./images/main-images/파트너이미지/pp-5-1.png"
                 alt="partners_logo"
               />
               <div class="mouseenter">
                 <img
-                  src="./main-images/파트너이미지/pp-5-2.png"
+                  src="./images/main-images/파트너이미지/pp-5-2.png"
                   alt="partners_logo"
                 />
               </div>
@@ -635,192 +680,192 @@
           <ul>
             <li>
               <img
-                src="./main-images/파트너이미지/pp-6-1.png"
+                src="./images/main-images/파트너이미지/pp-6-1.png"
                 alt="partners_logo"
               />
               <div class="mouseenter">
                 <img
-                  src="./main-images/파트너이미지/pp-6-2.png"
+                  src="./images/main-images/파트너이미지/pp-6-2.png"
                   alt="partners_logo"
                 />
               </div>
             </li>
             <li>
               <img
-                src="./main-images/파트너이미지/pp-7-1.png"
+                src="./images/main-images/파트너이미지/pp-7-1.png"
                 alt="partners_logo"
               />
               <div class="mouseenter">
                 <img
-                  src="./main-images/파트너이미지/pp-7-2.png"
+                  src="./images/main-images/파트너이미지/pp-7-2.png"
                   alt="partners_logo"
                 />
               </div>
             </li>
             <li>
               <img
-                src="./main-images/파트너이미지/pp-8-1.png"
+                src="./images/main-images/파트너이미지/pp-8-1.png"
                 alt="partners_logo"
               />
               <div class="mouseenter">
                 <img
-                  src="./main-images/파트너이미지/pp-8-2.png"
+                  src="./images/main-images/파트너이미지/pp-8-2.png"
                   alt="partners_logo"
                 />
               </div>
             </li>
             <li>
               <img
-                src="./main-images/파트너이미지/pp-9-1.png"
+                src="./images/main-images/파트너이미지/pp-9-1.png"
                 alt="partners_logo"
               />
               <div class="mouseenter">
                 <img
-                  src="./main-images/파트너이미지/pp-9-2.png"
+                  src="./images/main-images/파트너이미지/pp-9-2.png"
                   alt="partners_logo"
                 />
               </div>
             </li>
             <li>
               <img
-                src="./main-images/파트너이미지/pp-10-1.png"
+                src="./images/main-images/파트너이미지/pp-10-1.png"
                 alt="partners_logo"
               />
               <div class="mouseenter">
                 <img
-                  src="./main-images/파트너이미지/pp-10-2.png"
+                  src="./images/main-images/파트너이미지/pp-10-2.png"
                   alt="partners_logo"
                 />
               </div>
             </li>
             <li>
               <img
-                src="./main-images/파트너이미지/pp-11-1.png"
+                src="./images/main-images/파트너이미지/pp-11-1.png"
                 alt="partners_logo"
               />
               <div class="mouseenter">
                 <img
-                  src="./main-images/파트너이미지/pp-11-2.png"
+                  src="./images/main-images/파트너이미지/pp-11-2.png"
                   alt="partners_logo"
                 />
               </div>
             </li>
             <li>
               <img
-                src="./main-images/파트너이미지/pp-12-1.png"
+                src="./images/main-images/파트너이미지/pp-12-1.png"
                 alt="partners_logo"
               />
               <div class="mouseenter">
                 <img
-                  src="./main-images/파트너이미지/pp-12-2.png"
+                  src="./images/main-images/파트너이미지/pp-12-2.png"
                   alt="partners_logo"
                 />
               </div>
             </li>
             <li>
               <img
-                src="./main-images/파트너이미지/pp-13-1.png"
+                src="./images/main-images/파트너이미지/pp-13-1.png"
                 alt="partners_logo"
               />
               <div class="mouseenter">
                 <img
-                  src="./main-images/파트너이미지/pp-13-2.png"
+                  src="./images/main-images/파트너이미지/pp-13-2.png"
                   alt="partners_logo"
                 />
               </div>
             </li>
             <li>
               <img
-                src="./main-images/파트너이미지/pp-14-1.png"
+                src="./images/main-images/파트너이미지/pp-14-1.png"
                 alt="partners_logo"
               />
               <div class="mouseenter">
                 <img
-                  src="./main-images/파트너이미지/pp-14-2.png"
+                  src="./images/main-images/파트너이미지/pp-14-2.png"
                   alt="partners_logo"
                 />
               </div>
             </li>
             <li>
               <img
-                src="./main-images/파트너이미지/pp-15-1.png"
+                src="./images/main-images/파트너이미지/pp-15-1.png"
                 alt="partners_logo"
               />
               <div class="mouseenter">
                 <img
-                  src="./main-images/파트너이미지/pp-15-2.png"
+                  src="./images/main-images/파트너이미지/pp-15-2.png"
                   alt="partners_logo"
                 />
               </div>
             </li>
             <li>
               <img
-                src="./main-images/파트너이미지/pp-16-1.png"
+                src="./images/main-images/파트너이미지/pp-16-1.png"
                 alt="partners_logo"
               />
               <div class="mouseenter">
                 <img
-                  src="./main-images/파트너이미지/pp-16-2.png"
+                  src="./images/main-images/파트너이미지/pp-16-2.png"
                   alt="partners_logo"
                 />
               </div>
             </li>
             <li>
               <img
-                src="./main-images/파트너이미지/pp-17-1.png"
+                src="./images/main-images/파트너이미지/pp-17-1.png"
                 alt="partners_logo"
               />
               <div class="mouseenter">
                 <img
-                  src="./main-images/파트너이미지/pp-17-2.png"
+                  src="./images/main-images/파트너이미지/pp-17-2.png"
                   alt="partners_logo"
                 />
               </div>
             </li>
             <li>
               <img
-                src="./main-images/파트너이미지/pp-18-1.png"
+                src="./images/main-images/파트너이미지/pp-18-1.png"
                 alt="partners_logo"
               />
               <div class="mouseenter">
                 <img
-                  src="./main-images/파트너이미지/pp-18-2.png"
+                  src="./images/main-images/파트너이미지/pp-18-2.png"
                   alt="partners_logo"
                 />
               </div>
             </li>
             <li>
               <img
-                src="./main-images/파트너이미지/pp-19-1.png"
+                src="./images/main-images/파트너이미지/pp-19-1.png"
                 alt="partners_logo"
               />
               <div class="mouseenter">
                 <img
-                  src="./main-images/파트너이미지/pp-19-2.png"
+                  src="./images/main-images/파트너이미지/pp-19-2.png"
                   alt="partners_logo"
                 />
               </div>
             </li>
             <li>
               <img
-                src="./main-images/파트너이미지/pp-20-1.png"
+                src="./images/main-images/파트너이미지/pp-20-1.png"
                 alt="partners_logo"
               />
               <div class="mouseenter">
                 <img
-                  src="./main-images/파트너이미지/pp-20-2.png"
+                  src="./images/main-images/파트너이미지/pp-20-2.png"
                   alt="partners_logo"
                 />
               </div>
             </li>
             <li>
               <img
-                src="./main-images/파트너이미지/pp-21-1.png"
+                src="./images/main-images/파트너이미지/pp-21-1.png"
                 alt="partners_logo"
               />
               <div class="mouseenter">
                 <img
-                  src="./main-images/파트너이미지/pp-21-2.png"
+                  src="./images/main-images/파트너이미지/pp-21-2.png"
                   alt="partners_logo"
                 />
               </div>
@@ -829,16 +874,16 @@
         </div>
 
         <div class="partners_btn viewMore">
-          View more <img src="./main-images/more_icon.png" alt="+" />
+          View more <img src="./images/main-images/more_icon.png" alt="+" />
         </div>
       </article>
     </main>
 
     <!-- floated_btn -->
-    <div id="main_fixed_btn">
+    <div id="main_fixed_btn" class="poSticky">
       <div class="float_btn">
         <a href="#"
-          ><img src="./main-images/float_icon01.png" alt="버튼1" />
+          ><img src="./images/main-images/float_icon01.png" alt="버튼1" />
           <div class="hoverBg">
             <h5>Open Sea</h5>
           </div></a
@@ -846,7 +891,7 @@
       </div>
       <div class="float_btn">
         <a href="#"
-          ><img src="./main-images/float_icon02.png" alt="버튼2" />
+          ><img src="./images/main-images/float_icon02.png" alt="버튼2" />
           <div class="hoverBg">
             <h5>Discord</h5>
           </div></a
@@ -854,9 +899,49 @@
       </div>
 
       <div class="scrollup">
-        <img src="./main-images/scrollup.png" alt="스크롤 업" />
+        <img src="./images/main-images/scrollup.png" alt="스크롤 업" />
       </div>
     </div>
+
+    <!-- footer -->
+
+    <footer>
+      <div class="footerTop"></div>
+      <div class="footer">
+        <div class="footerInner">
+          <div class="footerLeft">
+            <div class="sandboxLogo">
+              <a href="https://www.sandbox.co.kr/" target="_blank"
+                ><img src="./images/main-images/footer_logo.png" alt="sandbox"
+              /></a>
+            </div>
+            <div class="sandboxText">
+              <div id="sandboxCorp">(주)샌드박스네트워크</div>
+              <div class="address">
+                <span>Address</span>
+                서울 특별시 용산구 서빙고로 17 30층
+              </div>
+              <div class="email">
+                <span>이메일</span>
+                mtdz@sandbox.co.kr
+              </div>
+            </div>
+          </div>
+          <div class="footerRight">
+            <ul id="social">
+              <li><a href="#">이용약관</a></li>
+              <li><a href="#">open sea</a></li>
+              <li><a href="#">discord</a></li>
+              <li><a href="#">twitter</a></li>
+              <li><a href="#">instagram</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footerBottom">
+        Copyright &copy; 2022 Meta toy dragonz. All Rights Reserved
+      </div>
+    </footer>
 
     <script src="./main.js"></script>
   </body>
