@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>scrollEx1</title>
+  <style>
+    /* html { scroll-behavior: smooth; } */
+
+    .box {
+      height: 300vh;
+    }
+
+    .btn {
+      position: fixed;
+      right: 30px;
+      bottom: 30px;
+      font-size: 3em;
+      transition: .4s;
+      animation: tree infinite 3s ease-in-out;
+      opacity: 0;
+    }
+
+    @keyframes tree {
+
+      0%,
+      100% {
+        transform: translateY(0) rotate(-5deg);
+      }
+
+      50% {
+        transform: translateY(-20px) rotate(10deg);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    <h1>top</h1>
+  </div>
+  <a href="#" id="go_to" class="btn">🎄</a>
+
+  <script>
+    const goTo = document.querySelector('#go_to');
+
+    goTo.addEventListener('click', e => {
+      e.preventDefault();
+      scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    })
+
+    addEventListener('scroll', () => {
+      let ht = document.documentElement.scrollTop;
+
+      // ht > 300 ? goTo.style.opacity = 1 : goTo.style.opacity = 0;
+      scrollY > 300 ? goTo.style.opacity = 1 : goTo.style.opacity = 0;
+
+    })
+  </script>
+</body>
+
+</html>

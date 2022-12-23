@@ -1,0 +1,213 @@
+@charset "utf-8";
+body {
+  box-sizing: border-box;
+  font-family: 'Poppins', 'Noto Sans KR', sans-serif;
+  letter-spacing: -0.5px;
+  margin: 0;
+}
+ul {
+  list-style: none;
+}
+
+/* ------------- article image ------------- */
+article {
+  text-align: center;
+  width: 100%;
+  height: 450px;
+  margin: 80px 0 0;
+  background: url(../images/partners/ptns_intro.png) no-repeat center bottom / contain;
+}
+.mainImg {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;  
+  padding-top: 200px;
+  margin-bottom: 0;
+}
+.mainImg h1 {
+  line-height: 1;
+  margin: 0 auto 25px;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 6em;
+}
+.mainImg p {
+  color: #7f7f7f;
+  font-size: 1.0em;
+}
+
+/* ------------- main ------------- */
+.businessPartner {
+  background-color: #d1ebfa;
+  height: 50vw;
+  width: 100%;
+  margin: 0;
+  padding: 7vw 0 5vw;
+}
+.businessPartner h2 {
+  text-align: center;
+  font-weight: 600;
+  margin: 0;
+  font-size: 3.2em;
+  letter-spacing: 2px;
+  padding-bottom: 60px;
+}
+.businessPartner #bpList {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+  margin: 0 auto;
+  width: 70vw;
+  padding: 0;
+  cursor: none;
+}
+.businessPartner #bpList li {
+  width: 100%;
+  height: 7vw;
+  border-radius: 20px;
+  margin: 0;
+  transition: .2s;
+  transform-style: preserve-3d;
+  cursor: none;
+  overflow: hidden;
+  position: relative;
+}
+#bpList .moveDot .dotCursor {
+  width: 30vw;
+  height: 14vw;
+  background: url(../images/partners/mousedot.png) no-repeat center / 30%;
+  position: absolute;
+  top: -50px; left: -50px;
+}
+#bpList .mouseLotate {
+  transform: rotateY(0);
+}
+#bpList li:hover {
+  transform: scale(1.05);
+}
+#bpList li:nth-child(1) { background: #fff url(../images/partners/bp-1-1.png) no-repeat center / contain; }
+#bpList li:nth-child(2) { background: #fff url(../images/partners/bp-2-1.png) no-repeat center / contain; }
+#bpList li:nth-child(3) { background: #fff url(../images/partners/bp-3-1.png) no-repeat center / contain; }
+#bpList li:nth-child(4) { background: #fff url(../images/partners/bp-4-1.png) no-repeat center / contain; }
+#bpList li:nth-child(5) { background: #fff url(../images/partners/bp-5-1.png) no-repeat center / contain; }
+#bpList li:nth-child(6) { background: #fff url(../images/partners/bp-6-1.png) no-repeat center / contain; }
+#bpList li:nth-child(7) { background: #fff url(../images/partners/bp-7-1.png) no-repeat center / contain; }
+#bpList li:nth-child(8) { background: #fff url(../images/partners/bp-8-1.png) no-repeat center / contain; }
+#bpList li:nth-child(9) { background: #fff url(../images/partners/bp-9-1.png) no-repeat center / contain; }
+#bpList li:nth-child(10) { background: #fff url(../images/partners/bp-10-1.png) no-repeat center / contain; }
+#bpList li:nth-child(11) { background: #fff url(../images/partners/bp-11-1.png) no-repeat center / contain; }
+#bpList li:nth-child(1):hover { background: #1b1b1b url(../images/partners/bp-1-2.png) no-repeat center / contain; }
+#bpList li:nth-child(2):hover { background: #1b1b1b url(../images/partners/bp-2-2.png) no-repeat center / contain; }
+#bpList li:nth-child(3):hover { background: #1b1b1b url(../images/partners/bp-3-2.png) no-repeat center / contain; }
+#bpList li:nth-child(4):hover { background: #1b1b1b url(../images/partners/bp-4-2.png) no-repeat center / contain; }
+#bpList li:nth-child(5):hover { background: #1b1b1b url(../images/partners/bp-5-2.png) no-repeat center / contain; }
+#bpList li:nth-child(6):hover { background: #1b1b1b url(../images/partners/bp-6-2.png) no-repeat center / contain; }
+#bpList li:nth-child(7):hover { background: #1b1b1b url(../images/partners/bp-7-2.png) no-repeat center / contain; }
+#bpList li:nth-child(8):hover { background: #1b1b1b url(../images/partners/bp-8-2.png) no-repeat center / contain; }
+#bpList li:nth-child(9):hover { background: #1b1b1b url(../images/partners/bp-9-2.png) no-repeat center / contain; }
+#bpList li:nth-child(10):hover{ background: #1b1b1b url(../images/partners/bp-10-2.png) no-repeat center / contain; }
+#bpList li:nth-child(11):hover{ background: #1b1b1b url(../images/partners/bp-11-2.png) no-repeat center / contain; }
+
+.projectPartner {
+  background-color: #FFF;
+  height: 75vw;
+  width: 100%;
+  margin: 0;
+  padding: 7vw 0 5vw;
+}
+.projectPartner h2 {
+  letter-spacing: 2px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 3.2em;
+  padding: 0;
+  margin-bottom: 60px;
+}
+.projectPartner #ppList {
+  /* 1062 x 360 */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+  margin: 0 auto;
+  width: 70vw;
+  padding: 0;
+  cursor: none;
+}
+.projectPartner #ppList li {
+  width: 100%;
+  height: 7vw;
+  border-radius: 20px;
+  margin: 0;
+  cursor: pointer;
+  transition: .2s;
+  background-color: #ddd;
+  box-shadow:
+  0px 0px 31.1px rgba(0, 0, 0, 0.013),
+  0px 0px 80px rgba(0, 0, 0, 0.07);
+  transition: .2s;
+  cursor: none;
+}
+#ppList li:hover {
+  transform: scale(1.05);
+  cursor: url(../images/partners/mousedot.png);
+}
+
+#ppList li:nth-child(1) { background: #fff url(../images/partners/pp-1-1.png) no-repeat center / contain; }
+#ppList li:nth-child(2) { background: #fff url(../images/partners/pp-2-1.png) no-repeat center / contain; }
+#ppList li:nth-child(3) { background: #fff url(../images/partners/pp-3-1.png) no-repeat center / contain; }
+#ppList li:nth-child(4) { background: #fff url(../images/partners/pp-4-1.png) no-repeat center / contain; }
+#ppList li:nth-child(5) { background: #fff url(../images/partners/pp-5-1.png) no-repeat center / contain; }
+#ppList li:nth-child(6) { background: #fff url(../images/partners/pp-6-1.png) no-repeat center / contain; }
+#ppList li:nth-child(7) { background: #fff url(../images/partners/pp-7-1.png) no-repeat center / contain; }
+#ppList li:nth-child(8) { background: #fff url(../images/partners/pp-8-1.png) no-repeat center / contain; }
+#ppList li:nth-child(9) { background: #fff url(../images/partners/pp-9-1.png) no-repeat center / contain; }
+#ppList li:nth-child(10) { background: #fff url(../images/partners/pp-10-1.png) no-repeat center / contain; }
+#ppList li:nth-child(11) { background: #fff url(../images/partners/pp-11-1.png) no-repeat center / contain; }
+#ppList li:nth-child(12) { background: #fff url(../images/partners/pp-12-1.png) no-repeat center / contain; }
+#ppList li:nth-child(13) { background: #fff url(../images/partners/pp-13-1.png) no-repeat center / contain; }
+#ppList li:nth-child(14) { background: #fff url(../images/partners/pp-14-1.png) no-repeat center / contain; }
+#ppList li:nth-child(15) { background: #fff url(../images/partners/pp-15-1.png) no-repeat center / contain; }
+#ppList li:nth-child(16) { background: #fff url(../images/partners/pp-16-1.png) no-repeat center / contain; }
+#ppList li:nth-child(17) { background: #fff url(../images/partners/pp-17-1.png) no-repeat center / contain; }
+#ppList li:nth-child(18) { background: #fff url(../images/partners/pp-18-1.png) no-repeat center / contain; }
+#ppList li:nth-child(19) { background: #fff url(../images/partners/pp-19-1.png) no-repeat center / contain; }
+#ppList li:nth-child(20) { background: #fff url(../images/partners/pp-20-1.png) no-repeat center / contain; }
+#ppList li:nth-child(21) { background: #fff url(../images/partners/pp-21-1.png) no-repeat center / contain; }
+#ppList li:nth-child(22) { background: #fff url(../images/partners/pp-22-1.png) no-repeat center / contain; }
+#ppList li:nth-child(23) { background: #fff url(../images/partners/pp-23-1.png) no-repeat center / contain; }
+#ppList li:nth-child(24) { background: #fff url(../images/partners/pp-24-1.png) no-repeat center / contain; }
+#ppList li:nth-child(25) { background: #fff url(../images/partners/pp-25-1.png) no-repeat center / contain; }
+#ppList li:nth-child(26) { background: #fff url(../images/partners/pp-26-1.png) no-repeat center / contain; }
+#ppList li:nth-child(27) { background: #fff url(../images/partners/pp-27-1.png) no-repeat center / contain; }
+#ppList li:nth-child(28) { background: #fff url(../images/partners/pp-28-1.png) no-repeat center / contain; }
+#ppList li:nth-child(29) { background: #fff url(../images/partners/pp-29-1.png) no-repeat center / contain; }
+#ppList li:nth-child(1):hover { background: #1b1b1b url(../images/partners/pp-1-2.png) no-repeat center / contain; }
+#ppList li:nth-child(2):hover { background: #1b1b1b url(../images/partners/pp-2-2.png) no-repeat center / contain; }
+#ppList li:nth-child(3):hover { background: #1b1b1b url(../images/partners/pp-3-2.png) no-repeat center / contain; }
+#ppList li:nth-child(4):hover { background: #1b1b1b url(../images/partners/pp-4-2.png) no-repeat center / contain; }
+#ppList li:nth-child(5):hover { background: #1b1b1b url(../images/partners/pp-5-2.png) no-repeat center / contain; }
+#ppList li:nth-child(6):hover { background: #1b1b1b url(../images/partners/pp-6-2.png) no-repeat center / contain; }
+#ppList li:nth-child(7):hover { background: #1b1b1b url(../images/partners/pp-7-2.png) no-repeat center / contain; }
+#ppList li:nth-child(8):hover { background: #1b1b1b url(../images/partners/pp-8-2.png) no-repeat center / contain; }
+#ppList li:nth-child(9):hover { background: #1b1b1b url(../images/partners/pp-9-2.png) no-repeat center / contain; }
+#ppList li:nth-child(10):hover { background: #1b1b1b url(../images/partners/pp-10-2.png) no-repeat center / contain; }
+#ppList li:nth-child(11):hover { background: #1b1b1b url(../images/partners/pp-11-2.png) no-repeat center / contain; }
+#ppList li:nth-child(12):hover { background: #1b1b1b url(../images/partners/pp-12-2.png) no-repeat center / contain; }
+#ppList li:nth-child(13):hover { background: #1b1b1b url(../images/partners/pp-13-2.png) no-repeat center / contain; }
+#ppList li:nth-child(14):hover { background: #1b1b1b url(../images/partners/pp-14-2.png) no-repeat center / contain; }
+#ppList li:nth-child(15):hover { background: #1b1b1b url(../images/partners/pp-15-2.png) no-repeat center / contain; }
+#ppList li:nth-child(16):hover { background: #1b1b1b url(../images/partners/pp-16-2.png) no-repeat center / contain; }
+#ppList li:nth-child(17):hover { background: #1b1b1b url(../images/partners/pp-17-2.png) no-repeat center / contain; }
+#ppList li:nth-child(18):hover { background: #1b1b1b url(../images/partners/pp-18-2.png) no-repeat center / contain; }
+#ppList li:nth-child(19):hover { background: #1b1b1b url(../images/partners/pp-19-2.png) no-repeat center / contain; }
+#ppList li:nth-child(20):hover { background: #1b1b1b url(../images/partners/pp-20-2.png) no-repeat center / contain; }
+#ppList li:nth-child(21):hover { background: #1b1b1b url(../images/partners/pp-21-2.png) no-repeat center / contain; }
+#ppList li:nth-child(22):hover { background: #1b1b1b url(../images/partners/pp-22-2.png) no-repeat center / contain; }
+#ppList li:nth-child(23):hover { background: #1b1b1b url(../images/partners/pp-23-2.png) no-repeat center / contain; }
+#ppList li:nth-child(24):hover { background: #1b1b1b url(../images/partners/pp-24-2.png) no-repeat center / contain; }
+#ppList li:nth-child(25):hover { background: #1b1b1b url(../images/partners/pp-25-2.png) no-repeat center / contain; }
+#ppList li:nth-child(26):hover { background: #1b1b1b url(../images/partners/pp-26-2.png) no-repeat center / contain; }
+#ppList li:nth-child(27):hover { background: #1b1b1b url(../images/partners/pp-27-2.png) no-repeat center / contain; }
+#ppList li:nth-child(28):hover { background: #1b1b1b url(../images/partners/pp-28-2.png) no-repeat center / contain; }
+#ppList li:nth-child(29):hover { background: #1b1b1b url(../images/partners/pp-29-2.png) no-repeat center / contain; }
+
