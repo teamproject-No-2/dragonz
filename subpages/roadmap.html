@@ -6,33 +6,71 @@
     <title>ko_roadmap</title>
     <link rel="stylesheet" href="../common/minireset.min.css" />
 
-    <!-- favicon -->
-    <link
-      rel="icon"
-      type="image/png"
-      href="../images/favicon/favicon_16x16.png"
-      sizes="16x16"
-    />
-    <!-- 오픈그래프 -->
-    <meta property="og:url" content="https://----------(url)-----------" />
-    <meta property="og:local" content="ko_KR" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Meta Toy Dragonz NFT" />
-    <meta
-      property="og:description"
-      content="빨리하고가조의 프로젝트 웹사이트 Meta Toy Dragonz NFT 입니다."
-    />
-    <meta property="og:image" content="../images/og/openGraph_web.png" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Poppins:wght@300;400;500&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="../css/roadmap.css" />
-    <style></style>
+  <!-- favicon -->
+  <link rel="icon" type="image/png" href="../images/favicon/favicon_16x16.png" sizes="16x16">
+
+  <!-- 오픈그래프 -->
+  <meta property="og:url" content="https://----------(url)-----------">
+  <meta property="og:local" content="ko_KR">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Meta Toy Dragonz NFT">
+  <meta property="og:description" content="빨리하고가조의 프로젝트 웹사이트 Meta Toy Dragonz NFT 입니다.">
+  <meta property="og:image" content="../images/og/openGraph_web.png">
+
+  <title>Roadmap_page</title>
+
+    <!-- 리셋 -->
+    <link rel="stylesheet" href="../common/minireset.min.css">
+
+  <!-- 폰트 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- css -->
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/roadmap.css" />
+
+
+  <style></style>
   </head>
   <body>
+  <!-- header height 120px -->
+  <header>
+    <div class="headerWrap">
+      <div class="logo"><a href="../index.html">logo</a></div>
+      <ul id="gnb">
+        <!-- 각페이지에 맞게 index위치 수정 -->
+        <li><a href="#">STORY</a></li>
+        <li>
+          <a href="#">PROJECTS</a>
+          <ul id="hiddenMenu">
+            <!-- js로 마우스이벤트 display 바꾸기 -->
+            <li><a href="#">MTDZ the Game</a></li>
+            <li><a href="#">Meta Toy City</a></li>
+            <li><a href="#">Meta Toy Gamers</a></li>
+            <li><a href="#">Meta Toy Bricks</a></li>
+            <!-- li a::after opacity 1로 -->
+          </ul>
+        </li>
+        <li><a href="#">ROADMAP</a></li>
+        <li><a href="#">PARTNERS</a></li>
+      </ul>
+
+      <!-- morearrow img사용 -->
+      <div class="lang ">
+        <div class="selectLang">
+          <!-- ENG 클릭시 EN 표기하기 -->
+            <div id="ko" class="noSelect selected">KO</div>
+            <div id="en" class="noSelect">EN</div>
+        </div>
+        <ul id="langLi">
+          <li id="selEn">ENG</li>
+          <li id="selKo">KOR</li>
+        </ul>
+      </div>
+    </div>
+  </header>
 
     <!-- contents -->
     <main class="container">
@@ -202,8 +240,62 @@
         </div>
       </div>
     </main>
+    
+  <!-- fixed btn -->
+  <div class="fixedBtn">
+    <ul class="sideBtn">
+      <li id="openSea" class="blackBtn">
+        <a href="#" id="mouseLink">
+          <span class="open">Open Sea</span><span class="smallImg"></span>
+        </a>
+      </li>
+      <li id="discord" class="blackBtn">
+        <a href="#" id="mouseLink">
+          <span class="open">Discord</span><span class="smallImg"></span>
+        </a>
+      </li>
+      <li id="goTop"><a href="#">go top</a></li>
+    </ul>
+  </div>
 
-    <!-- tilt js -->
+  <!-- footer -->  
+  <footer>
+    <div class="footerTop"></div>
+    <div class="footer">
+      <div class="footerInner">
+        <div class="footerLeft">
+          <div class="sandboxLogo">
+            <a href="https://www.sandbox.co.kr/" target="_blank"><img src="../images/partners/footer_logo.png" alt="sandbox"></a>
+          </div>
+          <div class="sandboxText">
+            <div id="sandboxCorp">(주)샌드박스네트워크</div>
+            <div class="address">
+              <span>Address</span>
+              서울 특별시 용산구 서빙고로 17 30층
+            </div>
+            <div class="email">
+              <span>이메일</span>
+              mtdz@sandbox.co.kr
+            </div>
+          </div>
+        </div>
+        <div class="footerRight">
+          <ul id="social">
+            <li><a href="#">이용약관</a></li>
+            <li><a href="#">open sea</a></li>
+            <li><a href="#">discord</a></li>
+            <li><a href="#">twitter</a></li>
+            <li><a href="#">instagram</a></li>
+          </ul>
+        </div>
+      </div>      
+    </div>
+    <div class="footerBottom">
+      Copyright &copy; 2022 Meta toy dragonz. All Rights Reserved
+    </div>
+  </footer>
+    <!-- js -->
+    <script defer src="../js/header.js"></script>
     <script src="../js/vanilla-tilt.min.js.js"></script>
   </body>
 </html>

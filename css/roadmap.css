@@ -5,7 +5,7 @@
   --txt: #454545;
   --bg: #189cf4;
   --white: #fff;
-  --height: 1000px;
+  --height: 1005px;
 }
 body {
   font-family: "Poppins", "Noto Sans KR", -apple-system, BlinkMacSystemFont,
@@ -107,6 +107,14 @@ body {
   vertical-align: bottom;
   overflow: auto;
   height: var(--height);
+}
+
+/* 스크롤바 */
+.section2::-webkit-scrollbar { width: 5px;}
+.section2::-webkit-scrollbar-track {background-color: var(--bg);}
+.section2::-webkit-scrollbar-thumb {
+  background-color: var(--white);
+  border-radius: 10px;
 }
 
 .card {
