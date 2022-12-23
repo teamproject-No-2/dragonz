@@ -156,9 +156,6 @@ selKo.addEventListener("click", () => {
 });
 
 const goToBtn = document.querySelector(".scrollup");
-const fixedBtn = document.querySelector("#main_fixed_btn");
-const footer = document.querySelector("footer");
-
 addEventListener("scroll", () => {
   if (scrollY >= 900) {
     goToBtn.classList.add("scrollOn");
@@ -168,20 +165,14 @@ addEventListener("scroll", () => {
     fixedBtn.style.bottom = "53px";
   }
 });
-// console.log(footer.offsetTop);
+
+// const fixedBtn = document.querySelector(".fixedBtn");
+// const footer = document.querySelector("footer").offsetTop;
+
 // addEventListener("scroll", () => {
-//   if (scrollY >= footer.offsetHeight) {
-//     fixedBtn.classList.remove("poSticky");
+//   if (scrollY <= footer) {
+//     fixedBtn.classList.remove("poFixed");
 //   } else {
-//     fixedBtn.classList.add("poSticky");
+//     fixedBtn.classList.add("poRelative");
 //   }
 // });
-
-/* 
-addEventListener("scroll", () => {
-  if (scrollY <= footer) {
-    fixedBtn.classList.remove("poFixed");
-  } else {
-    fixedBtn.classList.add("poRelative");
-  }
-}); */
