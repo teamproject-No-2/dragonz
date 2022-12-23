@@ -8,12 +8,12 @@
   <!-- google font -->
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
   <!-- css -->
-  <link rel="stylesheet" href="./common/minireset.min.css">
-  <link rel="stylesheet" href="./common/swiper-bundle.min.css">
-  <link rel="stylesheet" href="./common/story.css">
+  <link rel="stylesheet" href="./css/minireset.min.css">
+  <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="./css/story.css">
   <!-- js -->
-  <script src="./common/swiper-bundle.min.js"></script>
-  <script defer src="./common/story.js"></script>
+  <script src="./js/swiper-bundle.min.js"></script>
+  <script defer src="./js/story.js"></script>
 </head>
 <body>
   <!-- popUp -->
@@ -53,7 +53,7 @@
     <div class="rightHead">
       <div class="searchBox">
         <span class="innerTxt">MTZD#</span>
-        <input type="text" name="search" id="search" class="refresh" placeholder="0000">
+        <input type="text" name="search" id="search" placeholder="0000">
         <button type="button" id="btn"></button>
       </div>
     </div>
@@ -66,15 +66,15 @@
         <div class="filterCheck">
           <form action="">
             <div class="filterCont">
-              <input type="checkbox" onchange="checkBox(this)" name="filter" id="cbProj" class="refresh" value="PROJECT">
+              <input type="checkbox" name="filter"  id="cbProj" value="PROJECT" class="filterBox" onclick="ftrCheck()">
               <label for="cbProj">PROJECT<img src="./images/story/icon_project_pop.png" alt="PROJECT"></label>
             </div>
             <div class="filterCont">
-              <input type="checkbox" onchange="checkBox(this)" name="filter" id="cbLink" class="refresh" value="LINK">
+              <input type="checkbox" name="filter" id="cbLink" value="LINK" class="filterBox" onclick="ftrCheck()">
               <label for="cbLink">LINK<img src="./images/story/icon_link_pop.png" alt="LINK"></label>
             </div>
             <div class="filterCont">
-              <input type="checkbox" onchange="checkBox(this)" name="filter" id="cbStory" class="refresh" value="STORY">
+              <input type="checkbox" name="filter" id="cbStory" value="STORY" class="filterBox" onclick="ftrCheck()">
               <label for="cbStory">STORY<img src="./images/story/icon_story_pop.png" alt="STORY"></label>
             </div>
           </form>
@@ -85,23 +85,23 @@
         <div class="filterCheck">
           <form action="">
             <div class="filterCont">
-              <input type="checkbox" onchange="checkBox(this)" name="filter" id="cbLegend" class="refresh" value="L">
+              <input type="checkbox" name="filter" id="cbLegend" value="L" class="filterGrade" onclick="ftrCheck()">
               <label for="cbLegend">LEGENDARY</label>
             </div>
             <div class="filterCont">
-              <input type="checkbox" onchange="checkBox(this)" name="filter" id="cbUR" class="refresh" value="U">
+              <input type="checkbox" name="filter" id="cbUR" value="U" class="filterGrade" onclick="ftrCheck()">
               <label for="cbUR">ULTRA RARE</label>
             </div>
             <div class="filterCont">
-              <input type="checkbox" onchange="checkBox(this)" name="filter" id="cbSR" class="refresh" value="S">
+              <input type="checkbox" name="filter" id="cbSR" value="S" class="filterGrade" onclick="ftrCheck()">
               <label for="cbSR">SUPER RARE</label>
             </div>
             <div class="filterCont">
-              <input type="checkbox" onchange="checkBox(this)" name="filter" id="cbRare" class="refresh" value="R">
+              <input type="checkbox" name="filter" id="cbRare" value="R" class="filterGrade" onclick="ftrCheck()">
               <label for="cbRare">RARE</label>
             </div>
             <div class="filterCont">
-              <input type="checkbox" onchange="checkBox(this)" name="filter" id="cbNM" class="refresh" value="N">
+              <input type="checkbox" name="filter" id="cbNM" value="N" class="filterGrade" onclick="ftrCheck()">
               <label for="cbNM">NORMAL</label>
             </div>
           </form>

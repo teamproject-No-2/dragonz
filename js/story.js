@@ -41,7 +41,6 @@ const itemList = document.querySelector('.itemList');
 
 // 템플릿 문자열로 변환?
 
-// 아이콘 처리, 이미지(배열?)
 data.forEach((item) => {
   // 리스트 템플릿 (내부 링크 수정)
   itemList.innerHTML += `
@@ -125,23 +124,34 @@ function searchFilter(){
 }
 
 // 체크박스로 필터
-function sel(){
-	// 1. chk라는 이름을 가진 모든 checkbox 가져온다.
-	let chks = document.getElementsByName("chk");
-		
-	for(let i = 0; i < chks.length; i++){
-		// 2. 만일 chk들 중에 체크되어있는 element가 있다면,
-		if( chks[i].checked ){
-			// 3. 체크되어있는 chk.value값을 Id로 가지는 요소의 배경색을 chk.value값으로 바꾸자.
-			// document.getElementById(???).stlye.backgroundColor=???
-			document.getElementById(chks[i].value).style.background = chks[i].value;
-		} else {
-			document.getElementById(chks[i].value).style.background = "";
-		}
-	}
-}
+// function ftrCheck() {
+//   let results = Array.from(document.querySelectorAll('.itemCard'));
+//   let filterChecked = document.querySelectorAll('.filterNo1 input.filterBox:checked');
+//   let gradeChecked = document.querySelectorAll('.filterNo2 input.filterGrade:checked');
 
+//   results.forEach(function(result) {
+//     result.style.display = 'none';
+//   });
+//   filterOrGrade(filterChecked);
 
+//   if (gradeChecked.length != 0) {
+//     filterOrGrade(gradeChecked);
+//   }
+
+//   function filterOrGrade(filterOrGradeChecked) {
+//     results = Array.from(filterOrGradeChecked).reduce(function(sum, input) {
+//         const attrib = input.getAttribute('rel');
+//         return sum.concat(results.filter(function(result) {
+//             return result.classList.contains(attrib);
+//         }));
+//     }, []);
+  
+// }
+//   results.forEach(function(result) {
+//     result.style.display = 'block';
+//   });
+// }
+// ftrCheck();
 // 아이템 숫자 표기: 필터->재배열 ->배열수..?
 
 
