@@ -5,14 +5,13 @@
   --txt: #454545;
   --bg: #189cf4;
   --white: #fff;
-  --height: 1005px;
+  --height: 1050px;
 }
 body {
   font-family: "Poppins", "Noto Sans KR", -apple-system, BlinkMacSystemFont,
     "Malgun Gothic", "맑은 고딕", helvetica, "Apple SD Gothic Neo", sans-serif;
   text-transform: uppercase;
 }
-
 .left {
   height: var(--height);
   position: sticky;
@@ -78,6 +77,9 @@ body {
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 10px 0px;
   /* text-indent: -9999px; */
 }
+.year a {
+  color: #7f7f7f;
+}
 .year.active {
   padding-top: 60px;
   padding-left: 20px;
@@ -101,7 +103,7 @@ body {
 .section2 {
   position: absolute;
   left: 870px;
-  top: 0;
+  top: 0px;
   width: 1033px;
   background: url(../images/roadmap-images/bg_grid.png) var(--bg);
   vertical-align: bottom;
@@ -129,6 +131,9 @@ body {
 
 .card1 {
   margin-top: 250px;
+}
+.card6 {
+  margin-bottom: 100px;
 }
 .step {
   border: #189cf4 solid 1px;

@@ -4,6 +4,8 @@ body {
   font-family: 'Poppins', 'Noto Sans KR', sans-serif;
   letter-spacing: -0.5px;
 }
+
+/* ------------------------ 헤더 ------------------------ */
 header {
   width: 100%;
   height: 80px;
@@ -123,7 +125,7 @@ header {
 .lang {
   width: 110px;
   height: 45px;
-  padding: 5px 23px 0;
+  padding: 0 23px;
   border-radius: 23px;
   background-color: #fff;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
@@ -142,20 +144,25 @@ header {
   overflow: hidden;
 }
 .selectLang .noSelect {
-  padding: 8px 0 0px;  
+  padding: 0;  
   display: none;
   font-size: 14px;
   font-weight: 500;
 }
 .selectLang .selected {
+  line-height: 45px;
+  height: 45px;
   display: block;
+  margin-left: 0;
+  border: none;
+  box-shadow: none;
 }
 .selectLang .selected {
   width: 100%;
-  background: url(../images/partners/morearrow.png) no-repeat right;
+  background: url(../images/partners/morearrow.png) no-repeat right /  20%;
 }
 .lang.on .selectLang .selected {
-  background: url(../images/partners/morearrow2.png) no-repeat right;
+  background: url(../images/partners/morearrow2.png) no-repeat right / 20%;
 }
 #langLi li {
   padding: 5px 0;
@@ -169,6 +176,7 @@ footer {
   background-color: #1b1b1b;
   width: 100%;    
   height: 340px;
+  bottom: 0;
 }
 .footerTop {
   width: 100%;
@@ -209,10 +217,12 @@ footer .footerInner {
   color: rgba(255, 255, 255, 60%);
   font-size: 12px;
   position: relative;
+  text-transform: none;
 }
 .sandboxText span {
   display: inline-block;
   width: 70px;
+
 }
 .sandboxText span::after {
   position: absolute;
@@ -220,6 +230,7 @@ footer .footerInner {
   left: 60px;
   height: 12px;
   top: 50%;
+
   transform: translateY(-50%);
   content: '';
   opacity: 0.1;
@@ -284,6 +295,7 @@ footer .footerBottom {
   padding: 0;
   color: rgba(72, 72, 72, 0.3);
   position: absolute;
+  left: 0;
   bottom: 0;
 }
 
