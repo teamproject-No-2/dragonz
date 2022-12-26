@@ -1,14 +1,13 @@
-// main - home
-/* const bannerCharacter = document.querySelectorAll(".banner_character");
-function move() {
-  bannerCharacter.forEach((bannerCharacter, i) => {
-    i = 0;
-    bannerCharacter[i].classList.remove("center");
-    i++;
-    bannerCharacter[i].classList.add("center");
-  });
-}
-move(); */
+// main - story
+const cards = document.querySelector(".cardsList");
+const storyPage = document.querySelector("#main_story");
+
+window.addEventListener("scroll", () => {
+  let storyHeight = storyPage.offsetTop - 150;
+  if (scrollY >= storyHeight) {
+    cards.classList.add("active");
+  }
+});
 
 // main - project
 const sections = document.querySelectorAll(".games > section");
@@ -54,8 +53,8 @@ const roadmap = document.querySelector("#main_roadmap");
 
 addEventListener("scroll", () => {
   let num = roadmap.offsetTop - 600;
-  console.log(num);
-  console.log(scrollY);
+  // console.log(num);
+  // console.log(scrollY);
   if (scrollY > num) {
     roadmap.classList.add("scale");
   }

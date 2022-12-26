@@ -241,7 +241,7 @@ main #main_story {
 }
 
 main #main_story .cardsList {
-  margin-top: 150px;
+  margin: 150px auto 0;
   height: 500px;
   position: relative;
 }
@@ -252,37 +252,54 @@ main #main_story .cardsList .card {
   background-color: #fff;
   position: absolute;
   text-align: left;
+  left: 40%;
   transition: 0.6s;
 }
 main #main_story .cardsList #card1 {
   top: 0;
-  left: 230px;
+  /* left: 230px; */
   box-shadow: rgba(213, 149, 252, 0.2) 0px 3px 24px;
+}
+main #main_story .cardsList.active #card1 {
+  left: 230px;
 }
 main #main_story .cardsList #card2 {
   transform: rotate(-17deg);
   top: 0;
-  left: 500px;
+  /* left: 500px; */
   box-shadow: rgba(254, 179, 31, 0.2) 0px 3px 24px;
+}
+main #main_story .cardsList.active #card2 {
+  left: 500px;
 }
 main #main_story .cardsList #card3 {
   transform: rotate(10deg);
   top: -60px;
-  left: 750px;
+  /* left: 750px; */
   box-shadow: rgba(33, 186, 165, 0.2) 0px 3px 24px;
+}
+main #main_story .cardsList.active #card3 {
+  left: 750px;
 }
 main #main_story .cardsList #card4 {
   transform: rotate(-10deg);
   top: 0px;
-  left: 1000px;
+  /* left: 1000px; */
   box-shadow: rgba(146, 155, 60, 0.2) 0px 3px 20px;
+}
+main #main_story .cardsList.active #card4 {
+  left: 1000px;
 }
 main #main_story .cardsList #card5 {
   transform: rotate(10deg);
   top: 0;
-  left: 1270px;
+  /* left: 1270px; */
   box-shadow: rgba(236, 66, 31, 0.1) 0px 3px 20px;
 }
+main #main_story .cardsList.active #card5 {
+  left: 1270px;
+}
+
 /* card hover */
 main #main_story .cardsList #card1:hover {
   transform: rotate(0) scale(1.1);
