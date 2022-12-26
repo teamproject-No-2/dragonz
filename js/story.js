@@ -204,3 +204,5 @@ popInfo.addEventListener('click', e => {
       body.style.overflow = 'visible'
   }
 });
+
+// 클래스 추가
