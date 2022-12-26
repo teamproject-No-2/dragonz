@@ -189,4 +189,5 @@ h2 {
 }
 .fixedBtn {
   float: left;
+  overflow: hidden;
 }
