@@ -1,6 +1,5 @@
 // main - home
 /* const bannerCharacter = document.querySelectorAll(".banner_character");
-
 function move() {
   bannerCharacter.forEach((bannerCharacter, i) => {
     i = 0;
@@ -58,7 +57,7 @@ const line1 = document.querySelector(".line1");
 const line2 = document.querySelector(".line2");
 
 const lineLength = line1.offsetWidth;
-console.log(lineLength);
+// console.log(lineLength);
 
 line1.animate(
   {
@@ -87,11 +86,6 @@ line2.animate(
   }
 );
 
-lis.addEventListener("mouseenter", () => {
-  line1.animate;
-});
-lis.forEach();
-
 // floated_btn
 const goUp = document.querySelector(".scrollup");
 
@@ -110,21 +104,17 @@ let mouseY = 0;
 // 커서를 따라다니는 이모지 좌표
 let cursorX = 0;
 let cursorY = 0;
-
 // 마우스 이동
 addEventListener("mousemove", (e) => {
   mouseX = e.clientX - 50;
   mouseY = e.clientY - 50;
 });
-
 function ani() {
   requestAnimationFrame(ani); // 연속 호툴이 필요하기 때문에 이렇게 함수로 작성
   cursorX += (mouseX - cursorX) * 0.1;
   cursorY += (mouseY - cursorY) * 0.1;
-
   cursor.style.transform = `translate(${cursorX}px, ${cursorY}px)`;
 }
-
 ani();
  */
 
@@ -171,17 +161,25 @@ addEventListener("scroll", () => {
   }
 });
 
-// const fixedBtn = document.querySelector("#main_fixed_btn");
+const fixedBtn = document.querySelector("#main_fixed_btn");
+const partners = document.querySelector("#main_partners");
 // const footer = document.querySelector("footer").offsetTop;
-
-// addEventListener("scroll", () => {
-//   scrollY <= footer ? fixedBtn.classList.remove("poSticky") : false;
-// });
-
-/* addEventListener("scroll", () => {
+const footer = document.querySelector("footer");
+/* 
+addEventListener("scroll", () => {
   if (scrollY <= footer) {
     fixedBtn.classList.remove("poFixed");
   } else {
     fixedBtn.classList.add("poRelative");
   }
 }); */
+/* console.log(partners.offsetTop);
+addEventListener("scroll", () => {
+  if (scrollY >= partners.offsetTop) {
+    fixedBtn.classList.add("poSticky");
+    
+  } else {
+    fixedBtn.classList.remove("poSTicky");
+  }
+});
+ */

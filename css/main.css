@@ -14,6 +14,9 @@ body {
   text-align: center;
   overflow-x: hidden;
 }
+main {
+  position: relative;
+}
 
 .cursor {
   position: fixed;
@@ -698,10 +701,18 @@ main #main_partners .partners_btn {
 
 /* floated_btn */
 
-#main_fixed_btn {
+/* #main_fixed_btn {
   position: fixed;
   bottom: 10vh;
   right: 2vw;
+} */
+#main_fixed_btn {
+  /* border: 3px orange solid; */
+  position: sticky;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-right: 20px;
 }
 
 #main_fixed_btn .float_btn {
@@ -777,6 +788,7 @@ main #main_partners .partners_btn {
   position: relative;
   cursor: pointer;
   display: none;
+  margin-bottom: 40px;
 }
 #main_fixed_btn .scrollup img {
   position: absolute;
@@ -789,12 +801,12 @@ main #main_partners .partners_btn {
 }
 
 /* 헤더 푸터 */
-body {
+/* body {
   color: #1b1b1b;
   font-family: "Poppins", "Noto Sans KR", sans-serif;
   letter-spacing: -0.5px;
   box-sizing: border-box;
-}
+} */
 header {
   width: 100%;
   padding-top: 20px;
@@ -1176,101 +1188,3 @@ footer .footerBottom {
   position: absolute;
   bottom: 0;
 }
-
-/* ------------------------ fixed button ------------------------ */
-/* .fixedBtn {
-  margin: 0 30px 100px;
-  position: sticky;
-  top: 30vh;
-  z-index: 9999;
-  text-align: right;
-  width: 130px;
-  left: 100%;
-}
-.poFixed {
-  margin: 0;
-  position: fixed;
-  bottom: 100px;
-}
-.fixedBtn.scrolled {
-  position: absolute;
-  bottom: 50px;
-}
-.fixedBtn .sideBtn {
-  margin: 0;
-  padding: 0;
-}
-.fixedBtn .sideBtn li {
-  width: 125px;
-  height: 47px;
-  margin-bottom: 10px;
-}
-.fixedBtn .sideBtn li a {
-  position: absolute;
-  right: 0;
-  padding: 0;
-  width: 47px;
-  height: 47px;
-  overflow: hidden;
-  background: none;
-  display: flex;
-  justify-content: space-between;
-  text-decoration: none;
-}
-.fixedBtn .sideBtn li a:hover {
-  width: 125px;
-  height: 47px;
-  background: url(../images/partners/btnbox.png) no-repeat center / contain;
-  text-indent: 0;
-  color: #189cf4;
-  line-height: 47px;
-  font-size: 12px;
-  padding-left: 20px;
-}
-.fixedBtn .sideBtn li a span.open {
-  text-indent: -9999px;
-}
-.fixedBtn .sideBtn li a:hover span.open {
-  text-indent: 0px;
-}
-.fixedBtn .sideBtn li:nth-child(3) a {
-  width: 47px;
-  height: 47px;
-  text-indent: -9999px;
-  border-radius: 50%;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.16);
-}
-.fixedBtn .sideBtn li a .smallImg {
-  display: inline-block;
-  width: 47px;
-  height: 47px;
-  font-size: 14px;
-  text-decoration: none;
-  line-height: 47px;
-  border-radius: 50%;
-  text-indent: 9999px;
-}
-
-.fixedBtn .sideBtn #openSea a .smallImg {
-  background: #1b1b1b url(../images/partners/btn1-1.png) no-repeat center / 45%;
-  color: #fff;
-}
-.fixedBtn .sideBtn #openSea a:hover .smallImg {
-  background: #1b1b1b url(../images/partners/btn1-2.png) no-repeat center / 45%;
-}
-.fixedBtn .sideBtn #discord a .smallImg {
-  background: #1b1b1b url(../images/partners/btn2-1.png) no-repeat center / 45%;
-  color: #fff;
-}
-.fixedBtn .sideBtn #discord a:hover .smallImg {
-  background: #1b1b1b url(../images/partners/btn2-2.png) no-repeat center / 45%;
-}
-.fixedBtn .sideBtn #goTop a {
-  background: #fff url(../images/partners/scrollup.png) no-repeat center / 20%;
-  text-align: center;
-  display: none;
-}
-.fixedBtn .sideBtn #goTop.scrollOn a {
-  display: inline-block;
-}
- */
