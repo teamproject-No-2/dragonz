@@ -24,7 +24,7 @@ const fixedBtn = document.querySelector('.fixedBtn');
 const footer = document.querySelector('footer').offsetTop;
 
 addEventListener('scroll', () => {
-  if(scrollY >= 900) {
+  if(scrollY >= 500) {
     goToBtn.classList.add('scrollOn');
     fixedBtn.style.bottom = '100px'
   } else {

@@ -3,23 +3,39 @@ body {
   color: #1b1b1b;
   font-family: 'Poppins', 'Noto Sans KR', sans-serif;
   letter-spacing: -0.5px;
+  box-sizing: border-box;
 }
-
-/* ------------------------ 헤더 ------------------------ */
 header {
+  width: 100%;
+  padding-top: 20px;
+  height: 120px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.05);
+  position: fixed;
+  left: 0;
+  z-index: 9999;
+}
+.scrolled {
   width: 100%;
   height: 80px;
   margin: 0 auto;
+  padding-top: 0;
   background-color: #fff;
   position: fixed;
-  top: 0;
   left: 0;
   display: flex;
   justify-content: center;
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.05);
-  z-index: 9999;
 }
 .headerWrap {
+  width: 1600px;
+  display: flex;
+  align-items: center;
+  height: 100px;
+}
+.scrolled .headerWrap {
   width: 1600px;
   display: flex;
   align-items: center;
@@ -28,6 +44,10 @@ header {
 }
 .logo {
   position: absolute;
+  width: 190px;
+  height: 1000px;
+}
+.scrolled .logo {
   width: 100px;
   height: 50px;
 }
@@ -52,8 +72,22 @@ header {
 #gnb li {
   height: 100%;
   padding: 0 2vw;
+  line-height: 100%;
+}
+.scrolled #gnb li {
+  height: 100%;
+  padding: 0 2vw;
 }
 #gnb li a {
+  text-decoration: none;
+  color: #1b1b1b;
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 80%;
+  transition: .4s;
+}
+.scrolled #gnb li a {
   text-decoration: none;
   color: #1b1b1b;
   display: flex;
@@ -62,9 +96,26 @@ header {
   height: 100%;
   transition: .4s;
 }
-
+#gnb li > a:hover {
+  color: #fff;
+}
+.scrolled #gnb li > a:hover {
+  color: #1b1b1b;
+}
 /* ------------------------ 리스트 밑줄 ------------------------ */
 #gnb > li > a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0px;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: #141414;
+  opacity: 0; 
+  transition: .4s;
+}
+.scrolled #gnb > li > a::after {
   content: "";
   position: absolute;
   left: 0;
@@ -80,6 +131,19 @@ header {
   opacity: 1; 
 }
 #hiddenMenu {
+  opacity: 0;
+  background-color: #fff;
+  position: absolute;
+  top: 100px;
+  left: calc(50% - 200px);
+  width: 240px;
+  height: 0px;
+  padding: 50px 52px;
+  border-radius: 22px;
+  overflow: hidden;
+  transition: .4s;
+}
+.scrolled #hiddenMenu {
   opacity: 0;
   background-color: #fff;
   position: absolute;
@@ -103,12 +167,28 @@ header {
   height: 22px;
   margin-bottom: 30px;
 }
+.scrolled #hiddenMenu li {
+  padding: 0;
+  text-align: left;
+  width: 154px;
+  height: 22px;
+  margin-bottom: 30px;
+}
 #hiddenMenu li a {
   width: 154px;
   height: 22px;
   color: #a8a8a8;
 }
+.scrolled #hiddenMenu li a {
+  width: 154px;
+  height: 22px;
+  color: #a8a8a8;
+}
 #hiddenMenu li:hover a {
+  color: #189cf4;
+  padding-left: 15px;
+}
+.scrolled #hiddenMenu li:hover a {
   color: #189cf4;
   padding-left: 15px;
 }
@@ -125,16 +205,19 @@ header {
 .lang {
   width: 110px;
   height: 45px;
-  padding: 0 23px;
+  padding: 5px 23px 0;
   border-radius: 23px;
   background-color: #fff;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
   position: absolute;
-  top: 20px;
+  top: 35px;
   left: calc(100% - 14vw);
   cursor: pointer;
   overflow: hidden;
   transition: .4;
+}
+.scrolled .lang {
+  top: 15px;
 }
 .lang.on {
   height: 125px;
@@ -144,25 +227,21 @@ header {
   overflow: hidden;
 }
 .selectLang .noSelect {
-  padding: 0;  
+  padding: 8px 0 0px;  
   display: none;
   font-size: 14px;
   font-weight: 500;
 }
 .selectLang .selected {
-  line-height: 45px;
-  height: 45px;
   display: block;
-  margin-left: 0;
-  border: none;
-  box-shadow: none;
 }
+
 .selectLang .selected {
   width: 100%;
-  background: url(../images/partners/morearrow.png) no-repeat right /  20%;
+  background: url(../images/partners/morearrow.png) no-repeat right;
 }
 .lang.on .selectLang .selected {
-  background: url(../images/partners/morearrow2.png) no-repeat right / 20%;
+  background: url(../images/partners/morearrow2.png) no-repeat right;
 }
 #langLi li {
   padding: 5px 0;
@@ -171,12 +250,12 @@ header {
 
 
 /* ------------------------ footer ------------------------ */
+
 footer {
   position: relative;
   background-color: #1b1b1b;
   width: 100%;    
   height: 340px;
-  bottom: 0;
 }
 .footerTop {
   width: 100%;
@@ -217,12 +296,10 @@ footer .footerInner {
   color: rgba(255, 255, 255, 60%);
   font-size: 12px;
   position: relative;
-  text-transform: none;
 }
 .sandboxText span {
   display: inline-block;
   width: 70px;
-
 }
 .sandboxText span::after {
   position: absolute;
@@ -230,7 +307,6 @@ footer .footerInner {
   left: 60px;
   height: 12px;
   top: 50%;
-
   transform: translateY(-50%);
   content: '';
   opacity: 0.1;
@@ -295,9 +371,9 @@ footer .footerBottom {
   padding: 0;
   color: rgba(72, 72, 72, 0.3);
   position: absolute;
-  left: 0;
   bottom: 0;
 }
+
 
 /* ------------------------ fixed button ------------------------ */
 .fixedBtn {
@@ -350,7 +426,7 @@ footer .footerBottom {
   padding-left: 20px;
 }
 .fixedBtn .sideBtn li a span.open{
-  text-indent: -9999px; 
+  text-indent: -9999px;  
 }
 .fixedBtn .sideBtn li a:hover span.open{
   text-indent: 0px;  
@@ -372,6 +448,7 @@ footer .footerBottom {
   border-radius: 50%;
   text-indent: 9999px;
 }
+
 .fixedBtn .sideBtn #openSea a .smallImg {
   background: #1b1b1b url(../images/partners/btn1-1.png) no-repeat center / 45%;
   color: #fff;
