@@ -51,7 +51,7 @@ data.forEach((item) => {
         <img src="${item.img}" alt="item01">
       </div>
       <div class="cardTxt">
-        <span class="cardTitle">MTDZ#${item.tag}</span>
+        <span class="cardTitle">MTDZ#<span class="cardNum">${item.tag}</span></span>
         <div class="cardIcon">
           <div class="filterIcon linkIcon">
             <img src="../images/story/icon_link_pop.png" alt="link">
@@ -98,7 +98,7 @@ for(let i = 0; i < storyIcon.length; i++) {
 };
 
 
-// 검색 ??? -> MTDZ# 적어도 검색됨 / 일부만 맞아도 검색됨..
+// 검색 ??? -> 일부만 맞아도 검색됨..
 const btn = document.getElementById('btn');
 const search = document.getElementById('search');
 
@@ -113,7 +113,7 @@ function searchFilter(){
   let value = document.getElementById('search').value;
   let item = document.getElementsByClassName('one_quarter');
   for(i = 0; i < item.length; i++) {
-    let name = item[i].getElementsByClassName("cardTitle");
+    let name = item[i].getElementsByClassName("cardNum");
     if(name[0].innerHTML.indexOf(value) > -1){
       item[i].style.display = "flex";
     } else {
@@ -122,37 +122,12 @@ function searchFilter(){
   }
 }
 
-// 체크박스로 필터
-// function ftrCheck() {
-//   let results = Array.from(document.querySelectorAll('.itemCard'));
-//   let filterChecked = document.querySelectorAll('.filterNo1 input.filterBox:checked');
-//   let gradeChecked = document.querySelectorAll('.filterNo2 input.filterGrade:checked');
+// 수량 확인xxxxxxxxxx
+const listCount = document.querySelector('#listCount');
+let project = data.filter(project => project.proj === 1).length;
 
-//   results.forEach(function(result) {
-//     result.style.display = 'none';
-//   });
-//   filterOrGrade(filterChecked);
 
-//   if (gradeChecked.length != 0) {
-//     filterOrGrade(gradeChecked);
-//   }
-
-//   function filterOrGrade(filterOrGradeChecked) {
-//     results = Array.from(filterOrGradeChecked).reduce(function(sum, input) {
-//         const attrib = input.getAttribute('rel');
-//         return sum.concat(results.filter(function(result) {
-//             return result.classList.contains(attrib);
-//         }));
-//     }, []);
-  
-// }
-//   results.forEach(function(result) {
-//     result.style.display = 'flex';
-//   });
-// }
-// ftrCheck();
-
-// 아이템 숫자 표기: 필터->재배열 ->배열수..?
+// 체크박스로 필터xxxxxxxxxxx
 
 
 // checkResult.innerHTML +=
@@ -161,7 +136,7 @@ function checkBox(checked){
   let filterBox = document.getElementsByClassName('filterBox');
   let result = document.getElementById("checkResult");
   if(checked.checked == true){
-      // console.log(result.value); 
+      console.log(result.value); 
       if(result.value == "") {
           result.value = checked.getAttribute("value");
           console.log(result.value);
@@ -171,9 +146,8 @@ function checkBox(checked){
       let inputV = checked.getAttribute("value");
       checkResult.innerHTML += `<div class="cRItem">
       ${inputV}
-      <div class="closeBtnM"></div>
+      <div class="closeBtnM" onclick="deleteDiv()"></div>
     </div>`;
-    console.log(result.value); 
   } else {
       let resultArr = result.value.split(",");
       for(let i=0; i<resultArr.length; i++){
@@ -186,18 +160,16 @@ function checkBox(checked){
   }
 }
 
-// 체크 닫기 버튼 클릭시
-const cRItem = document.querySelectorAll('.cRItem');
+// 체크 닫기 버튼 클릭시xxxxxxxx
 const closeBtnM = document.querySelectorAll('.closeBtnM');
-// for(let i = 0; i < cRItem.length; i++) {
-//   closeBtnM.addEventListener('click', () => {
-//     cRItem.remove(); // 나중에 삭제로 바꿈
-//   });
-// };
-closeBtnM.addEventListener('click', () => {
-  cRItem.remove(); // 나중에 삭제로 바꿈
-});
 
+function deleteDiv() {
+  const cRItem = document.querySelectorAll('.cRItem');
+  closeBtnM.addEventListener('click', () => {
+  
+    cRItem.remove();
+  });
+} 
 
 // 검색값 초기화 (+ 필터 적용했을 때도 초기화 되는지)
 function clearInput(){
@@ -205,7 +177,6 @@ function clearInput(){
   for(let i = 0; i <= item.length; i++){
     item[i].style.display = "flex";
   }
-  cRItem.remove();
 }
 
 // 팝업 ++팝업 내용..., 스크롤 없어지면서 뒷배경 움직임
