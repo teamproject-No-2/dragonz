@@ -110,6 +110,32 @@ body {
   font-size: 13px;
   color: #7f7f7f;
   padding-top: 10px;
+  padding-left: 30px;
+}
+.leftArea .filter .filterCheck .filterCont input {
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+}
+.leftArea .filter .filterCheck .filterCont label {
+  position: relative;
+}
+.leftArea .filter .filterCheck .filterCont label:after {
+  content: '';
+  position: absolute;
+  top: 0; left: -30px;
+  width: 18px; height: 18px;
+  background: url(../images/story/check_no.png) no-repeat center;
+}
+.leftArea .filter .filterCheck .filterCont input[type="checkbox"]:checked + label {
+  cursor: pointer;
+  font-weight: 500;
+  color: #1b1b1b;
+}
+.leftArea .filter .filterCheck .filterCont input[type="checkbox"]:checked + label img {
+  opacity: 1;
+}
+.leftArea .filter .filterCheck .filterCont input[type="checkbox"]:checked + label:after {
+  background: url(../images/story/check_on.png) no-repeat center;
 }
 .leftArea .filter .filterCheck .filterCont img {
   opacity: 0.5;
