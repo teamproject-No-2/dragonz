@@ -499,8 +499,8 @@ main #main_roadmap {
 }
 main #main_roadmap .circle {
   background-color: #31a7f67e;
-  width: 700px;
-  height: 700px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
   margin: 0 auto;
   position: absolute;
@@ -508,19 +508,16 @@ main #main_roadmap .circle {
   left: 50%;
   transform: translateX(-50%);
   z-index: 9;
-  /* animation: roadmap 3s 1; */
+  transition: 0.9s;
+  transform: scale(0);
 }
-/* @keyframes roadmap {
-  0% {
-    width: 400px;
-    height: 400px;
-    transform: scale(0);
-  }
-  ,
-  100% {
-    transform: scale(3);
-  }
-} */
+main #main_roadmap.scale .circle {
+  width: 700px;
+  height: 700px;
+  transform: scale(1);
+  left: 50%;
+  transform: translateX(-50%);
+}
 main #main_roadmap .roadmap_head {
   width: 100%;
   margin-bottom: 60px;

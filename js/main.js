@@ -50,6 +50,16 @@ sections[4].addEventListener("mouseenter", () => {
 });
 
 // main - roadmap
+const roadmap = document.querySelector("#main_roadmap");
+
+addEventListener("scroll", () => {
+  let num = roadmap.offsetTop - 600;
+  console.log(num);
+  console.log(scrollY);
+  if (scrollY > num) {
+    roadmap.classList.add("scale");
+  }
+});
 
 // main -partners
 const lis = document.querySelectorAll("li");
@@ -163,23 +173,4 @@ addEventListener("scroll", () => {
 
 const fixedBtn = document.querySelector("#main_fixed_btn");
 const partners = document.querySelector("#main_partners");
-// const footer = document.querySelector("footer").offsetTop;
-const footer = document.querySelector("footer");
-/* 
-addEventListener("scroll", () => {
-  if (scrollY <= footer) {
-    fixedBtn.classList.remove("poFixed");
-  } else {
-    fixedBtn.classList.add("poRelative");
-  }
-}); */
-/* console.log(partners.offsetTop);
-addEventListener("scroll", () => {
-  if (scrollY >= partners.offsetTop) {
-    fixedBtn.classList.add("poSticky");
-    
-  } else {
-    fixedBtn.classList.remove("poSTicky");
-  }
-});
- */
+const footer = document.querySelector("footer").offsetTop;
