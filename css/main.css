@@ -16,6 +16,7 @@ body {
 }
 main {
   position: relative;
+  background-color: var(--bg-lightGray);
 }
 
 .cursor {
@@ -238,6 +239,7 @@ main #main_home .banner .banner_character h4 {
 /* article 2 story */
 main #main_story {
   width: 100%;
+  background-color: #fff;
 }
 
 main #main_story .cardsList {
@@ -649,6 +651,7 @@ main #main_partners {
   background-color: var(--bg-lightGray);
   position: relative;
   height: 90vh;
+  margin-bottom: 0;
 }
 main #main_partners h2 {
   margin-bottom: 70px;
@@ -665,21 +668,7 @@ main #main_partners .line2 {
 main #main_partners .line2 {
   bottom: 25vh;
 }
-/*
-main #main_partners .line1 ul {
-  width: 2000%;
-  animation: partners_mov 40s 1s infinite linear;
-}
-main #main_partners .line2 ul {
-  width: 2000%;
-  animation: partners_mov 40s infinite linear;
-}
 
-@keyframes partners_mov {
-  to {
-    transform: translate3d(-5300px, 0, 0);
-  }
-} */
 main #main_partners ul {
   display: flex;
   flex-wrap: nowrap;
@@ -1108,7 +1097,7 @@ footer .footerInner {
 }
 .address,
 .email {
-  width: 250px;
+  width: 260px;
   display: inline-block;
   color: rgba(255, 255, 255, 60%);
   font-size: 12px;
@@ -1128,6 +1117,7 @@ footer .footerInner {
   content: "";
   opacity: 0.1;
   background-color: #fff;
+  margin-left: 7px;
 }
 .footerRight {
   grid-column: 3 / 4;
