@@ -16,6 +16,7 @@ body {
 }
 main {
   position: relative;
+  background-color: var(--bg-lightGray);
 }
 
 .cursor {
@@ -238,6 +239,7 @@ main #main_home .banner .banner_character h4 {
 /* article 2 story */
 main #main_story {
   width: 100%;
+  background-color: #fff;
 }
 
 main #main_story .cardsList {
