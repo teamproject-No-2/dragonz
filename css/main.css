@@ -640,22 +640,27 @@ main #main_partners .line1,
 main #main_partners .line2 {
   width: 100%;
   height: 150px;
-
   position: absolute;
   bottom: 45vh;
 
-  /* animation: partners_mov 30s infinite alternate; */
+  /* overflow: hidden; */
 }
 main #main_partners .line2 {
   bottom: 25vh;
-  /* animation-delay: 2s; */
 }
-/* @keyframes partners_mov {
-  0% {
-    right: -10%;
-  }
-  100% {
-    right: 110%;
+/*
+main #main_partners .line1 ul {
+  width: 2000%;
+  animation: partners_mov 40s 1s infinite linear;
+}
+main #main_partners .line2 ul {
+  width: 2000%;
+  animation: partners_mov 40s infinite linear;
+}
+
+@keyframes partners_mov {
+  to {
+    transform: translate3d(-5300px, 0, 0);
   }
 } */
 main #main_partners ul {
@@ -698,15 +703,6 @@ main #main_partners .partners_btn {
   bottom: 10vh;
   right: 2vw;
 }
-/* #main_fixed_btn.poSticky {
-  margin: 0 30px 100px;
-  position: sticky;
-  top: 30vh;
-  z-index: 9999;
-  text-align: right;
-  width: 130px;
-  left: 100%;
-} */
 
 #main_fixed_btn .float_btn {
   width: 45px;
@@ -1183,7 +1179,7 @@ footer .footerBottom {
 
 /* ------------------------ fixed button ------------------------ */
 /* .fixedBtn {
-  margin: 0 30px 100px ;
+  margin: 0 30px 100px;
   position: sticky;
   top: 30vh;
   z-index: 9999;
@@ -1221,7 +1217,7 @@ footer .footerBottom {
   justify-content: space-between;
   text-decoration: none;
 }
-.fixedBtn .sideBtn li a:hover {  
+.fixedBtn .sideBtn li a:hover {
   width: 125px;
   height: 47px;
   background: url(../images/partners/btnbox.png) no-repeat center / contain;
@@ -1231,11 +1227,11 @@ footer .footerBottom {
   font-size: 12px;
   padding-left: 20px;
 }
-.fixedBtn .sideBtn li a span.open{
-  text-indent: -9999px;  
+.fixedBtn .sideBtn li a span.open {
+  text-indent: -9999px;
 }
-.fixedBtn .sideBtn li a:hover span.open{
-  text-indent: 0px;  
+.fixedBtn .sideBtn li a:hover span.open {
+  text-indent: 0px;
 }
 .fixedBtn .sideBtn li:nth-child(3) a {
   width: 47px;
@@ -1276,4 +1272,5 @@ footer .footerBottom {
 }
 .fixedBtn .sideBtn #goTop.scrollOn a {
   display: inline-block;
-} */
+}
+ */

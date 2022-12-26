@@ -87,6 +87,11 @@ line2.animate(
   }
 );
 
+lis.addEventListener("mouseenter", () => {
+  line1.animate;
+});
+lis.forEach();
+
 // floated_btn
 const goUp = document.querySelector(".scrollup");
 
@@ -172,3 +177,11 @@ addEventListener("scroll", () => {
 // addEventListener("scroll", () => {
 //   scrollY <= footer ? fixedBtn.classList.remove("poSticky") : false;
 // });
+
+/* addEventListener("scroll", () => {
+  if (scrollY <= footer) {
+    fixedBtn.classList.remove("poFixed");
+  } else {
+    fixedBtn.classList.add("poRelative");
+  }
+}); */
