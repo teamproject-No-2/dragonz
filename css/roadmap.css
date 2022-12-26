@@ -187,3 +187,6 @@ h2 {
 .checked_bg {
   background: url(../images/roadmap-images/check_icon.png) no-repeat 0 50%;
 }
+.fixedBtn {
+  float: left;
+}

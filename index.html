@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>main</title>
+    <!-- favicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="../images/favicon/favicon_16x16.png"
+      sizes="16x16"
+    />
+
+    <!-- 오픈그래프 -->
+    <meta property="og:url" content="https://----------(url)-----------" />
+    <meta property="og:local" content="ko_KR" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Meta Toy Dragonz NFT" />
+    <meta
+      property="og:description"
+      content="빨리하고가조의 프로젝트 웹사이트 Meta Toy Dragonz NFT 입니다."
+    />
+    <meta property="og:image" content="../images/og/openGraph_web.png" />
+
+    <!-- mini reset -->
+    <link rel="stylesheet" href="common/minireset.min.css" />
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Poppins:wght@100;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- css 헤더 푸터 -->
+    <!-- <link rel="stylesheet" href="./index_header.css" /> -->
+    <!-- css 메인 -->
+    <link rel="stylesheet" href="./css/main.css" />
+
+    <!-- js 헤더 푸터 -->
+    <!-- <script defer src="./index_header.js"></script> -->
+  </head>
+
+  <body>
+    <!-- header height 120px -->
+    <header class="header">
+      <div class="headerWrap">
+        <div class="logo"><a href="./index.html">logo</a></div>
+        <ul id="gnb">
+          <!-- 각페이지에 맞게 index위치 수정 -->
+          <li>
+            <a
+              href="subpages/story.html"
+              >STORY</a
+            >
+          </li>
+          <li>
+            <a href="#">PROJECTS</a>
+            <ul id="hiddenMenu">
+              <!-- js로 마우스이벤트 display 바꾸기 -->
+              <li><a href="#">MTDZ the Game</a></li>
+              <li><a href="#">Meta Toy City</a></li>
+              <li><a href="#">Meta Toy Gamers</a></li>
+              <li><a href="#">Meta Toy Bricks</a></li>
+              <!-- li a::after opacity 1로 -->
+            </ul>
+          </li>
+          <li>
+            <a
+              href="subpages/roadmap.html"
+              >ROADMAP</a
+            >
+          </li>
+          <li>
+            <a
+              href="subpages/partners.html"
+              >PARTNERS</a
+            >
+          </li>
+        </ul>
+
+        <!-- morearrow img사용 -->
+        <div class="lang">
+          <div class="selectLang">
+            <!-- ENG 클릭시 EN 표기하기 -->
+            <div id="ko" class="noSelect selected">KO</div>
+            <div id="en" class="noSelect">EN</div>
+          </div>
+          <ul id="langLi">
+            <li id="selEn">ENG</li>
+            <li id="selKo">KOR</li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <!-- 메인 contents -->
+
+    <!-- 마우스 커서 -->
+    <img
+      src="./images/main-images/mouse_bg.png"
+      alt="마우스 커서"
+      class="cursor"
+    />
+    <main>
+      <div class="home_bg"></div>
+      <!-- article 1 home -->
+      <article id="main_home">
+        <div class="moon_img"></div>
+        <div class="water_img"></div>
+        <img
+          src="./images/main-images/home_main_blink2.png"
+          alt="배경 이미지1"
+          id="bgImg"
+        />
+        <img
+          src="./images/main-images/home_bling01.png"
+          alt="큰 별"
+          id="star1"
+        />
+        <img
+          src="./images/main-images/home_bling02.png"
+          alt="작은 별"
+          id="star2"
+        />
+
+        <div class="main_home_container">
+          <div class="main_home_txt">
+            <img
+              src="./images/main-images/home_welcome.png"
+              alt="welcome"
+              class="welcome"
+            />
+            <h1>META TOY<span>DRAGONZ</span></h1>
+            <p>
+              메타 토이 드래곤즈(MTDZ)는 블록체인 기술을 <br />
+              활용한 P2E 게임 NFT 프로젝트입니다. 메타 토이 월드에서 펼쳐질<br />
+              장난감 드래곤들의 모험을 즐겨보세요.
+            </p>
+          </div>
+
+          <ul class="stage">
+            <li class="stage_character left">
+              <img
+                src="./images/main-images/home_dragonz01.png"
+                alt="dragon1"
+              />
+            </li>
+            <li class="stage_character center">
+              <img
+                src="./images/main-images/home_dragonz02.png"
+                alt="dragon2"
+              />
+            </li>
+            <li class="stage_character right">
+              <img
+                src="./images/main-images/home_dragonz03.png"
+                alt="dragon3"
+              />
+            </li>
+            <!-- <li class="stage_character">
+              <img src="./images/main-images/home_dragonz04.png" alt="dragon4" />
+            </li>
+            <li class="stage_character">
+              <img src="./images/main-images/home_dragonz05.png" alt="dragon5" />
+            </li> -->
+          </ul>
+
+          <ul class="banner">
+            <li class="banner_character">
+              <img
+                src="./images/main-images/home_dragonz_thum01.png"
+                alt="dragon1"
+              />
+              <h4>MTDZ#7983</h4>
+            </li>
+            <li class="banner_character center">
+              <img
+                src="./images/main-images/home_dragonz_thum02.png"
+                alt="dragon2"
+              />
+              <h4>MTDZ#6481</h4>
+            </li>
+            <li class="banner_character">
+              <img
+                src="./images/main-images/home_dragonz_thum03.png"
+                alt="dragon3"
+              />
+              <h4>MTDZ#1038</h4>
+            </li>
+            <li class="banner_character">
+              <img
+                src="./images/main-images/home_dragonz_thum04.png"
+                alt="dragon4"
+              />
+              <h4>MTDZ#3303</h4>
+            </li>
+            <li class="banner_character">
+              <img
+                src="./images/main-images/home_dragonz_thum05.png"
+                alt="dragon5"
+              />
+              <h4>MTDZ#7575</h4>
+            </li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- article 2 story -->
+      <article id="main_story">
+        <div class="story_txt">
+          <h2>STORY</h2>
+          <h3>Meet a toy DragonZ</h3>
+          <p>
+            메타 토이 월드의 귀여운 주민들을 만나보세요. 그들이 가지고 있는
+            다양한 이야기와 콘텐츠도 즐겨볼 수 있습니다.
+          </p>
+        </div>
+
+        <ul class="cardsList">
+          <li class="card" id="card1">
+            <img src="./images/main-images/story_dragonz1.png" alt="card1" />
+            <h5>Meta Toy DragonZ</h5>
+            <div class="num heart">981</div>
+            <div class="codeName">MTDZ#1205</div>
+          </li>
+          <li class="card" id="card2">
+            <img src="./images/main-images/story_dragonz2.png" alt="card2" />
+            <h5>Meta Toy DragonZ</h5>
+            <div class="num heart">754</div>
+            <div class="codeName">MTDZ#8029</div>
+          </li>
+          <li class="card" id="card3">
+            <img src="./images/main-images/story_dragonz3.png" alt="card3" />
+            <h5>Meta Toy DragonZ</h5>
+            <div class="num heart">831</div>
+            <div class="codeName">MTDZ#4299</div>
+          </li>
+          <li class="card" id="card4">
+            <img src="./images/main-images/story_dragonz4.png" alt="card4" />
+            <h5>Meta Toy DragonZ</h5>
+            <div class="num heart">651</div>
+            <div class="codeName">MTDZ#6481</div>
+          </li>
+          <li class="card" id="card5">
+            <img src="./images/main-images/story_dragonz5.png" alt="card5" />
+            <h5>Meta Toy DragonZ</h5>
+            <div class="num heart">972</div>
+            <div class="codeName">MTDZ#5397</div>
+          </li>
+        </ul>
+
+        <div class="story_btn viewMore">
+          View more <img src="./images/main-images/more_icon.png" alt="+" />
+        </div>
+
+        <!-- article 3 project -->
+      </article>
+      <article id="main_project">
+        <img
+          src="./images/main-images/project_big_coin.png"
+          alt="큰 별"
+          class="starIcon"
+        />
+        <h2>PROJECT</h2>
+        <p>메타 토이 월드의 또다른 세상을 소개합니다.</p>
+
+        <div class="games">
+          <section>
+            <div class="wrapper gameBox1">
+              <figure class="icon">
+                <img src="./images/main-images/project_sliding_icon01.png" />
+                <figcaption>The Game</figcaption>
+              </figure>
+              <div class="wrapperTxt">
+                <h4>MTDZ the Game</h4>
+                <p>
+                  메타 토이 월드를 탐험하자! <br />
+                  귀여운 장난감 드래곤과 함께 떠나는 신나는 RPG 세상!
+                </p>
+              </div>
+              <div class="projectBtn">project 1</div>
+            </div>
+          </section>
+          <section>
+            <div class="wrapper gameBox2">
+              <figure class="icon">
+                <img src="./images/main-images/project_sliding_icon02.png" />
+                <figcaption>MTC</figcaption>
+              </figure>
+
+              <div class="wrapperTxt">
+                <h4>Meta Toy City</h4>
+                <p>
+                  메타 토이 월드에 건축된 거대한 도시! <br />도시 속 나만의 집을
+                  지어보자!<br />
+                  과연 내가 살 집은 어떤 집일까? <br />화려하고 격렬한 액션!<br />
+                  장난감 드래곤이라고는 믿을 수 없는 최고의 액션을 경험해보자
+                </p>
+              </div>
+              <div class="projectBtn">project 2</div>
+            </div>
+          </section>
+          <section class="on">
+            <div class="wrapper gameBox3">
+              <figure class="icon">
+                <img src="./images/main-images/project_sliding_icon03.png" />
+                <figcaption>MTG</figcaption>
+              </figure>
+
+              <div class="wrapperTxt">
+                <h4>Meta Toy Gamers</h4>
+                <p>
+                  E스포츠와 NFT의 만남! 현실의 구단을 운영하는 거버넌스에
+                  참여해보자!
+                </p>
+              </div>
+              <div class="projectBtn">project 3</div>
+            </div>
+          </section>
+          <section>
+            <div class="wrapper gameBox4">
+              <figure class="icon">
+                <img src="./images/main-images/project_sliding_icon04.png" />
+                <figcaption>MTB</figcaption>
+              </figure>
+
+              <div class="wrapperTxt">
+                <h4>Meta Toy Bricks</h4>
+                <p>
+                  BAYC와 MTDZ가 만났다! 귀여운 장난감 펫과 함께 MTDZ의 세상에
+                  빠져보자!
+                </p>
+              </div>
+              <div class="projectBtn">project 4</div>
+            </div>
+          </section>
+          <section>
+            <div class="wrapper gameBox5">
+              <figure class="icon">
+                <img src="./images/main-images/project_sliding_icon05.png" />
+                <figcaption>Coming Soon</figcaption>
+              </figure>
+              <div class="wrapperTxt">
+                <h4>Coming Soon</h4>
+                <p>추가 프로젝트를 준비중입니다.</p>
+              </div>
+              <div class="projectBtn">project 5</div>
+            </div>
+          </section>
+        </div>
+
+        <img
+          src="./images/main-images/project_small_coin.png"
+          alt="작은 별"
+          class="smallStarIcon"
+        />
+      </article>
+
+      <!-- article 4 roadmap -->
+      <article id="main_roadmap">
+        <div class="circle"></div>
+        <div class="roadmap_head">
+          <img
+            src="./images/main-images/roadmap_tit.png"
+            alt="선글라스 아이콘"
+          />
+          <h2>ROADMAP</h2>
+        </div>
+        <div class="roadmap_body">
+          <div class="roadmap_box_line1">
+            <div class="roadmap_box">
+              <img
+                src="./images/main-images/roadmap_completed.png"
+                alt="completed"
+                class="completed"
+              />
+              <div class="step">step0</div>
+              <h3>메타 토이 드래곤의 시작 & 커뮤니티 오픈</h3>
+              <ul>
+                <li>홈페이지, 트위터, 디스코드 커뮤니티를 오픈한다.</li>
+                <li>Klaytn과 기술협약을 체결한다.</li>
+                <li>PFP NFT X9999 민팅한다.</li>
+                <li>프로젝트 총괄 유튜브 인터뷰를 2회 진행한다.</li>
+                <li>'보라 거버넌스 카운슬'에 합류한다.</li>
+                <li>프로젝트 총괄 AMA를 진행한다.</li>
+                <li>기업 파트너쉽을 확장한다.</li>
+                <li>온/오프라인 브랜드 마케팅을 진행한다.</li>
+              </ul>
+              <img
+                src="./images/main-images/home_dragonz01.png"
+                alt="popUpCharacter"
+                class="popUpCharacter"
+              />
+            </div>
+            <div class="roadmap_box">
+              <div class="step">step2</div>
+              <h3>P2E 게임 런칭</h3>
+              <ul>
+                <li>개발 영상을 공개한다.</li>
+                <li>홀더 대상 알파 테스트를 진행한다.</li>
+                <li>P2E 수집형 RPG 캐릭터 NFT 에어드랍을 진행한다.</li>
+                <li class="emptyBox">
+                  홀더 채굴이 가능한 공개 베타테스트를 진행한다.
+                </li>
+                <li class="emptyBox">아시아 서버를 정식 런칭한다.</li>
+                <li class="emptyBox">게임 공식 유튜브 채널을 개설한다.</li>
+              </ul>
+              <img
+                src="./images/main-images/home_dragonz03.png"
+                alt="popUpCharacter"
+                class="popUpCharacter"
+              />
+            </div>
+            <div class="roadmap_box">
+              <div class="step">step4</div>
+              <h3>메타버스로 확장</h3>
+              <ul>
+                <li>더 샌드박스 랜드를 구입한다. 12x12</li>
+                <li>더 샌드박스 NFT 제작 아티스트로 등록한다.</li>
+                <li>'더 샌드박스' 공식 파트너 MOU를 체결한다.</li>
+                <li>더 샌드박스 MTDZ 월드를 오픈한다.</li>
+                <li class="emptyBox">
+                  전체 홀더를 대상으로 3D & 복셀 NFT를 1종 이상 에어드랍한다.
+                </li>
+              </ul>
+              <img
+                src="./images/main-images/home_dragonz05.png"
+                alt="popUpCharacter"
+                class="popUpCharacter"
+              />
+            </div>
+          </div>
+          <div class="roadmap_box_line2">
+            <div class="roadmap_box">
+              <img
+                src="./images/main-images/roadmap_completed.png"
+                alt="completed"
+                class="completed"
+              />
+              <div class="step">step1</div>
+              <h3>홀더 전용 한정판 레전더리 PFP NFT 민팅</h3>
+              <ul>
+                <li>민팅 완료 후 레어리티 등급 표를 공개한다.</li>
+                <li>스냅샷 후 추첨을 통해 레전더리 드래곤 1개 에어드랍한다.</li>
+                <li>
+                  스냅샷 후 15개 이상 보유한 홀더 대상 럭키 드로우를 실시한다.
+                </li>
+                <li>메타 캐릭터 NFT들과 파트너십 제휴를 체결한다.</li>
+                <li>홀더 대상 1:1 BBL X MTDZ PFP NTF 에어드랍을 진행한다.</li>
+              </ul>
+              <img
+                src="./images/main-images/home_dragonz02.png"
+                alt="popUpCharacter"
+                class="popUpCharacter"
+              />
+            </div>
+            <div class="roadmap_box">
+              <div class="step">step3</div>
+              <h3>PFP NFT 홀더 거버넌스 출범</h3>
+              <ul>
+                <li>홀더 거버넌스로 스테이킹을 통한 수익화를 제공한다.</li>
+                <li>투표 기반의 의사 결정 구조로 탈중앙화를 제공한다.</li>
+                <li class="emptyBox">
+                  공식 브리더 인증 제도를 추가하여 거래 로열티 수익을 제공한다.
+                </li>
+                <li class="emptyBox">
+                  P2E 게임 수익의 일부를 고정 비율만큼 스테이킹하여 홀더의
+                  수익을 추가 보장한다.
+                </li>
+                <li class="emptyBox">오프라인 서비스 연계 혜택을 공개한다.</li>
+              </ul>
+              <img
+                src="./images/main-images/home_dragonz04.png"
+                alt="popUpCharacter"
+                class="popUpCharacter"
+              />
+            </div>
+            <div class="roadmap_box">
+              <div class="step">step5</div>
+              <h3>드박스 메타토이 IP화 및 NFT 유니버스 출범</h3>
+              <ul>
+                <li>
+                  샌 NFT 유니버스 출범 장비 NFT를 출시하고 홀더 한정 1차 민팅을
+                  진행한다.
+                </li>
+                <li>'샌드박스 게이밍' 콜라보레이션을 진행한다.</li>
+                <li>유튜브 크리에이터 콜라보레이션을 진행한다.</li>
+                <li class="emptyBox">
+                  메타버스에 메타 토이 굿즈 샵을 오픈한다.
+                </li>
+                <li class="emptyBox">
+                  메타 토이 드래곤즈 한정판 장난감을 출시한다.
+                </li>
+                <li class="emptyBox">세계관을 공개한다.</li>
+                <li class="emptyBox">숏폼/애니메이션을 제작한다.</li>
+                <li class="emptyBox">전용 유튜브 채널을 개설한다.</li>
+              </ul>
+              <img
+                src="./images/main-images/home_dragonz02.png"
+                alt="popUpCharacter"
+                class="popUpCharacter"
+              />
+            </div>
+          </div>
+          <div class="roadmap_btn viewMore">
+            View more <img src="./images/main-images/more_icon.png" alt="+" />
+          </div>
+        </div>
+      </article>
+
+      <!-- article 5 partners -->
+      <article id="main_partners">
+        <h2>PARTNERS</h2>
+        <div class="line1">
+          <ul>
+            <li>
+              <img
+                src="./images/main-images/파트너이미지/bg-3-1.png"
+                alt="partners_logo"
+              />
+              <div class="mouseenter">
+                <img
+                  src="./images/main-images/파트너이미지/bg-3-2.png"
+                  alt="partners_logo"
+                />
+              </div>
+            </li>
+            <li>
+              <img
+                src="./images/main-images/파트너이미지/bp-1-1.png"
+                alt="partners_logo"
+              />
+              <div class="mouseenter">
+                <img
+                  src="./images/main-images/파트너이미지/bp-1-2.png"
+                  alt="partners_logo"
+                />
+              </div>
+            </li>
+            <li>
+              <img
+                src="./images/main-images/파트너이미지/bp-2-1.png"
+                alt="partners_logo"
+              />
+              <div class="mouseenter">
+                <img
+                  src="./images/main-images/파트너이미지/bp-2-2.png"
+                  alt="partners_logo"
+                />
+              </div>
+            </li>
+            <li>
+              <img
+                src="./images/main-images/파트너이미지/bp-4-1.png"
+                alt="partners_logo"
+              />
+              <div class="mouseenter">
+                <img
+                  src="./images/main-images/파트너이미지/bp-4-2.png"
+                  alt="partners_logo"
+                />
+              </div>
+            </li>
+            <li>
+              <img
+                src="./images/main-images/파트너이미지/bp-5-1.png"
+                alt="partners_logo"
+              />
+              <div class="mouseenter">
+                <img
+                  src="./images/main-images/파트너이미지/bp-5-2.png"
+                  alt="partners_logo"
+                />
+              </div>
+            </li>
+            <li>
+              <img
+                src="./images/main-images/파트너이미지/bp-6-1.png"
+                alt="partners_logo"
+              />
+              <div class="mouseenter">
+                <img
+                  src="./images/main-images/파트너이미지/bp-6-2.png"
+                  alt="partners_logo"
+                />
+              </div>
+            </li>
+            <li>
+              <img
+                src="./images/main-images/파트너이미지/bp-7-1.png"
+                alt="partners_logo"
+              />
+              <div class="mouseenter">
+                <img
+                  src="./images/main-images/파트너이미지/bp-7-2.png"
+                  alt="partners_logo"
+                />
+              </div>
+            </li>
+            <li>
+              <img
+                src="./images/main-images/파트너이미지/bp-8-1.png"
+                alt="partners_logo"
+              />
+              <div class="mouseenter">
+                <img
+                  src="./images/main-images/파트너이미지/bp-8-2.png"
+                  alt="partners_logo"
+                />
+              </div>
+            </li>
+            <li>
+              <img
+                src="./images/main-images/파트너이미지/bp-9-1.png"
+                alt="partners_logo"
+              />
+              <div class="mouseenter">
+                <img
+                  src="./images/main-images/파트너이미지/bp-9-2.png"
+                  alt="partners_logo"
+                />
+              </div>
+            </li>
+            <li>
+              <img
+                src="./images/main-images/파트너이미지/bp-10-1.png"
+                alt="partners_logo"
+              />
+              <div class="mouseenter">
+                <img
+                  src="./images/main-images/파트너이미지/bp-10-2.png"
+                  alt="partners_logo"
+                />
+              </div>
+            </li>
+            <li>
+              <img
+                src="./images/main-images/파트너이미지/bp-11-1.png"
+                alt="partners_logo"
+              />
+              <div class="mouseenter">
+                <img
+                  src="./images/main-images/파트너이미지/bp-11-2.png"
+                  alt="partners_logo"
+                />
+              </div>
+            </li>
+            <li>
+              <img
+                src="./images/main-images/파트너이미지/pp-1-1.png"
+                alt="partners_logo"
+              />
+              <div class="mouseenter">
+                <img
+                  src="./images/main-images/파트너이미지/pp-1-2.png"
+                  alt="partners_logo"
+                />
+              </div>
+            </li>
+            <li>
+              <img
+                src="./images/main-images/파트너이미지/pp-2-1.png"
+                alt="partners_logo"
+              />
+              <div class="mouseenter">
+                <img
+                  src="./images/main-images/파트너이미지/pp-2-2.png"
+                  alt="partners_logo"
+                />
+              </div>
+            </li>
+            <li>
+              <img
+                src="./images/main-images/파트너이미지/pp-3-1.png"
+                alt="partners_logo"
+              />
+              <div class="mouseenter">
+                <img
+                  src="./images/main-images/파트너이미지/pp-3-2.png"
+                  alt="partners_logo"
+                />
+              </div>
+            </li>
+            <li>
+              <img
+                src="./images/main-images/파트너이미지/pp-4-1.png"
+                alt="partners_logo"
+              />
+              <div class="mouseenter">
+                <img
+                  src="./images/main-images/파트너이미지/pp-4-2.png"
+                  alt="partners_logo"
+                />
+              </div>
+            </li>
+            <li>
+              <img
+                src="./images/main-images/파트너이미지/pp-5-1.png"
+                alt="partners_logo"
+              />
+              <div class="mouseenter">
+                <img
+                  src="./images/main-images/파트너이미지/pp-5-2.png"
+                  alt="partners_logo"
+                />
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="line2">
+          <ul>
+            <li>
+              <img
+                src="./images/main-images/파트너이미지/pp-6-1.png"
+                alt="partners_logo"
+              />
+              <div class="mouseenter">
+                <img
+                  src="./images/main-images/파트너이미지/pp-6-2.png"
+                  alt="partners_logo"
+                />
+              </div>
+            </li>
+            <li>
+              <img
+                src="./images/main-images/파트너이미지/pp-7-1.png"
+                alt="partners_logo"
+              />
+              <div class="mouseenter">
+                <img
+                  src="./images/main-images/파트너이미지/pp-7-2.png"
+                  alt="partners_logo"
+                />
+              </div>
+            </li>
+            <li>
+              <img
+                src="./images/main-images/파트너이미지/pp-8-1.png"
+                alt="partners_logo"
+              />
+              <div class="mouseenter">
+                <img
+                  src="./images/main-images/파트너이미지/pp-8-2.png"
+                  alt="partners_logo"
+                />
+              </div>
+            </li>
+            <li>
+              <img
+                src="./images/main-images/파트너이미지/pp-9-1.png"
+                alt="partners_logo"
+              />
+              <div class="mouseenter">
+                <img
+                  src="./images/main-images/파트너이미지/pp-9-2.png"
+                  alt="partners_logo"
+                />
+              </div>
+            </li>
+            <li>
+              <img
+                src="./images/main-images/파트너이미지/pp-10-1.png"
+                alt="partners_logo"
+              />
+              <div class="mouseenter">
+                <img
+                  src="./images/main-images/파트너이미지/pp-10-2.png"
+                  alt="partners_logo"
+                />
+              </div>
+            </li>
+            <li>
+              <img
+                src="./images/main-images/파트너이미지/pp-11-1.png"
+                alt="partners_logo"
+              />
+              <div class="mouseenter">
+                <img
+                  src="./images/main-images/파트너이미지/pp-11-2.png"
+                  alt="partners_logo"
+                />
+              </div>
+            </li>
+            <li>
+              <img
+                src="./images/main-images/파트너이미지/pp-12-1.png"
+                alt="partners_logo"
+              />
+              <div class="mouseenter">
+                <img
+                  src="./images/main-images/파트너이미지/pp-12-2.png"
+                  alt="partners_logo"
+                />
+              </div>
+            </li>
+            <li>
+              <img
+                src="./images/main-images/파트너이미지/pp-13-1.png"
+                alt="partners_logo"
+              />
+              <div class="mouseenter">
+                <img
+                  src="./images/main-images/파트너이미지/pp-13-2.png"
+                  alt="partners_logo"
+                />
+              </div>
+            </li>
+            <li>
+              <img
+                src="./images/main-images/파트너이미지/pp-14-1.png"
+                alt="partners_logo"
+              />
+              <div class="mouseenter">
+                <img
+                  src="./images/main-images/파트너이미지/pp-14-2.png"
+                  alt="partners_logo"
+                />
+              </div>
+            </li>
+            <li>
+              <img
+                src="./images/main-images/파트너이미지/pp-15-1.png"
+                alt="partners_logo"
+              />
+              <div class="mouseenter">
+                <img
+                  src="./images/main-images/파트너이미지/pp-15-2.png"
+                  alt="partners_logo"
+                />
+              </div>
+            </li>
+            <li>
+              <img
+                src="./images/main-images/파트너이미지/pp-16-1.png"
+                alt="partners_logo"
+              />
+              <div class="mouseenter">
+                <img
+                  src="./images/main-images/파트너이미지/pp-16-2.png"
+                  alt="partners_logo"
+                />
+              </div>
+            </li>
+            <li>
+              <img
+                src="./images/main-images/파트너이미지/pp-17-1.png"
+                alt="partners_logo"
+              />
+              <div class="mouseenter">
+                <img
+                  src="./images/main-images/파트너이미지/pp-17-2.png"
+                  alt="partners_logo"
+                />
+              </div>
+            </li>
+            <li>
+              <img
+                src="./images/main-images/파트너이미지/pp-18-1.png"
+                alt="partners_logo"
+              />
+              <div class="mouseenter">
+                <img
+                  src="./images/main-images/파트너이미지/pp-18-2.png"
+                  alt="partners_logo"
+                />
+              </div>
+            </li>
+            <li>
+              <img
+                src="./images/main-images/파트너이미지/pp-19-1.png"
+                alt="partners_logo"
+              />
+              <div class="mouseenter">
+                <img
+                  src="./images/main-images/파트너이미지/pp-19-2.png"
+                  alt="partners_logo"
+                />
+              </div>
+            </li>
+            <li>
+              <img
+                src="./images/main-images/파트너이미지/pp-20-1.png"
+                alt="partners_logo"
+              />
+              <div class="mouseenter">
+                <img
+                  src="./images/main-images/파트너이미지/pp-20-2.png"
+                  alt="partners_logo"
+                />
+              </div>
+            </li>
+            <li>
+              <img
+                src="./images/main-images/파트너이미지/pp-21-1.png"
+                alt="partners_logo"
+              />
+              <div class="mouseenter">
+                <img
+                  src="./images/main-images/파트너이미지/pp-21-2.png"
+                  alt="partners_logo"
+                />
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="partners_btn viewMore">
+          View more <img src="./images/main-images/more_icon.png" alt="+" />
+        </div>
+      </article>
+
+      <!-- floated_btn -->
+      <div id="main_fixed_btn" class="poSticky">
+        <div class="float_btn">
+          <a href="#"
+            ><img src="./images/main-images/float_icon01.png" alt="버튼1" />
+            <div class="hoverBg">
+              <h5>Open Sea</h5>
+            </div></a
+          >
+        </div>
+        <div class="float_btn">
+          <a href="#"
+            ><img src="./images/main-images/float_icon02.png" alt="버튼2" />
+            <div class="hoverBg">
+              <h5>Discord</h5>
+            </div></a
+          >
+        </div>
+
+        <div class="scrollup">
+          <img src="./images/main-images/scrollup.png" alt="스크롤 업" />
+        </div>
+      </div>
+    </main>
+
+    <!-- footer -->
+
+    <footer>
+      <div class="footerTop"></div>
+      <div class="footer">
+        <div class="footerInner">
+          <div class="footerLeft">
+            <div class="sandboxLogo">
+              <a href="https://www.sandbox.co.kr/" target="_blank"
+                ><img src="./images/main-images/footer_logo.png" alt="sandbox"
+              /></a>
+            </div>
+            <div class="sandboxText">
+              <div id="sandboxCorp">(주)샌드박스네트워크</div>
+              <div class="address">
+                <span>Address</span>
+                서울 특별시 용산구 서빙고로 17 30층
+              </div>
+              <div class="email">
+                <span>이메일</span>
+                mtdz@sandbox.co.kr
+              </div>
+            </div>
+          </div>
+          <div class="footerRight">
+            <ul id="social">
+              <li><a href="#">이용약관</a></li>
+              <li><a href="#">open sea</a></li>
+              <li><a href="#">discord</a></li>
+              <li><a href="#">twitter</a></li>
+              <li><a href="#">instagram</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footerBottom">
+        Copyright &copy; 2022 Meta toy dragonz. All Rights Reserved
+      </div>
+    </footer>
+
+    <script src="./js/main.js"></script>
+  </body>
+</html>
