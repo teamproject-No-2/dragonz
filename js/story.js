@@ -155,29 +155,25 @@ function searchFilter(){
 // 아이템 숫자 표기: 필터->재배열 ->배열수..?
 
 
-// 검색값 초기화 (+ 필터 적용했을 때도 초기화 되는지)
-function clearInput(){
-  let item = document.getElementsByClassName('one_quarter');
-  for(let i = 0; i <= item.length; i++){
-    item[i].style.display = "flex";
-  }
-}
-
 // checkResult.innerHTML +=
 // 필터된 단어 표시
 function checkBox(checked){
+  let filterBox = document.getElementsByClassName('filterBox');
   let result = document.getElementById("checkResult");
   if(checked.checked == true){
-      console.log(result.value); 
+      // console.log(result.value); 
       if(result.value == "") {
           result.value = checked.getAttribute("value");
+          console.log(result.value);
       } else {
           result.value += ","+ checked.getAttribute("value");
       }
+      let inputV = checked.getAttribute("value");
       checkResult.innerHTML += `<div class="cRItem">
-      item
+      ${inputV}
       <div class="closeBtnM"></div>
     </div>`;
+    console.log(result.value); 
   } else {
       let resultArr = result.value.split(",");
       for(let i=0; i<resultArr.length; i++){
@@ -191,13 +187,26 @@ function checkBox(checked){
 }
 
 // 체크 닫기 버튼 클릭시
-// const cRItem = document.querySelectorAll('.cRItem');
-// const closeBtnM = document.querySelectorAll('.closeBtnM');
-// closeBtnM.addEventListener('click', () => {
-//   cRItem.style.display = 'none' // 나중에 삭제로 바꿈
-// });
+const cRItem = document.querySelectorAll('.cRItem');
+const closeBtnM = document.querySelectorAll('.closeBtnM');
+// for(let i = 0; i < cRItem.length; i++) {
+//   closeBtnM.addEventListener('click', () => {
+//     cRItem.remove(); // 나중에 삭제로 바꿈
+//   });
+// };
+closeBtnM.addEventListener('click', () => {
+  cRItem.remove(); // 나중에 삭제로 바꿈
+});
 
 
+// 검색값 초기화 (+ 필터 적용했을 때도 초기화 되는지)
+function clearInput(){
+  let item = document.getElementsByClassName('one_quarter');
+  for(let i = 0; i <= item.length; i++){
+    item[i].style.display = "flex";
+  }
+  cRItem.remove();
+}
 
 // 팝업 ++팝업 내용..., 스크롤 없어지면서 뒷배경 움직임
 const popInfo = document.getElementById('popInfo');

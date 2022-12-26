@@ -216,6 +216,7 @@ body {
   background-color: #fff;
   border-radius: 50%;
   margin-left: 10px;
+  cursor: pointer;
 }
 .itemContents .itemTitle .titleRight .refreshBtn {
   width: 44px;
