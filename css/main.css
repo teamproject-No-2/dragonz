@@ -92,7 +92,6 @@ main #main_home {
   position: relative;
   padding-top: 50px;
 }
-
 main #main_home .moon_img {
   background-color: #ffd92e;
   width: 250px;
@@ -176,8 +175,6 @@ main #main_home .stage {
   justify-content: space-evenly;
   overflow: hidden;
 }
-main #main_home .stage .stage_character {
-}
 
 main #main_home .stage .left img {
   height: 150px;
@@ -193,7 +190,6 @@ main #main_home .stage .right img {
 
 /* home - banner */
 main #main_home .banner {
-  /* grid-row: 2/3; */
   width: 90%;
   margin: 20px auto;
   display: flex;
@@ -215,7 +211,7 @@ main #main_home .banner .banner_character:hover {
   color: #fff;
   border-radius: 20px;
   position: relative;
-  cursor: url(../images/main-images/mouse_bg128px.png) 20 30, auto;
+  cursor: url(../images/main-images/mouse_bg128px.png) 50 50, auto;
 }
 main #main_home .banner .banner_character:hover::after {
   content: "";
@@ -260,7 +256,6 @@ main #main_story .cardsList .card {
 }
 main #main_story .cardsList #card1 {
   top: 0;
-  /* left: 230px; */
   box-shadow: rgba(213, 149, 252, 0.2) 0px 3px 24px;
 }
 main #main_story .cardsList.active #card1 {
@@ -269,7 +264,6 @@ main #main_story .cardsList.active #card1 {
 main #main_story .cardsList #card2 {
   transform: rotate(-17deg);
   top: 0;
-  /* left: 500px; */
   box-shadow: rgba(254, 179, 31, 0.2) 0px 3px 24px;
 }
 main #main_story .cardsList.active #card2 {
@@ -278,7 +272,6 @@ main #main_story .cardsList.active #card2 {
 main #main_story .cardsList #card3 {
   transform: rotate(10deg);
   top: -60px;
-  /* left: 750px; */
   box-shadow: rgba(33, 186, 165, 0.2) 0px 3px 24px;
 }
 main #main_story .cardsList.active #card3 {
@@ -287,7 +280,6 @@ main #main_story .cardsList.active #card3 {
 main #main_story .cardsList #card4 {
   transform: rotate(-10deg);
   top: 0px;
-  /* left: 1000px; */
   box-shadow: rgba(146, 155, 60, 0.2) 0px 3px 20px;
 }
 main #main_story .cardsList.active #card4 {
@@ -296,7 +288,6 @@ main #main_story .cardsList.active #card4 {
 main #main_story .cardsList #card5 {
   transform: rotate(10deg);
   top: 0;
-  /* left: 1270px; */
   box-shadow: rgba(236, 66, 31, 0.1) 0px 3px 20px;
 }
 main #main_story .cardsList.active #card5 {
