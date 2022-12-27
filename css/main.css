@@ -130,7 +130,7 @@ main #main_home .moon_img {
   position: absolute;
   top: 15vh;
   right: -60px;
-  animation: moon 1s 1s;
+  animation: moon 1s;
 }
 @keyframes moon {
   0% {
