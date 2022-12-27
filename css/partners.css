@@ -68,7 +68,7 @@ article {
   margin: 0;
   transition: .2s;
   transform-style: preserve-3d;
-  cursor: none;
+  cursor: url(../images/main-images/mouse_bg128px.png) 50 50, auto;
   overflow: hidden;
   position: relative;
 }
@@ -131,7 +131,7 @@ article {
   margin: 0 auto;
   width: 70vw;
   padding: 0;
-  cursor: none;
+  cursor: url(../images/main-images/mouse_bg128px.png) 50 50, auto;
 }
 .projectPartner #ppList li {
   width: 100%;
