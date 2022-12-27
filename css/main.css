@@ -680,12 +680,147 @@ main #main_partners ul li {
   background-color: #fff;
   margin-right: 40px;
   margin-bottom: 30px;
+  transition: 0.2s;
 }
 
 main #main_partners li:hover {
-  background: #1b1b1b;
+  /* background: #1b1b1b; */
   cursor: url(../images/main-images/mouse_bg128px.png) 50 50, auto;
+  transform: scale(1.05);
 }
+/* main #main_partners li:hover img {
+  display: none;
+} */
+main #main_partners .line1 li:nth-child(1):hover {
+  background: #1b1b1b url(./images/main-images/파트너이미지/bg-3-2.png)
+    no-repeat center / contain;
+}
+main #main_partners .line1 li:nth-child(2):hover {
+  background: #1b1b1b url(./images/main-images/파트너이미지/bp-1-2.png)
+    no-repeat center / contain;
+}
+main #main_partners .line1 li:nth-child(3):hover {
+  background: #1b1b1b url(./images/main-images/파트너이미지/bp-2-2.png)
+    no-repeat center / contain;
+}
+main #main_partners .line1 li:nth-child(4):hover {
+  background: #1b1b1b url(./images/main-images/파트너이미지/bp-4-2.png)
+    no-repeat center / contain;
+}
+main #main_partners .line1 li:nth-child(5):hover {
+  background: #1b1b1b url(./images/main-images/파트너이미지/bp-5-2.png)
+    no-repeat center / contain;
+}
+main #main_partners .line1 li:nth-child(6):hover {
+  background: #1b1b1b url(./images/main-images/파트너이미지/bp-6-2.png)
+    no-repeat center / contain;
+}
+main #main_partners .line1 li:nth-child(7):hover {
+  background: #1b1b1b url(./images/main-images/파트너이미지/bp-7-2.png)
+    no-repeat center / contain;
+}
+main #main_partners .line1 li:nth-child(8):hover {
+  background: #1b1b1b url(./images/main-images/파트너이미지/bp-8-2.png)
+    no-repeat center / contain;
+}
+main #main_partners .line1 li:nth-child(9):hover {
+  background: #1b1b1b url(./images/main-images/파트너이미지/bp-9-2.png)
+    no-repeat center / contain;
+}
+main #main_partners .line1 li:nth-child(10):hover {
+  background: #1b1b1b url(./images/main-images/파트너이미지/bp-10-2.png)
+    no-repeat center / contain;
+}
+main #main_partners .line1 li:nth-child(11):hover {
+  background: #1b1b1b url(./images/main-images/파트너이미지/bp-11-2.png)
+    no-repeat center / contain;
+}
+main #main_partners .line1 li:nth-child(12):hover {
+  background: #1b1b1b url(./images/main-images/파트너이미지/pp-1-2.png)
+    no-repeat center / contain;
+}
+main #main_partners .line1 li:nth-child(13):hover {
+  background: #1b1b1b url(./images/main-images/파트너이미지/pp-2-2.png)
+    no-repeat center / contain;
+}
+main #main_partners .line1 li:nth-child(14):hover {
+  background: #1b1b1b url(./images/main-images/파트너이미지/pp-3-2.png)
+    no-repeat center / contain;
+}
+main #main_partners .line1 li:nth-child(15):hover {
+  background: #1b1b1b url(./images/main-images/파트너이미지/pp-4-2.png)
+    no-repeat center / contain;
+}
+main #main_partners .line1 li:nth-child(16):hover {
+  background: #1b1b1b url(./images/main-images/파트너이미지/pp-5-2.png)
+    no-repeat center / contain;
+}
+
+main #main_partners .line2 li:nth-child(1):hover {
+  background: #1b1b1b url(./images/main-images/파트너이미지/pp-6-2.png)
+    no-repeat center / contain;
+}
+main #main_partners .line2 li:nth-child(2):hover {
+  background: #1b1b1b url(./images/main-images/파트너이미지/pp-7-2.png)
+    no-repeat center / contain;
+}
+main #main_partners .line2 li:nth-child(3):hover {
+  background: #1b1b1b url(./images/main-images/파트너이미지/pp-8-2.png)
+    no-repeat center / contain;
+}
+main #main_partners .line2 li:nth-child(4):hover {
+  background: #1b1b1b url(./images/main-images/파트너이미지/pp-9-2.png)
+    no-repeat center / contain;
+}
+main #main_partners .line2 li:nth-child(5):hover {
+  background: #1b1b1b url(./images/main-images/파트너이미지/pp-10-2.png)
+    no-repeat center / contain;
+}
+main #main_partners .line2 li:nth-child(6):hover {
+  background: #1b1b1b url(./images/main-images/파트너이미지/pp-11-2.png)
+    no-repeat center / contain;
+}
+main #main_partners .line2 li:nth-child(7):hover {
+  background: #1b1b1b url(./images/main-images/파트너이미지/pp-12-2.png)
+    no-repeat center / contain;
+}
+main #main_partners .line2 li:nth-child(8):hover {
+  background: #1b1b1b url(./images/main-images/파트너이미지/pp-13-2.png)
+    no-repeat center / contain;
+}
+main #main_partners .line2 li:nth-child(9):hover {
+  background: #1b1b1b url(./images/main-images/파트너이미지/pp-14-2.png)
+    no-repeat center / contain;
+}
+main #main_partners .line2 li:nth-child(10):hover {
+  background: #1b1b1b url(./images/main-images/파트너이미지/pp-15-2.png)
+    no-repeat center / contain;
+}
+main #main_partners .line2 li:nth-child(11):hover {
+  background: #1b1b1b url(./images/main-images/파트너이미지/pp-16-2.png)
+    no-repeat center / contain;
+}
+main #main_partners .line2 li:nth-child(12):hover {
+  background: #1b1b1b url(./images/main-images/파트너이미지/pp-17-2.png)
+    no-repeat center / contain;
+}
+main #main_partners .line2 li:nth-child(13):hover {
+  background: #1b1b1b url(./images/main-images/파트너이미지/pp-18-2.png)
+    no-repeat center / contain;
+}
+main #main_partners .line2 li:nth-child(14):hover {
+  background: #1b1b1b url(./images/main-images/파트너이미지/pp-19-2.png)
+    no-repeat center / contain;
+}
+main #main_partners .line2 li:nth-child(15):hover {
+  background: #1b1b1b url(./images/main-images/파트너이미지/pp-20-2.png)
+    no-repeat center / contain;
+}
+main #main_partners .line2 li:nth-child(16):hover {
+  background: #1b1b1b url(./images/main-images/파트너이미지/pp-21-2.png)
+    no-repeat center / contain;
+}
+
 main #main_partners .partners_btn {
   position: absolute;
   bottom: 5vh;
