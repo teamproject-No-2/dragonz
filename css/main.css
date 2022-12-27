@@ -148,7 +148,6 @@ main #main_home .main_home_container {
 }
 /* main - home - txt */
 main #main_home .main_home_txt {
-  /* grid-column: 1/2; */
   width: 45%;
   line-height: 1;
   text-align: left;
@@ -170,7 +169,6 @@ main #main_home .main_home_txt p {
 /* home - 캐릭터 */
 
 main #main_home .stage {
-  /* border: 2px orange solid; */
   width: 40%;
   display: flex;
   align-items: flex-end;
@@ -654,7 +652,6 @@ main #main_partners {
   background-color: var(--bg-lightGray);
   position: relative;
   height: 90vh;
-  margin-bottom: 0;
   overflow: hidden;
 }
 main #main_partners h2 {
@@ -666,7 +663,6 @@ main #main_partners .line2 {
   height: 150px;
   position: absolute;
   bottom: 45vh;
-  /* overflow: hidden; */
 }
 main #main_partners .line2 {
   bottom: 25vh;
@@ -686,17 +682,10 @@ main #main_partners ul li {
   margin-bottom: 30px;
 }
 
-main #main_partners ul li > .mouseenter {
-  width: 340px;
-  height: 140px;
-  border-radius: 20px;
-  background-color: #1b1b1b;
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
+main #main_partners li:hover {
+  background: #1b1b1b;
+  cursor: url(../images/main-images/mouse_bg128px.png) 50 50, auto;
 }
-
 main #main_partners .partners_btn {
   position: absolute;
   bottom: 5vh;
