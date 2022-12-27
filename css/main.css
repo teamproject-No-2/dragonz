@@ -31,6 +31,8 @@ main {
 /* 공통 */
 main h1 {
   font-size: 105px;
+  font-weight: bold;
+  color: #1b1b1b;
 }
 main h2 {
   font-size: 52px;
