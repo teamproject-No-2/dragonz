@@ -1,0 +1,392 @@
+@charset "utf-8";
+body {
+  color: #1b1b1b;
+  font-family: 'Poppins', 'Noto Sans KR', sans-serif;
+  letter-spacing: -0.5px;
+}
+
+/* ------------------------ 헤더 ------------------------ */
+header {
+  width: 100%;
+  height: 80px;
+  margin: 0 auto;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.05);
+  z-index: 9999;
+}
+.headerWrap {
+  width: 1600px;
+  display: flex;
+  align-items: center;
+  height: 80px;
+  background-color: #fff;
+}
+.logo {
+  position: absolute;
+  width: 100px;
+  height: 50px;
+}
+.logo a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  background: url(../images/partners/logo.png) no-repeat 50% / contain;
+  text-indent: 9999px;
+}
+
+/* ------------------------ 네비게이션바 ------------------------ */
+#gnb {
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 400;
+}
+#gnb li {
+  height: 100%;
+  padding: 0 2vw;
+}
+#gnb li a {
+  text-decoration: none;
+  color: #1b1b1b;
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 100%;
+  transition: .4s;
+}
+
+/* ------------------------ 리스트 밑줄 ------------------------ */
+#gnb > li > a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0px;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: #189cf4;
+  opacity: 0; 
+  transition: .4s;
+}
+#gnb > li:hover > a::after {
+  opacity: 1; 
+}
+#hiddenMenu {
+  opacity: 0;
+  background-color: #fff;
+  position: absolute;
+  top: 80px;
+  left: calc(50% - 200px);
+  width: 240px;
+  height: 0px;
+  padding: 50px 52px;
+  border-radius: 22px;
+  overflow: hidden;
+  transition: .4s;
+}
+#gnb > li:hover #hiddenMenu {
+  opacity: 1;
+  height: 268px;
+}
+#hiddenMenu li {
+  padding: 0;
+  text-align: left;
+  width: 154px;
+  height: 22px;
+  margin-bottom: 30px;
+}
+#hiddenMenu li a {
+  width: 154px;
+  height: 22px;
+  color: #a8a8a8;
+}
+#hiddenMenu li:hover a {
+  color: #189cf4;
+  padding-left: 15px;
+}
+#hiddenMenu li:hover a::before {
+  content: "\2022";
+  color: #189cf4;
+  font-weight: bold;
+  display: inline-block; 
+  width: 1em;
+  margin-left: -1em;
+}
+
+/* ------------------------ 언어선택 ------------------------ */
+.lang {
+  width: 110px;
+  height: 45px;
+  padding: 0 23px;
+  border-radius: 23px;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+  position: absolute;
+  top: 20px;
+  left: calc(100% - 14vw);
+  cursor: pointer;
+  overflow: hidden;
+  transition: .4;
+}
+.lang.on {
+  height: 125px;
+}
+.selectLang {
+  height: 45px;
+  overflow: hidden;
+}
+.selectLang .noSelect {
+  padding: 0;  
+  display: none;
+  font-size: 14px;
+  font-weight: 500;
+}
+.selectLang .selected {
+  line-height: 45px;
+  height: 45px;
+  display: block;
+  margin-left: 0;
+  border: none;
+  box-shadow: none;
+}
+.selectLang .selected {
+  width: 100%;
+  background: url(../images/partners/morearrow.png) no-repeat right /  20%;
+}
+.lang.on .selectLang .selected {
+  background: url(../images/partners/morearrow2.png) no-repeat right / 20%;
+}
+#langLi li {
+  padding: 5px 0;
+  color: #ababab;
+}
+
+
+/* ------------------------ footer ------------------------ */
+footer {
+  position: relative;
+  background-color: #1b1b1b;
+  width: 100%;    
+  height: 340px;
+  bottom: 0;
+}
+.footerTop {
+  width: 100%;
+  height: 16px;
+  background: transparent url(../images/partners/foot_pc_bg.png) repeat;
+  position: absolute;
+  bottom: 340px;
+}
+footer .footer {  
+  background-color: #1b1b1b;
+  margin: 0 auto ;
+  max-width: 1440px;
+  height: 75px;
+  padding: 80px 0;
+}
+footer .footerInner {
+  padding: 0;
+ display: grid;
+ grid-template-columns: 1fr 0.5fr 1fr;
+}
+.footerLeft {
+  display: grid;
+  grid-template-columns: 85px 1fr;
+  gap: 30px;
+  align-items: center;
+}
+.sandboxLogo {
+  line-height: 20px;
+}
+.sandboxText #sandboxCorp {
+  color: rgba(255, 255, 255, 82%);
+  margin-bottom: 5px;
+  font-size: 12px;
+}
+.address, .email {
+  width: 250px;
+  display: inline-block;
+  color: rgba(255, 255, 255, 60%);
+  font-size: 12px;
+  position: relative;
+  text-transform: none;
+}
+.sandboxText span {
+  display: inline-block;
+  width: 70px;
+
+}
+.sandboxText span::after {
+  position: absolute;
+  width: 1px;
+  left: 60px;
+  height: 12px;
+  top: 50%;
+
+  transform: translateY(-50%);
+  content: '';
+  opacity: 0.1;
+  background-color: #fff;
+}
+.footerRight {
+  grid-column: 3 / 4;
+}
+.footerRight #social {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+  margin: 0;
+  padding: 0;
+}
+.footerRight #social li {
+  margin-left: 10px;
+  width: 80px; 
+  height: 80px;
+  border-radius: 40px;
+  box-shadow: 0px 5px 9.7px 0.3px rgb(0 0 0 / 70%);
+  text-align: center;
+  overflow: hidden;
+}
+.footerRight #social li a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  line-height: 80px;
+  text-decoration: none;
+  text-indent: -9999px;
+}
+.footerRight #social li:nth-child(1) {
+  width: 150px;
+}
+.footerRight #social li:nth-child(1) a {
+  font-size: 15px;
+  width: 100%;
+  height: 100%;
+  text-indent: 0;
+  color: rgba(255, 255, 255, 0.8);
+}
+.footerRight #social li:nth-child(2) a { background: #1b1b1b url(../images/partners/sns_icon01.png) no-repeat center / 40%; }
+.footerRight #social li:nth-child(3) a { background: #1b1b1b url(../images/partners/sns_icon02.png) no-repeat center / 40%; }
+.footerRight #social li:nth-child(4) a { background: #1b1b1b url(../images/partners/sns_icon03.png) no-repeat center / 40%; }
+.footerRight #social li:nth-child(5) a { background: #1b1b1b url(../images/partners/sns_icon04.png) no-repeat center / 30%; }
+.footerRight #social li a:hover {
+  background-color: #189cf4;
+}
+footer .footerBottom {
+  text-align: center;
+  line-height: 50px;
+  font-size: 12px;
+  width: 100%;
+  height: 50px;
+  background-color: #141414;
+  margin: 0;
+  padding: 0;
+  color: rgba(72, 72, 72, 0.3);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+/* ------------------------ fixed button ------------------------ */
+.fixedBtn {
+  margin: 0 30px 63px ;
+  position: absolute;
+  top: 90vh;
+  z-index: 9999;
+  text-align: right;
+  width: 130px;
+  right: 0;
+}
+.poFixed {
+  position: fixed;
+  top: 78vh;
+}
+
+.fixedBtn .sideBtn {
+  margin: 0;
+  padding: 0;
+}
+.fixedBtn .sideBtn li {
+  width: 125px;
+  height: 47px;
+  margin-bottom: 10px;
+}
+.fixedBtn .sideBtn li a {
+  position: absolute;
+  right: 0;
+  padding: 0;
+  width: 47px;
+  height: 47px;
+  overflow: hidden;
+  background: none;
+  display: flex;
+  justify-content: space-between;
+  text-decoration: none;
+}
+.fixedBtn .sideBtn li a:hover {  
+  width: 125px;
+  height: 47px;
+  background: url(../images/partners/btnbox.png) no-repeat center / contain;
+  text-indent: 0;
+  color: #189cf4;
+  line-height: 47px;
+  font-size: 12px;
+  padding-left: 20px;
+}
+.fixedBtn .sideBtn li a span.open{
+  text-indent: -9999px; 
+}
+.fixedBtn .sideBtn li a:hover span.open{
+  text-indent: 0px;  
+}
+.fixedBtn .sideBtn li:nth-child(3) a {
+  width: 47px;
+  height: 47px;
+  text-indent: -9999px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.16);
+}
+.fixedBtn .sideBtn li a .smallImg {
+  display: inline-block;
+  width: 47px;
+  height: 47px;
+  font-size: 14px;
+  text-decoration: none;
+  line-height: 47px;
+  border-radius: 50%;
+  text-indent: 9999px;
+}
+.fixedBtn .sideBtn #openSea a .smallImg {
+  background: #1b1b1b url(../images/partners/btn1-1.png) no-repeat center / 45%;
+  color: #fff;
+}
+.fixedBtn .sideBtn #openSea a:hover .smallImg {
+  background: #1b1b1b url(../images/partners/btn1-2.png) no-repeat center / 45%;
+}
+.fixedBtn .sideBtn #discord a .smallImg {
+  background: #1b1b1b url(../images/partners/btn2-1.png) no-repeat center / 45%;
+  color: #fff;
+}
+.fixedBtn .sideBtn #discord a:hover .smallImg {
+  background: #1b1b1b url(../images/partners/btn2-2.png) no-repeat center / 45%;
+}
+.fixedBtn .sideBtn #goTop a {
+  background: #fff url(../images/partners/scrollup.png) no-repeat center / 20%;
+  text-align: center;
+  display: none;
+}
+.fixedBtn .sideBtn #goTop.scrollOn a {
+  display: inline-block;
+}
