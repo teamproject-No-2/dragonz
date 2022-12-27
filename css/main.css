@@ -195,7 +195,7 @@ main #main_home .stage .right img {
 main #main_home .banner {
   /* grid-row: 2/3; */
   width: 90%;
-  margin: 0 auto;
+  margin: 20px auto;
   display: flex;
   justify-content: center;
   background-color: #fff;
@@ -704,13 +704,7 @@ main #main_partners .partners_btn {
 
 /* floated_btn */
 
-/* #main_fixed_btn {
-  position: fixed;
-  bottom: 10vh;
-  right: 2vw;
-} */
 #main_fixed_btn {
-  /* border: 3px orange solid; */
   position: sticky;
   display: flex;
   flex-direction: column;
@@ -746,12 +740,13 @@ main #main_partners .partners_btn {
   z-index: 9999;
 }
 #main_fixed_btn .float_btn a .hoverBg {
+  /* border: orange 2px solid; */
   background: url(../images/main-images/txtbox.png) no-repeat top left / contain;
-  width: 0;
-  height: 45px;
+  width: 125px;
+  height: 47px;
   position: absolute;
   top: 50%;
-  right: 0;
+  right: -16px;
   transform: translateY(-50%);
   z-index: 9;
   opacity: 0;
@@ -760,7 +755,6 @@ main #main_partners .partners_btn {
 #main_fixed_btn .float_btn a .hoverBg h5 {
   color: var(--bg-lightBlue);
   text-align: left;
-  padding-left: 28px;
   line-height: 45px;
   font-size: 12px;
   opacity: 0;
@@ -776,7 +770,7 @@ main #main_partners .partners_btn {
 }
 #main_fixed_btn .float_btn:hover .hoverBg h5 {
   opacity: 1;
-  padding-left: 20px;
+  padding-left: 21px;
 }
 #main_fixed_btn .float_btn:hover img {
   color: var(--bg-lightBlue);
@@ -1090,17 +1084,24 @@ footer .footerInner {
 .sandboxLogo {
   line-height: 20px;
 }
+.sandboxText {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-left: 90px;
+  /* border: orange 2px solid; */
+}
 .sandboxText #sandboxCorp {
   color: rgba(255, 255, 255, 82%);
   margin-bottom: 5px;
-  font-size: 12px;
+  font-size: 16px;
 }
 .address,
 .email {
-  width: 260px;
+  width: 350px;
   display: inline-block;
   color: rgba(255, 255, 255, 60%);
-  font-size: 12px;
+  font-size: 15px;
   position: relative;
 }
 .sandboxText span {
@@ -1110,7 +1111,7 @@ footer .footerInner {
 .sandboxText span::after {
   position: absolute;
   width: 1px;
-  left: 60px;
+  left: 55px;
   height: 12px;
   top: 50%;
   transform: translateY(-50%);
