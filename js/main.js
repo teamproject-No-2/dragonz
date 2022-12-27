@@ -1,3 +1,8 @@
+// main - home page
+// const mainHomeBg = document.querySelector(".home_bg");
+
+// addEventListener("scroll", bg);
+
 // main - story
 const cards = document.querySelector(".cardsList");
 const storyPage = document.querySelector("#main_story");
@@ -53,8 +58,6 @@ const roadmap = document.querySelector("#main_roadmap");
 
 addEventListener("scroll", () => {
   let num = roadmap.offsetTop - 600;
-  // console.log(num);
-  // console.log(scrollY);
   if (scrollY > num) {
     roadmap.classList.add("scale");
   }
@@ -104,28 +107,6 @@ goUp.addEventListener("click", () => {
     behavior: "smooth",
   });
 });
-/* 
-// 마우스 커서
-const cursor = document.querySelector(".cursor");
-// 마우스 좌표
-let mouseX = 0;
-let mouseY = 0;
-// 커서를 따라다니는 이모지 좌표
-let cursorX = 0;
-let cursorY = 0;
-// 마우스 이동
-addEventListener("mousemove", (e) => {
-  mouseX = e.clientX - 50;
-  mouseY = e.clientY - 50;
-});
-function ani() {
-  requestAnimationFrame(ani); // 연속 호툴이 필요하기 때문에 이렇게 함수로 작성
-  cursorX += (mouseX - cursorX) * 0.1;
-  cursorY += (mouseY - cursorY) * 0.1;
-  cursor.style.transform = `translate(${cursorX}px, ${cursorY}px)`;
-}
-ani();
- */
 
 // 헤더 푸터
 const header = document.querySelector(".header");

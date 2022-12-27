@@ -17,6 +17,7 @@ body {
 main {
   position: relative;
   background-color: var(--bg-lightGray);
+  overflow: hidden;
 }
 
 .cursor {
@@ -84,14 +85,43 @@ main article {
   }
 }
 
+.home_bg {
+  width: 700px;
+  height: 700px;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: var(--bg-lightBlue);
+  transition: 1s;
+  animation: home_bg 2s 2s 1 both;
+  z-index: 9;
+}
+@keyframes home_bg {
+  100% {
+    width: 200%;
+    height: 200vh;
+    top: -50%;
+    right: -40%;
+  }
+}
+/* .home_bg {
+  width: 100%;
+  height: 100vh;
+  border-radius: 0;
+} */
 /* article 1 home */
 main #main_home {
   width: 100%;
   height: 100vh;
-  background-color: var(--bg-lightBlue);
+  /* background-color: var(--bg-lightBlue); */
   position: relative;
   padding-top: 50px;
+
+  overflow: hidden;
+  z-index: 99;
 }
+
 main #main_home .moon_img {
   background-color: #ffd92e;
   width: 250px;
@@ -100,7 +130,7 @@ main #main_home .moon_img {
   position: absolute;
   top: 15vh;
   right: -60px;
-  animation: moon 1s 1;
+  animation: moon 1s 1s;
 }
 @keyframes moon {
   0% {
@@ -237,6 +267,8 @@ main #main_home .banner .banner_character h4 {
 main #main_story {
   width: 100%;
   background-color: #fff;
+  position: relative;
+  z-index: 999;
 }
 
 main #main_story .cardsList {
@@ -354,6 +386,7 @@ main #main_project .starIcon {
   top: -120px;
   right: 17%;
   animation: starIcon 3s ease-in-out infinite;
+  z-index: 999;
 }
 main #main_project p {
   color: var(--color-gray);
