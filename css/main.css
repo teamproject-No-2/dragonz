@@ -27,6 +27,10 @@ main {
 
   will-change: transform;
 }
+a {
+  color: inherit;
+  text-decoration: none;
+}
 
 /* 공통 */
 main h1 {
@@ -348,6 +352,10 @@ main #main_story .cardsList .card .codeName {
   display: block;
   color: #000;
   font-size: 17px;
+}
+
+main #main_story .viewMore {
+  padding: 10px 22px;
 }
 
 /* article 3 project */
